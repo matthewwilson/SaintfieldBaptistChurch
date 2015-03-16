@@ -1,15 +1,18 @@
-body { padding-top: 50px; }
+body {
+  padding-top: 50px;
+  font-family: 'Lato', sans-serif;
+}
 
 .navbar {
   margin-bottom:0px;
 }
 
 .jumbo-church-meeting {
-  background-image:url('../img/people.jpg');
-  background-size:cover;
   color:white;
   height:280px;
   margin-bottom: 0px;
+  background-image:url('../img/people.jpg');
+  background-size:cover;
 }
 
 .jumbo-church-meeting .jumbo-church-meeting-text {
@@ -20,6 +23,7 @@ body { padding-top: 50px; }
 
 .jumbo-church-meeting h1 {
   font-size:50px;
+  font-weight:900;
 }
 
 @media (min-width: 1200px) {
@@ -29,6 +33,10 @@ body { padding-top: 50px; }
 
   .jumbo-church-meeting h1 {
     font-size:70px;
+  }
+
+  .church-outline {
+    display:block !important;
   }
 }
 
@@ -54,19 +62,61 @@ body { padding-top: 50px; }
     margin-bottom:10px;
 }
 
+.square:hover {
+  background-color:#4470CC;
+}
+
 .square.downloads {
   background-color:#A1C0FF;
+}
+
+.square.downloads:hover {
+  background-color:#4470CC;
 }
 
 .square.live {
   background-color:#558CFF;
 }
 
+.square.live:hover {
+  background-color:#4470CC;
+}
+
 .square.contact {
   background-color:#51607F;
 }
 
+.square.contact:hover {
+  background-color:#4470CC;
+}
+
 
 .square h1 {
-  /*font-weight:100;*/
+  font-weight:100;
+}
+
+.quote {
+  font-size:25px;
+  margin-top:30px;
+  margin-bottom:30px;
+  text-align:center;
+  font-weight:300;
+  font-style: oblique;
+}
+
+.news-blocks {
+  margin-top:20px;
+}
+
+.news-block-heading {
+  background-color:#4470CC;
+  padding-top:1px;
+  padding-bottom:5px;
+  font-weight:100;
+  color:white;
+  text-align:center;
+}
+
+.news-block-heading h3 {
+  font-weight:100;
 }
