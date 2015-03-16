@@ -5,21 +5,31 @@ body { padding-top: 50px; }
 }
 
 .jumbo-church-meeting {
-  background-image:url('../img/meeting.jpg');
+  background-image:url('../img/people.jpg');
   background-size:cover;
   color:white;
-  height:400px;
+  height:280px;
+  margin-bottom: 0px;
 }
 
 .jumbo-church-meeting .jumbo-church-meeting-text {
-  background-color:#1c2e54;
-  padding:20px;
-  opacity: 0.9;
+  padding-left:30px;
+  /*opacity: 0.9;
+  background-color:#1c2e54;*/
 }
 
 .jumbo-church-meeting h1 {
-  font-weight:100;
-  letter-spacing: 5px;
+  font-size:50px;
+}
+
+@media (min-width: 1200px) {
+  .jumbo-church-meeting {
+    height:380px;
+  }
+
+  .jumbo-church-meeting h1 {
+    font-size:70px;
+  }
 }
 
 .jumbo-church-meeting p {
@@ -27,4 +37,36 @@ body { padding-top: 50px; }
   letter-spacing: 1px;
   font-style: italic;
   font-size:18px
+}
+
+.squares {
+  background-color:#e7e7e7;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+.square {
+    background-color:#1c2e54;
+    color: white;
+    padding:10px;
+    padding-left:20px;
+    min-height:130px;
+    margin-bottom:10px;
+}
+
+.square.downloads {
+  background-color:#A1C0FF;
+}
+
+.square.live {
+  background-color:#558CFF;
+}
+
+.square.contact {
+  background-color:#51607F;
+}
+
+
+.square h1 {
+  /*font-weight:100;*/
 }
