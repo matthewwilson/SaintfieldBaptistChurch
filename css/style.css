@@ -120,3 +120,18 @@ body {
 .news-block-heading h3 {
   font-weight:100;
 }
+
+.news-block-body {
+  padding:10px;
+}
+
+.news-block-body p{
+  font-size:20px;
+}
+
+.news-block-row {
+  margin-top:5px;
+  border-bottom-style:solid;
+  border-width:1px;
+  border-color: #e7e7e7;
+}
