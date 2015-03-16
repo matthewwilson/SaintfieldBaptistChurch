@@ -12,3 +12,5 @@ New site should be:
 Planned frameworks:
 * Bootstrap
 * React.js
+
+Work in progress demo site can be viewed here - http://mwil.so/sbc/
