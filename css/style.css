@@ -135,3 +135,24 @@ body {
   border-width:1px;
   border-color: #e7e7e7;
 }
+
+.footer {
+  margin-top:20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color:#4470CC;
+  color:white;
+}
+
+.footer-church-name h3 {
+  font-weight:100;
+}
+
+.footer-church-name a {
+  color:white;
+}
+
+.footer-copyright {
+  font-weight:100;
+  font-size:12px;
+}
