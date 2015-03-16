@@ -8,3 +8,7 @@ New site should be:
 * Mobile Friendly
 * Easy to use
 * Easy to update
+
+Planned frameworks:
+* Bootstrap
+* React.js
