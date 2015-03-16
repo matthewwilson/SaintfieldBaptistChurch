@@ -1,3 +1,30 @@
-.header {
+body { padding-top: 50px; }
 
+.navbar {
+  margin-bottom:0px;
+}
+
+.jumbo-church-meeting {
+  background-image:url('../img/meeting.jpg');
+  background-size:cover;
+  color:white;
+  height:400px;
+}
+
+.jumbo-church-meeting .jumbo-church-meeting-text {
+  background-color:#1c2e54;
+  padding:20px;
+  opacity: 0.9;
+}
+
+.jumbo-church-meeting h1 {
+  font-weight:100;
+  letter-spacing: 5px;
+}
+
+.jumbo-church-meeting p {
+  font-weight:100;
+  letter-spacing: 1px;
+  font-style: italic;
+  font-size:18px
 }
