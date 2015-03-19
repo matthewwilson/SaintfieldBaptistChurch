@@ -18,10 +18,10 @@ var NavigationHeader = React.createClass({
 
 var NavigationItem = React.createClass({
   render: function() {
-    if(this.props.active == 'true') {
-      return (<li className="active"><a href="#">{this.props.name} <span className="sr-only">(current)</span></a></li>)
+    if(this.props.currentPage == this.props.name) {
+      return (<li className="active"><a href={this.props.link}>{this.props.name} <span className="sr-only">(current)</span></a></li>)
     } else {
-      return (<li><a href="#">{this.props.name}</a></li>);
+      return (<li><a href={this.props.link}>{this.props.name}</a></li>);
     }
   }
 });
@@ -31,11 +31,11 @@ var NavigationItems = React.createClass({
     return (
       <div className="collapse navbar-collapse" id="navigation-collapse">
         <ul className="nav navbar-nav">
-          <NavigationItem name="Home" active="true"/>
-          <NavigationItem name="About"/>
-          <NavigationItem name="Announcements"/>
-          <NavigationItem name="Watch Live"/>
-          <NavigationItem name="Downloads"/>
+          <NavigationItem name="Home" currentPage={this.props.currentPage} link="index.html"/>
+          <NavigationItem name="About" currentPage={this.props.currentPage} link="index.html"/>
+          <NavigationItem name="Announcements" currentPage={this.props.currentPage} link="index.html"/>
+          <NavigationItem name="Watch Live" currentPage={this.props.currentPage} link="index.html"/>
+          <NavigationItem name="Sermon Downloads" currentPage={this.props.currentPage} link="sermons.html"/>
         </ul>
       </div>
     );
@@ -48,7 +48,7 @@ var Navigation = React.createClass({
     return (
         <div className="container">
           <NavigationHeader/>
-          <NavigationItems/>
+          <NavigationItems currentPage={this.props.currentPage}/>
         </div>
     );
   }

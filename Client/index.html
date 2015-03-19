@@ -147,37 +147,15 @@
         </div>
       </div>
 
-      <div class="container-fluid footer">
-        <div class="row">
-          <div class="col-md-3">
-            <img src="img/church_footer.png"></img>
-          </div>
-          <div class="col-md-3 footer-church-name">
-            <h3>Follow Us</h3>
-            <p><a href="https://twitter.com/SaintfieldBC">Twitter</a></p>
-            <p><a href="https://www.facebook.com/pages/Saintfield-Baptist-Church/105178506183089?sk=wall">Facebook</a></p>
-          </div>
-          <div class="col-md-3 footer-church-name">
-            <h3>Find Us</h3>
-            <p>Saintfield Baptist Church</br>51 Crossgar Road</br>Saintfield</p>
-          </div>
-          <div class="col-md-3 footer-church-name">
-            <h3>Fellowship with us</h3>
-            <p>Sunday School - 10.30am</br>
-            Morning Meeting - 11.30am</br>
-            Gospel Meeting - 7.00pm</p>
-          </div>
-        </div>
-        </br>
-        <p class="footer-copyright">Saintfield Baptist Church © 2015. All Rights Reserved.</p>
-      </div>
+      <div class="container-fluid footer" id="footer"></div>
 
       <script src="http://fb.me/react-0.12.2.js"></script>
       <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
       <script type="text/jsx" src="js/navigation.js"></script>
+      <script type="text/jsx" src="js/footer.js"></script>
       <script type="text/jsx">
         React.render(
-          <Navigation/>,
+          <Navigation currentPage="Home"/>,
           document.getElementById('navigation')
         );
       </script>
