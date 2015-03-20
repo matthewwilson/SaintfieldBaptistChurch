@@ -4,10 +4,9 @@ var SermonHeaders = React.createClass({
         <tr>
           <th>Date</th>
           <th>Speaker</th>
-          <th>Reading</th>
-          <th>Subject</th>
-          <th>Type</th>
-          <th>Download Link</th>
+          <th className="hidden-xs">Reading</th>
+          <th className="hidden-xs">Subject</th>
+          <th>Options</th>
         </tr>
     );
   }
@@ -54,21 +53,31 @@ var AudioPlayer = React.createClass({
     {
       return (
         <a href={this.state.url} className="btn btn-default btn-sm">
-          <span className="glyphicon glyphicon-headphones" aria-hidden="true"></span> Download
+          <span className="glyphicon glyphicon-download" aria-hidden="true"></span> Download
         </a>
       );
     } else if(this.state.play) {
       return (
-        <audio controls>
-          <source src={this.state.url} type="audio/mpeg"></source>
-          Your browser does not support the audio element.
-        </audio>
+        <div>
+          <a href={this.state.url} className="btn btn-default btn-sm">
+            <span className="glyphicon glyphicon-download" aria-hidden="true"></span> Download
+          </a>
+          <audio controls className="audio">
+            <source src={this.state.url} type="audio/mpeg"></source>
+            Your browser does not support the audio element.
+          </audio>
+        </div>
       );
     } else {
       return (
-        <button type="button" className="btn btn-default btn-sm" onClick={this.listenClicked}>
-          <span className="glyphicon glyphicon-headphones" aria-hidden="true"></span> Listen
-        </button>
+        <div className="btn-group" role="group">
+          <a href={this.state.url} className="btn btn-default btn-sm">
+            <span className="glyphicon glyphicon-download" aria-hidden="true"></span> Download
+          </a>
+          <button type="button" className="btn btn-default btn-sm" onClick={this.listenClicked}>
+            <span className="glyphicon glyphicon-headphones" aria-hidden="true"></span> Listen
+          </button>
+        </div>
       );
     }
 
@@ -99,21 +108,22 @@ var SermonTable = React.createClass({
             <tr>
               <td>{sermon.day} {sermon.month} {sermon.year}</td>
               <td>{sermon.speaker}</td>
-              <td>{sermon.bibleBook} {sermon.verses}</td>
-              <td>{sermon.subject}</td>
-              <td>{sermon.type}</td>
-              <td><AudioPlayer url={sermon.downloadLink}/></td>
+              <td className="hidden-xs">{sermon.bibleBook} {sermon.verses}</td>
+              <td className="hidden-xs">{sermon.subject}</td>
+              <td className="audioPlayer"><AudioPlayer url={sermon.downloadLink}/></td>
             </tr>
           );
     });
 
     return (
-      <table className="table table-striped">
-        <tbody>
-          <SermonHeaders/>
-          {sermons}
-        </tbody>
-      </table>
+      <div className="table-responsive">
+        <table className="table table-striped table-condensed">
+          <tbody>
+            <SermonHeaders/>
+            {sermons}
+          </tbody>
+        </table>
+      </div>
     );
   }
 });

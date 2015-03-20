@@ -156,3 +156,20 @@ body {
   font-weight:100;
   font-size:12px;
 }
+
+.audio {
+  margin-top:5px;
+  display:block;
+}
+
+.audioPlayer {
+  min-width : 300px;
+}
+
+.audioPlayer a {
+  vertical-align:middle;
+}
+
+.audioPlayer button {
+  vertical-align:middle;
+}
