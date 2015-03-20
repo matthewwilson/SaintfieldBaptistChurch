@@ -128,7 +128,95 @@ var SermonTable = React.createClass({
   }
 });
 
+var SermonControl = React.createClass({
+  getInitialState: function() {
+    return {
+      url : "",
+      searchData : [],
+      searchOption : ""
+    }
+  },
+  buttonClicked: function(selectedSearchOption) {
+    $.ajax({
+      url: "http://saintfieldbaptist.org.uk/php/GetSermons.php?available="+selectedSearchOption,
+      dataType: 'json',
+      success: function(data) {
+        this.setState({
+          url : this.state.url,
+          searchData : data,
+          searchOption : selectedSearchOption
+        });
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this.props.url, status, err.toString());
+      }.bind(this)
+    });
+    console.log('button clicked');
+  },
+  render: function() {
+
+    var buttons = (<div className="btn-group btn-group-justified" role="group" aria-label="...">
+      <div className="btn-group" role="group">
+        <button type="button" className="btn btn-default" onClick={this.buttonClicked.bind(this,'dates')}>Date</button>
+      </div>
+      <div className="btn-group" role="group">
+        <button type="button" className="btn btn-default" onClick={this.buttonClicked}>Speaker</button>
+      </div>
+      <div className="btn-group" role="group">
+        <button type="button" className="btn btn-default" onClick={this.buttonClicked}>Book</button>
+      </div>
+      <div className="btn-group" role="group">
+        <button type="button" className="btn btn-default" onClick={this.buttonClicked}>Subject</button>
+      </div>
+    </div>);
+
+    if(this.state.searchOption) {
+
+      var searchOptions;
+
+      if(this.state.searchOption == "dates")
+      {
+        var listItems = this.state.searchData.map(function(date) {
+              return (
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">{date.month} {date.year}</a></li>
+              );
+        });
+
+        searchOptions = (
+          <div className="dropdown">
+            <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+              Select a Date
+              <span className="caret"></span>
+            </button>
+            <ul className="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              {listItems}
+            </ul>
+          </div>
+        );
+      }
+
+      return (
+        <div>
+          <p>Select your search option by clicking one of the buttons below</p>
+          {buttons}
+          {searchOptions}
+          <SermonTable url={this.state.url}/>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <p>Select your search option by clicking one of the buttons below</p>
+          {buttons}
+        </div>
+      );
+    }
+
+
+  }
+});
+
 React.render(
-  <SermonTable url="http://saintfieldbaptist.org.uk/php/GetSermons.php"/>,
+  <SermonControl/>,
   document.getElementById('sermons')
 );
