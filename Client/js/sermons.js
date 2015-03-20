@@ -2,9 +2,7 @@ var SermonHeaders = React.createClass({
   render: function() {
     return (
         <tr>
-          <th>Day</th>
-          <th>Month</th>
-          <th>Year</th>
+          <th>Date</th>
           <th>Speaker</th>
           <th>Book</th>
           <th>Verses</th>
@@ -38,15 +36,13 @@ var SermonTable = React.createClass({
     var sermons = this.state.data.map(function(sermon) {
           return (
             <tr>
-              <td>{sermon.day}</td>
-              <td>{sermon.month}</td>
-              <td>{sermon.year}</td>
+              <td>{sermon.day} {sermon.month} {sermon.year}</td>
               <td>{sermon.speaker}</td>
               <td>{sermon.bibleBook}</td>
               <td>{sermon.verses}</td>
               <td>{sermon.subject}</td>
               <td>{sermon.type}</td>
-              <td>{sermon.downloadLink}</td>
+              <td><a href={sermon.downloadLink}>Download</a></td>
             </tr>
           );
     });
