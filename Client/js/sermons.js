@@ -140,10 +140,12 @@ var SermonTable = React.createClass({
           </table>
         </div>
       );
-    } else {
+    } else if(this.props.url) {
       return (
         <div className="alert alert-danger" role="alert">Sorry we have no sermons that match your search</div>
       );
+    } else {
+      return <div></div>
     }
   }
 });
