@@ -31,11 +31,14 @@ var AudioPlayer = React.createClass({
       url: 'http://saintfieldbaptist.org.uk/php/ExpandSermonLink.php?link='+this.props.url,
       dataType: 'json',
       success: function(data) {
-        var expandedUrl = data.expandedUrl;
 
-        if(!makeSuffixRegExp(".mp3").test(expandedUrl))
-        {
-          this.setState({url: this.state.url, play : this.state.play, downloadOnly : true});
+        if(this.isMounted()) {
+          var expandedUrl = data.expandedUrl;
+
+          if(!makeSuffixRegExp(".mp3").test(expandedUrl))
+          {
+            this.setState({url: this.state.url, play : this.state.play, downloadOnly : true});
+          }
         }
 
       }.bind(this),
@@ -102,7 +105,9 @@ var SermonTable = React.createClass({
         url: url,
         dataType: 'json',
         success: function(data) {
-          this.setState({data: data});
+          if(this.isMounted()) {
+            this.setState({data: data});
+          }
         }.bind(this),
         error: function(xhr, status, err) {
           console.error(url, status, err.toString());
@@ -112,28 +117,34 @@ var SermonTable = React.createClass({
   },
   render: function() {
 
-    var sermons = this.state.data.map(function(sermon) {
-          return (
-            <tr key={sermon.downloadLink}>
-              <td>{sermon.day} {sermon.month} {sermon.year}</td>
-              <td>{sermon.speaker}</td>
-              <td className="hidden-xs">{sermon.bibleBook} {sermon.verses}</td>
-              <td className="hidden-xs">{sermon.subject}</td>
-              <td className="audioPlayer"><AudioPlayer url={sermon.downloadLink}/></td>
-            </tr>
-          );
-    });
+    if(this.state.data.length > 0) {
+      var sermons = this.state.data.map(function(sermon) {
+            return (
+              <tr key={sermon.downloadLink+Math.random()}>
+                <td>{sermon.day} {sermon.month} {sermon.year}</td>
+                <td>{sermon.speaker}</td>
+                <td className="hidden-xs">{sermon.bibleBook} {sermon.verses}</td>
+                <td className="hidden-xs">{sermon.subject}</td>
+                <td className="audioPlayer"><AudioPlayer url={sermon.downloadLink}/></td>
+              </tr>
+            );
+      });
 
-    return (
-      <div className="table-responsive">
-        <table className="table table-striped table-condensed">
-          <tbody>
-            <SermonHeaders/>
-            {sermons}
-          </tbody>
-        </table>
-      </div>
-    );
+      return (
+        <div className="table-responsive">
+          <table className="table table-striped table-condensed">
+            <tbody>
+              <SermonHeaders/>
+              {sermons}
+            </tbody>
+          </table>
+        </div>
+      );
+    } else {
+      return (
+        <div className="alert alert-danger" role="alert">Sorry we have no sermons that match your search</div>
+      );
+    }
   }
 });
 
@@ -165,12 +176,14 @@ var SermonControl = React.createClass({
     var url;
 
     if(optionType == 'dates') {
-
       var dateParts = e.target.value.split(" ");
       url = 'http://saintfieldbaptist.org.uk/php/GetSermons.php?month='+dateParts[0]+'&year='+dateParts[1];
-
     } else if(optionType == 'speakers') {
       url = 'http://saintfieldbaptist.org.uk/php/GetSermons.php?speaker='+e.target.value;
+    } else if(optionType == 'books') {
+      url = 'http://saintfieldbaptist.org.uk/php/GetSermons.php?book='+e.target.value;
+    } else if(optionType == 'subjects') {
+      url = 'http://saintfieldbaptist.org.uk/php/GetSermons.php?subject='+e.target.value;
     }
 
     if(url) {
@@ -192,10 +205,10 @@ var SermonControl = React.createClass({
         <button type="button" className="btn btn-default" onClick={this.buttonClicked.bind(this,'speakers')}>Speaker</button>
       </div>
       <div className="btn-group" role="group">
-        <button type="button" className="btn btn-default" onClick={this.buttonClicked}>Book</button>
+        <button type="button" className="btn btn-default" onClick={this.buttonClicked.bind(this,'books')}>Book</button>
       </div>
       <div className="btn-group" role="group">
-        <button type="button" className="btn btn-default" onClick={this.buttonClicked}>Subject</button>
+        <button type="button" className="btn btn-default" onClick={this.buttonClicked.bind(this,'subjects')}>Subject</button>
       </div>
     </div>);
 
@@ -227,6 +240,34 @@ var SermonControl = React.createClass({
         searchOptions = (
             <select className="form-control" onChange={this.optionSelected.bind(this, 'speakers')}>
             <option value="">Please select a speaker...</option>
+                {options}
+            </select>
+        );
+      } else if(this.state.searchOption == 'books') {
+        var options = this.state.searchData.map(function(book) {
+              return (
+                <option key={book.bibleBook} value={book.bibleBook}>{book.bibleBook}</option>
+              );
+        });
+
+        searchOptions = (
+            <select className="form-control" onChange={this.optionSelected.bind(this, 'books')}>
+            <option value="">Please select a book...</option>
+                {options}
+            </select>
+        );
+      } else if(this.state.searchOption == 'subjects') {
+        var options = this.state.searchData.map(function(subject) {
+              if(subject.subject) {
+                return (
+                  <option key={subject.subject} value={subject.subject}>{subject.subject}</option>
+                );
+              }
+        });
+
+        searchOptions = (
+            <select className="form-control" onChange={this.optionSelected.bind(this, 'subjects')}>
+            <option value="">Please select a subject...</option>
                 {options}
             </select>
         );
