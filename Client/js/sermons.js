@@ -90,22 +90,31 @@ var SermonTable = React.createClass({
     return {data: []};
   },
   componentDidMount: function() {
-    $.ajax({
-      url: this.props.url,
-      dataType: 'json',
-      success: function(data) {
-        this.setState({data: data});
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
+    this.updateSermonTable(this.props.url);
+  },
+  componentWillReceiveProps : function(nextProps) {
+    this.updateSermonTable(nextProps.url);
+  },
+  updateSermonTable : function(url) {
+
+    if(url) {
+      $.ajax({
+        url: url,
+        dataType: 'json',
+        success: function(data) {
+          this.setState({data: data});
+        }.bind(this),
+        error: function(xhr, status, err) {
+          console.error(url, status, err.toString());
+        }.bind(this)
+      });
+    }
   },
   render: function() {
 
     var sermons = this.state.data.map(function(sermon) {
           return (
-            <tr>
+            <tr key={sermon.downloadLink}>
               <td>{sermon.day} {sermon.month} {sermon.year}</td>
               <td>{sermon.speaker}</td>
               <td className="hidden-xs">{sermon.bibleBook} {sermon.verses}</td>
@@ -151,7 +160,19 @@ var SermonControl = React.createClass({
         console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
-    console.log('button clicked');
+  },
+  optionSelected: function(optionType, e) {
+    if(optionType == 'dates') {
+
+      var dateParts = e.target.value.split(" ");
+
+      this.setState({
+        url : 'http://saintfieldbaptist.org.uk/php/GetSermons.php?month='+dateParts[0]+'&year='+dateParts[1],
+        searchData : this.state.searchData,
+        searchOption : this.state.searchOption
+      });
+
+    }
   },
   render: function() {
 
@@ -174,24 +195,19 @@ var SermonControl = React.createClass({
 
       var searchOptions;
 
-      if(this.state.searchOption == "dates")
+      if(this.state.searchOption == 'dates')
       {
-        var listItems = this.state.searchData.map(function(date) {
+        var options = this.state.searchData.map(function(date) {
               return (
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">{date.month} {date.year}</a></li>
+                <option key={date.month+' '+date.year} value={date.month+' '+date.year}>{date.month} {date.year}</option>
               );
         });
 
         searchOptions = (
-          <div className="dropdown">
-            <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-              Select a Date
-              <span className="caret"></span>
-            </button>
-            <ul className="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-              {listItems}
-            </ul>
-          </div>
+            <select className="form-control" onChange={this.optionSelected.bind(this, 'dates')}>
+            <option value="">Please select a date...</option>
+                {options}
+            </select>
         );
       }
 
@@ -203,6 +219,7 @@ var SermonControl = React.createClass({
           <SermonTable url={this.state.url}/>
         </div>
       );
+
     } else {
       return (
         <div>
