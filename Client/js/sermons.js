@@ -162,17 +162,25 @@ var SermonControl = React.createClass({
     });
   },
   optionSelected: function(optionType, e) {
+    var url;
+
     if(optionType == 'dates') {
 
       var dateParts = e.target.value.split(" ");
+      url = 'http://saintfieldbaptist.org.uk/php/GetSermons.php?month='+dateParts[0]+'&year='+dateParts[1];
 
+    } else if(optionType == 'speakers') {
+      url = 'http://saintfieldbaptist.org.uk/php/GetSermons.php?speaker='+e.target.value;
+    }
+
+    if(url) {
       this.setState({
-        url : 'http://saintfieldbaptist.org.uk/php/GetSermons.php?month='+dateParts[0]+'&year='+dateParts[1],
+        url : url,
         searchData : this.state.searchData,
         searchOption : this.state.searchOption
       });
-
     }
+
   },
   render: function() {
 
@@ -181,7 +189,7 @@ var SermonControl = React.createClass({
         <button type="button" className="btn btn-default" onClick={this.buttonClicked.bind(this,'dates')}>Date</button>
       </div>
       <div className="btn-group" role="group">
-        <button type="button" className="btn btn-default" onClick={this.buttonClicked}>Speaker</button>
+        <button type="button" className="btn btn-default" onClick={this.buttonClicked.bind(this,'speakers')}>Speaker</button>
       </div>
       <div className="btn-group" role="group">
         <button type="button" className="btn btn-default" onClick={this.buttonClicked}>Book</button>
@@ -206,6 +214,19 @@ var SermonControl = React.createClass({
         searchOptions = (
             <select className="form-control" onChange={this.optionSelected.bind(this, 'dates')}>
             <option value="">Please select a date...</option>
+                {options}
+            </select>
+        );
+      } else if(this.state.searchOption == 'speakers') {
+        var options = this.state.searchData.map(function(speaker) {
+              return (
+                <option key={speaker.speaker} value={speaker.speaker}>{speaker.speaker}</option>
+              );
+        });
+
+        searchOptions = (
+            <select className="form-control" onChange={this.optionSelected.bind(this, 'speakers')}>
+            <option value="">Please select a speaker...</option>
                 {options}
             </select>
         );
