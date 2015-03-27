@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>SBC | Sermon Downloads</title>
+    <title>SBC | About</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -29,25 +29,46 @@
 
       <div class="container-fluid">
         <div class="page-header">
-          <h1>Sermon Downloads</h1>
+          <h1>Weekly Meetings</h1>
         </div>
       </div>
 
       <div class="container-fluid main-content">
-        <div id="sermons"></div>
-      </div>
+        <p class="lead">Sunday Meetings</p>
+        <table class="table">
+          <tr><td>Sunday School</td><td>10.30am</td></tr>
+          <tr><td>Morning Meeting</td><td>11.30am</td></tr>
+          <tr><td>Gospel Service</td><td>7.00pm</td></tr>
+          <tr><td colspan="2">Both services preceeded by times of prayer</td></tr>
+        </table>
+        <br>
+        <p class="lead">Upcoming Sunday Speakers</p>
+        <table class="table">
+          <tr><td>1st March</td><td>Mr Sydney Ward</td></tr>
+          <tr><td>8th March</td><td>Pastor John McFarland</td></tr>
+          <tr><td>15th March</td><td>Mr Stephen Moffatt</td></tr>
+          <tr><td>22nd March</td><td>Pastor Edward Rea</td></tr>
+          <tr><td>29th March</td><td>Pastor Edward Rea</td></tr>
+        </table>
+        <br>
+        <p class="lead">Midweek Meetings</p>
+        <table class="table">
+          <tr><td>Sunday School</td><td>10.30am</td></tr>
+          <tr><td>Morning Meeting</td><td>11.30am</td></tr>
+          <tr><td>Gospel Service</td><td>7.00pm</td></tr>
+          <tr><td colspan="2">Both services preceeded by times of prayer</td></tr>
+        </table>
+     </div>
 
       <div class="container-fluid footer" id="footer"></div>
 
       <script src="http://fb.me/react-0.12.2.js"></script>
       <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
       <script type="text/jsx" src="js/navigation.js"></script>
-      <script type="text/jsx" src="js/audioPlayer.js"></script>
-      <script type="text/jsx" src="js/sermons.js"></script>
       <script type="text/jsx" src="js/footer.js"></script>
       <script type="text/jsx">
         React.render(
-          <Navigation currentPage="Sermon Downloads"/>,
+          <Navigation currentPage="Weekly Meetings"/>,
           document.getElementById('navigation')
         );
       </script>

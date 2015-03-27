@@ -57,7 +57,7 @@ var NewsBlock = React.createClass({
 
     var sermons = this.state.data.map(function(sermon) {
           return (
-            <NewsBlockRow date={sermon.day + " " +sermon.month + " " + sermon.year} speaker={sermon.speaker} downloadLink={sermon.downloadLink}/>
+            <NewsBlockRow date={sermon.day + " " +sermon.month + " " + sermon.year} speaker={sermon.speaker} downloadLink={sermon.downloadLink} key={sermon.downloadLink}/>
           );
     });
 

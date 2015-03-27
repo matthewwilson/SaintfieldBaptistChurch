@@ -8,7 +8,7 @@ var NavigationHeader = React.createClass({
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="index.html">
           <img alt="SBC" src="img/church_icon.png"></img>
         </a>
       </div>
@@ -32,10 +32,12 @@ var NavigationItems = React.createClass({
       <div className="collapse navbar-collapse" id="navigation-collapse">
         <ul className="nav navbar-nav">
           <NavigationItem name="Home" currentPage={this.props.currentPage} link="index.html"/>
-          <NavigationItem name="About" currentPage={this.props.currentPage} link="index.html"/>
-          <NavigationItem name="Announcements" currentPage={this.props.currentPage} link="index.html"/>
+          <NavigationItem name="About" currentPage={this.props.currentPage} link="about.html"/>
+          <NavigationItem name="Weekly Meetings" currentPage={this.props.currentPage} link="meetings.html"/>
+          <NavigationItem name="Church Bulletin" currentPage={this.props.currentPage} link="index.html"/>
           <NavigationItem name="Watch Live" currentPage={this.props.currentPage} link="index.html"/>
           <NavigationItem name="Sermon Downloads" currentPage={this.props.currentPage} link="sermons.html"/>
+          <NavigationItem name="Contact Us" currentPage={this.props.currentPage} link="sermons.html"/>
         </ul>
       </div>
     );
