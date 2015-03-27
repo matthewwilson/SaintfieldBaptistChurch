@@ -1,6 +1,13 @@
+html {
+  height: 100%;
+}
+
 body {
   padding-top: 50px;
   font-family: 'Lato', sans-serif;
+  position: relative;
+  min-height: 100%;
+  padding-bottom:640px;
 }
 
 .navbar {
@@ -27,6 +34,10 @@ body {
 }
 
 @media (min-width: 1200px) {
+  body {
+    padding-bottom:300px;
+  }
+
   .jumbo-church-meeting {
     height:380px;
   }
@@ -37,6 +48,12 @@ body {
 
   .church-outline {
     display:block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-bottom:300px;
   }
 }
 
@@ -51,6 +68,10 @@ body {
   background-color:#e7e7e7;
   padding-top:30px;
   padding-bottom:30px;
+}
+
+.squares a:hover {
+  text-decoration:none;
 }
 
 .square {
@@ -134,14 +155,20 @@ body {
   border-bottom-style:solid;
   border-width:1px;
   border-color: #e7e7e7;
+  padding-top:15px;
+  padding-bottom:10px;
 }
 
 .footer {
-  margin-top:20px;
+  margin-top:100px;
   padding-top: 50px;
   padding-bottom: 25px;
   background-color:#4470CC;
   color:white;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  clear:both;
 }
 
 .footer-church-name h3 {
@@ -172,4 +199,19 @@ body {
 
 .audioPlayer button {
   vertical-align:middle;
+}
+
+.main-content {
+  padding-bottom:50px;
+  min-height:500px;
+}
+
+.sermon-buttons {
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.sermon-select {
+  margin-top:20px;
+  margin-bottom:20px;
 }

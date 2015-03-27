@@ -12,85 +12,12 @@ var SermonHeaders = React.createClass({
   }
 });
 
-function makeSuffixRegExp(suffix, caseInsensitive) {
-  return new RegExp(
-      String(suffix).replace(/[$%()*+.?\[\\\]{|}]/g, "\\$&") + "$",
-      caseInsensitive ? "i" : "");
-}
-
-var AudioPlayer = React.createClass({
-  getInitialState: function() {
-    return {
-      url : this.props.url,
-      play : false,
-      downloadOnly : false
-    };
-  },
-  componentDidMount: function() {
-    $.ajax({
-      url: 'http://saintfieldbaptist.org.uk/php/ExpandSermonLink.php?link='+this.props.url,
-      dataType: 'json',
-      success: function(data) {
-
-        if(this.isMounted()) {
-          var expandedUrl = data.expandedUrl;
-
-          if(!makeSuffixRegExp(".mp3").test(expandedUrl))
-          {
-            this.setState({url: this.state.url, play : this.state.play, downloadOnly : true});
-          }
-        }
-
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
-  },
-  listenClicked : function() {
-    this.setState({url: this.state.url, play: true, downloadOnly : this.state.downloadOnly});
-  },
-  render: function() {
-
-    if(this.state.downloadOnly)
-    {
-      return (
-        <a href={this.state.url} className="btn btn-default btn-sm">
-          <span className="glyphicon glyphicon-download" aria-hidden="true"></span> Download
-        </a>
-      );
-    } else if(this.state.play) {
-      return (
-        <div>
-          <a href={this.state.url} className="btn btn-default btn-sm">
-            <span className="glyphicon glyphicon-download" aria-hidden="true"></span> Download
-          </a>
-          <audio controls className="audio">
-            <source src={this.state.url} type="audio/mpeg"></source>
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      );
-    } else {
-      return (
-        <div className="btn-group" role="group">
-          <a href={this.state.url} className="btn btn-default btn-sm">
-            <span className="glyphicon glyphicon-download" aria-hidden="true"></span> Download
-          </a>
-          <button type="button" className="btn btn-default btn-sm" onClick={this.listenClicked}>
-            <span className="glyphicon glyphicon-headphones" aria-hidden="true"></span> Listen
-          </button>
-        </div>
-      );
-    }
-
-  }
-});
-
-
 var SermonTable = React.createClass({
   getInitialState: function() {
-    return {data: []};
+    return {
+      data: [],
+      initialResponseReceived:false
+    };
   },
   componentDidMount: function() {
     this.updateSermonTable(this.props.url);
@@ -106,7 +33,7 @@ var SermonTable = React.createClass({
         dataType: 'json',
         success: function(data) {
           if(this.isMounted()) {
-            this.setState({data: data});
+            this.setState({data: data, initialResponseReceived:true});
           }
         }.bind(this),
         error: function(xhr, status, err) {
@@ -140,7 +67,7 @@ var SermonTable = React.createClass({
           </table>
         </div>
       );
-    } else if(this.props.url) {
+    } else if(this.props.url && this.state.initialResponseReceived) {
       return (
         <div className="alert alert-danger" role="alert">Sorry we have no sermons that match your search</div>
       );
@@ -199,7 +126,7 @@ var SermonControl = React.createClass({
   },
   render: function() {
 
-    var buttons = (<div className="btn-group btn-group-justified" role="group" aria-label="...">
+    var buttons = (<div className="btn-group btn-group-justified sermon-buttons" role="group" aria-label="...">
       <div className="btn-group" role="group">
         <button type="button" className="btn btn-default" onClick={this.buttonClicked.bind(this,'dates')}>Date</button>
       </div>
@@ -227,7 +154,7 @@ var SermonControl = React.createClass({
         });
 
         searchOptions = (
-            <select className="form-control" onChange={this.optionSelected.bind(this, 'dates')}>
+            <select className="form-control sermon-select" onChange={this.optionSelected.bind(this, 'dates')}>
             <option value="">Please select a date...</option>
                 {options}
             </select>
@@ -240,7 +167,7 @@ var SermonControl = React.createClass({
         });
 
         searchOptions = (
-            <select className="form-control" onChange={this.optionSelected.bind(this, 'speakers')}>
+            <select className="form-control sermon-select" onChange={this.optionSelected.bind(this, 'speakers')}>
             <option value="">Please select a speaker...</option>
                 {options}
             </select>
@@ -253,7 +180,7 @@ var SermonControl = React.createClass({
         });
 
         searchOptions = (
-            <select className="form-control" onChange={this.optionSelected.bind(this, 'books')}>
+            <select className="form-control sermon-select" onChange={this.optionSelected.bind(this, 'books')}>
             <option value="">Please select a book...</option>
                 {options}
             </select>
@@ -268,7 +195,7 @@ var SermonControl = React.createClass({
         });
 
         searchOptions = (
-            <select className="form-control" onChange={this.optionSelected.bind(this, 'subjects')}>
+            <select className="form-control sermon-select" onChange={this.optionSelected.bind(this, 'subjects')}>
             <option value="">Please select a subject...</option>
                 {options}
             </select>

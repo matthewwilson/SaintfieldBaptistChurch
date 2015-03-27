@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Saintfield Baptist Church</title>
 
@@ -59,9 +59,11 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="square downloads">
-              <h1>Sermon</br>Downloads</h1>
-            </div>
+            <a href="sermons.html">
+              <div class="square downloads">
+                <h1>Sermon</br>Downloads</h1>
+              </div>
+            </a>
           </div>
           <div class="col-md-3">
             <div class="square live">
@@ -101,48 +103,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="news-block">
-              <div class="news-block-heading"><h3>Recent Sermons</h3></div>
-              <div class="news-block-body">
-                <div class="row news-block-row">
-                  <div class="col-md-3"><p>8.3.15</p></div>
-                  <div class="col-md-7"><p class="lead">Pastor John McFarland</p></div>
-                  <div class="col-md-2">
-                    <button type="button" class="btn btn-default btn-sm">
-                      <span class="glyphicon glyphicon glyphicon-headphones" aria-hidden="true"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="row news-block-row">
-                  <div class="col-md-3"><p>8.3.15</p></div>
-                  <div class="col-md-7"><p class="lead">Pastor John McFarland</p></div>
-                  <div class="col-md-2">
-                    <button type="button" class="btn btn-default btn-sm">
-                      <span class="glyphicon glyphicon glyphicon-headphones" aria-hidden="true"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="row news-block-row">
-                  <div class="col-md-3"><p>15.3.15</p></div>
-                  <div class="col-md-7"><p class="lead">Stephen Moffatt</p></div>
-                  <div class="col-md-2">
-                    <button type="button" class="btn btn-default btn-sm">
-                      <span class="glyphicon glyphicon glyphicon-headphones" aria-hidden="true"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="row news-block-row">
-                  <div class="col-md-3"><p>15.3.15</p></div>
-                  <div class="col-md-7"><p class="lead">Stephen Moffatt</p></div>
-                  <div class="col-md-2">
-                    <button type="button" class="btn btn-default btn-sm">
-                      <span class="glyphicon glyphicon glyphicon-headphones" aria-hidden="true"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="col-md-6" id="recent-sermons">
+
           </div>
         </div>
       </div>
@@ -152,6 +114,8 @@
       <script src="http://fb.me/react-0.12.2.js"></script>
       <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
       <script type="text/jsx" src="js/navigation.js"></script>
+      <script type="text/jsx" src="js/audioPlayer.js"></script>
+      <script type="text/jsx" src="js/recentSermons.js"></script>
       <script type="text/jsx" src="js/footer.js"></script>
       <script type="text/jsx">
         React.render(
