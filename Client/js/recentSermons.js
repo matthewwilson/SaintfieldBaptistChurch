@@ -22,8 +22,8 @@ var NewsBlockRow = React.createClass({
     return (
       <div className="row news-block-row">
         <div className="col-md-2"><p>{this.state.date}</p></div>
-        <div className="col-md-4"><p className="lead">{this.props.speaker}</p></div>
-        <div className="col-md-6">
+        <div className="col-md-5"><p className="lead">{this.props.speaker}</p></div>
+        <div className="col-md-5">
           <AudioPlayer url={this.props.downloadLink}/>
         </div>
       </div>

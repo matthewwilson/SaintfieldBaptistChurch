@@ -187,6 +187,7 @@ body {
 .audio {
   margin-top:5px;
   display:block;
+  width:95%;
 }
 
 .audioPlayer {
