@@ -13,7 +13,7 @@ var NewsBlockRow = React.createClass({
     var dateParts = this.props.date.split(" ");
     var day = dateParts[0].replace(/\D/g,'');
     var month = getMonthFromString(dateParts[1]);
-    var year = dateParts[2].substring(2,3);
+    var year = dateParts[2].substring(2,4);
 
     return {date: day+"."+month+"."+year};
 
@@ -34,17 +34,35 @@ var NewsBlockRow = React.createClass({
 var NewsBlock = React.createClass({
   getInitialState: function() {
     return {
+      url: this.props.url,
       data: []
     };
+  },
+  getSermons: function(count) {
+
+    var sermonUrl = this.state.url + '?count=' +count;
+
+    $.ajax({
+      url: sermonUrl,
+      dataType: 'json',
+      success: function(data) {
+        if(this.isMounted()) {
+          this.setState({url: this.state.url, data: data});
+        }
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(url, status, err.toString());
+      }.bind(this)
+    });
   },
   componentDidMount: function() {
     if(this.props.url) {
       $.ajax({
-        url: this.props.url,
+        url: "http://saintfieldbaptist.org.uk/php/GetSundaySpeakers.php",
         dataType: 'json',
         success: function(data) {
           if(this.isMounted()) {
-            this.setState({data: data});
+            this.getSermons(data.length);
           }
         }.bind(this),
         error: function(xhr, status, err) {
