@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>SBC | Meetings</title>
+    <title>SBC | Contact Us</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -29,47 +29,37 @@
 
       <div class="container-fluid">
         <div class="page-header">
-          <h1>Weekly Meetings</h1>
+          <h1>Contact Us</h1>
         </div>
       </div>
 
+      <div class="container-fluid google-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18556.005004244576!2d-5.826712305557256!3d54.454100942542745!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4861121c51fedbc5%3A0x651d3674f0673947!2sSaintfield+Baptist+Church!5e0!3m2!1sen!2suk!4v1428159881824" width="1024" height="300" frameborder="0" style="border:0"></iframe>
+      </div>
+
       <div class="container-fluid main-content">
-
-        <p class="lead">Midweek Meetings</p>
-        <table class="table">
-          <tr><td>Women's Meeting</td><td>Last Tuesday of each month at 8pm</td></tr>
-          <tr><td>Searchers</td><td>Every Wednesday night at 6:45pm</td></tr>
-          <tr><td>Bible study and prayer meeting</td><td>Every Wednesday night at 8pm</td></tr>
-          <tr><td>Friendly hour</td><td>First Thursday of each month at 10:45am</td></tr>
-          <tr><td>Junior scene</td><td>Friday nights (as announced)</td></tr>
-        </table>
+        <address>
+          <strong>Saintfield Baptist Church</strong><br>
+          51 Crossgar Road<br>
+          Saintfield<br>
+        </address>
         <br>
-
-        <p class="lead">Sunday Meetings</p>
-        <table class="table">
-          <tr><td>Sunday school</td><td>10.30am</td></tr>
-          <tr><td>Morning meeting</td><td>11.30am</td></tr>
-          <tr><td>Gospel service</td><td>7.00pm</td></tr>
-          <tr><td>Youth fellowship</td><td>Every other Sunday at 8:30pm</td></tr>
-          <tr><td colspan="2">Both the morning and gospel services are preceded by times of prayer</td></tr>
-        </table>
+        <abbr title="FaceBook">Like: </abbr><a href="https://www.facebook.com/pages/Saintfield-Baptist-Church/105178506183089?sk=wall">Facebook</a>
         <br>
-
-        <div id="sunday-speakers"></div>
+        <abbr title="Twitter">Follow: </abbr><a href="https://twitter.com/SaintfieldBC">Twitter</a>
         <br>
-
-     </div>
+        <abbr title="Mail">E-mail: </abbr><a href="mailto:matthew@saintfieldbaptist.org.uk">matthew@saintfieldbaptist.org.uk</a>
+      </div>
 
       <div class="container-fluid footer" id="footer"></div>
 
       <script src="http://fb.me/react-0.12.2.js"></script>
       <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
       <script type="text/jsx" src="js/navigation.js"></script>
-      <script type="text/jsx" src="js/sundayspeakers.js"></script>
       <script type="text/jsx" src="js/footer.js"></script>
       <script type="text/jsx">
         React.render(
-          <Navigation currentPage="Weekly Meetings"/>,
+          <Navigation currentPage="Contact Us"/>,
           document.getElementById('navigation')
         );
       </script>

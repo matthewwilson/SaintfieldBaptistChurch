@@ -216,3 +216,12 @@ body {
   margin-top:20px;
   margin-bottom:20px;
 }
+
+.google-maps {
+  padding-bottom:20px;
+}
+
+.google-maps iframe {
+    width: 100% !important;
+    height: 300px !important;
+}
