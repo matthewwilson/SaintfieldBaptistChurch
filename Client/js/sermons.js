@@ -204,7 +204,7 @@ var SermonControl = React.createClass({
 
       return (
         <div>
-          <p>Select your search option by clicking one of the buttons below</p>
+          <p className="lead">Select a search option by clicking one of the buttons below</p>
           {buttons}
           {searchOptions}
           <SermonTable url={this.state.url}/>
@@ -214,7 +214,7 @@ var SermonControl = React.createClass({
     } else {
       return (
         <div>
-          <p>Select your search option by clicking one of the buttons below</p>
+          <p className="lead">Select a search option by clicking one of the buttons below</p>
           {buttons}
         </div>
       );

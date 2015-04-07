@@ -225,3 +225,7 @@ body {
     width: 100% !important;
     height: 300px !important;
 }
+
+#sbc-live-player {
+  max-width:854px;
+}

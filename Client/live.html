@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>SBC | About</title>
+    <title>SBC | Watch Live</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -29,40 +29,24 @@
 
       <div class="container">
         <div class="page-header">
-          <h1>About Us</h1>
+          <h1>Watch Live</h1>
         </div>
       </div>
 
-      <div class="container main-content">
-        <p>Thank you for visiting our web site. Saintfield Baptist Church is a relatively young church having recently celebrated its twentieth year.  Our desire is to exalt the Name of our Saviour the Lord Jesus Christ.</p>
-
-        <blockquote>
-          <p>And he is the head of the body, the church: who is the beginning, the firstborn from the dead; that in all things he might have the pre-eminence.</p>
-          <footer>Col. 1:18</footer>
-        </blockquote>
-
-        <p>The main focus in our meetings is the preaching of God’s Word.</p>
-
-        <blockquote>
-          <p>Preach the word; be instant in season, out of season; reprove, rebuke, exhort with all longsuffering and doctrine.</p>
-          <footer>2 Tim. 4:2</footer>
-        </blockquote>
-
-        <p>Crèche facilities and Children’s church operate during our Sunday morning meeting.</p>
-        <p>If you are visiting in the area or seeking a place to worship we heartily invite you to come along and enjoy the fellowship of God’s people.  We assure you of a warm welcome at all times.</p>
-        <br>
-        <p>To see our weekly meeting times and upcoming speakers <a href="meetings.html">click here</a></p>
-     </div>
+      <div class="container main-content player">
+        <div id="sbc-live-player"></div>
+      </div>
 
       <div class="container-fluid footer" id="footer"></div>
 
       <script src="http://fb.me/react-0.12.2.js"></script>
       <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
       <script type="text/jsx" src="js/navigation.js"></script>
+      <script type="text/jsx" src="js/liveVideoPlayer.js"></script>
       <script type="text/jsx" src="js/footer.js"></script>
       <script type="text/jsx">
         React.render(
-          <Navigation currentPage="About"/>,
+          <Navigation currentPage="Watch Live"/>,
           document.getElementById('navigation')
         );
       </script>
