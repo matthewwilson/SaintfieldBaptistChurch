@@ -33,6 +33,12 @@ body {
   font-weight:900;
 }
 
+.live-alert {
+  background-color:#e7e7e7;
+  padding-top:20px;
+  padding-bottom:0px;
+}
+
 @media (min-width: 1200px) {
   body {
     padding-bottom:300px;
