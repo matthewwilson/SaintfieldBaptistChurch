@@ -190,6 +190,10 @@ body {
   font-size:12px;
 }
 
+.footer-copyright a{
+  color:white;
+}
+
 .audio {
   margin-top:5px;
   display:block;
