@@ -6,3 +6,11 @@ Server/GetSermons.php
 Client/.htaccess
 
 Client/build/.module-cache
+
+manifest examples.txt
+
+Server/GetLiveStatus.php
+
+Server/GetSundaySpeakers.php
+
+Server/UpdateLiveStatus.php
