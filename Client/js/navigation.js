@@ -44,7 +44,6 @@ var NavigationItems = React.createClass({
   }
 });
 
-
 var Navigation = React.createClass({
   render: function() {
     return (

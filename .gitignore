@@ -2,3 +2,7 @@
 Server/GetMostRecentSermons.php
 
 Server/GetSermons.php
+
+Client/.htaccess
+
+Client/build/.module-cache

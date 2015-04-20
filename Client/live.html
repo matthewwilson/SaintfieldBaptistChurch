@@ -8,7 +8,7 @@
     <title>SBC | Watch Live</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="build/bootstrap.min.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
 
@@ -39,14 +39,13 @@
 
       <div class="container-fluid footer" id="footer"></div>
 
-      <script src="http://fb.me/react-0.12.2.js"></script>
-      <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
-      <script type="text/jsx" src="js/navigation.js"></script>
-      <script type="text/jsx" src="js/liveVideoPlayer.js"></script>
-      <script type="text/jsx" src="js/footer.js"></script>
-      <script type="text/jsx">
+      <script src="build/react.min.js"></script>
+      <script src="build/navigation.js"></script>
+      <script src="build/liveVideoPlayer.js"></script>
+      <script src="build/footer.js"></script>
+      <script>
         React.render(
-          <Navigation currentPage="Watch Live"/>,
+          React.createElement(Navigation, {currentPage: "Watch Live"}),
           document.getElementById('navigation')
         );
       </script>
