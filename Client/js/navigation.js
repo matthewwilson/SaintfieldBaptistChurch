@@ -20,6 +20,8 @@ var NavigationItem = React.createClass({
   render: function() {
     if(this.props.currentPage == this.props.name) {
       return (<li className="active"><a href={this.props.link}>{this.props.name} <span className="sr-only">(current)</span></a></li>)
+    } else if(this.props.target){
+      return (<li><a href={this.props.link} target={this.props.target}>{this.props.name}</a></li>);
     } else {
       return (<li><a href={this.props.link}>{this.props.name}</a></li>);
     }
@@ -34,7 +36,7 @@ var NavigationItems = React.createClass({
           <NavigationItem name="Home" currentPage={this.props.currentPage} link="index.html"/>
           <NavigationItem name="About" currentPage={this.props.currentPage} link="about.html"/>
           <NavigationItem name="Weekly Meetings" currentPage={this.props.currentPage} link="meetings.html"/>
-          <NavigationItem name="Church Bulletin" currentPage={this.props.currentPage} link="bulletin/bulletin.pdf"/>
+          <NavigationItem name="Church Bulletin" currentPage={this.props.currentPage} link="bulletin/bulletin.pdf" target="_blank"/>
           <NavigationItem name="Watch Live" currentPage={this.props.currentPage} link="live.html"/>
           <NavigationItem name="Sermon Downloads" currentPage={this.props.currentPage} link="sermons.html"/>
           <NavigationItem name="Contact Us" currentPage={this.props.currentPage} link="contact.html"/>

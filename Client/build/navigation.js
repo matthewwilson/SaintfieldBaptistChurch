@@ -20,6 +20,8 @@ var NavigationItem = React.createClass({displayName: "NavigationItem",
   render: function() {
     if(this.props.currentPage == this.props.name) {
       return (React.createElement("li", {className: "active"}, React.createElement("a", {href: this.props.link}, this.props.name, " ", React.createElement("span", {className: "sr-only"}, "(current)"))))
+    } else if(this.props.target){
+      return (React.createElement("li", null, React.createElement("a", {href: this.props.link, target: this.props.target}, this.props.name)));
     } else {
       return (React.createElement("li", null, React.createElement("a", {href: this.props.link}, this.props.name)));
     }
@@ -34,7 +36,7 @@ var NavigationItems = React.createClass({displayName: "NavigationItems",
           React.createElement(NavigationItem, {name: "Home", currentPage: this.props.currentPage, link: "index.html"}), 
           React.createElement(NavigationItem, {name: "About", currentPage: this.props.currentPage, link: "about.html"}), 
           React.createElement(NavigationItem, {name: "Weekly Meetings", currentPage: this.props.currentPage, link: "meetings.html"}), 
-          React.createElement(NavigationItem, {name: "Church Bulletin", currentPage: this.props.currentPage, link: "bulletin/bulletin.pdf"}), 
+          React.createElement(NavigationItem, {name: "Church Bulletin", currentPage: this.props.currentPage, link: "bulletin/bulletin.pdf", target: "_blank"}), 
           React.createElement(NavigationItem, {name: "Watch Live", currentPage: this.props.currentPage, link: "live.html"}), 
           React.createElement(NavigationItem, {name: "Sermon Downloads", currentPage: this.props.currentPage, link: "sermons.html"}), 
           React.createElement(NavigationItem, {name: "Contact Us", currentPage: this.props.currentPage, link: "contact.html"})
