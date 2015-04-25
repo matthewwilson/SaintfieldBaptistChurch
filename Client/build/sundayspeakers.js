@@ -31,7 +31,7 @@ var SpeakersTable = React.createClass({displayName: "SpeakersTable",
             );
           } else {
             return (
-              React.createElement("tr", null, React.createElement("td", null, "sundayMeeting.date"), React.createElement("td", null, React.createElement("p", null, "AM:", sundayMeeting.morning), React.createElement("p", null, "PM:", sundayMeeting.evening)))
+              React.createElement("tr", null, React.createElement("td", null, sundayMeeting.date), React.createElement("td", null, React.createElement("p", null, "AM:", sundayMeeting.morning), React.createElement("p", null, "PM:", sundayMeeting.evening)))
             );
           }
     });

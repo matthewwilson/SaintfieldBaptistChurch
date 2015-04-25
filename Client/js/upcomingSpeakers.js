@@ -18,12 +18,22 @@ var SundayNewsBlockRow = React.createClass({
 
   },
   render: function() {
-    return (
-      <div className="row news-block-row">
-        <div className="col-md-3"><p>{this.state.date}</p></div>
-        <div className="col-md-9"><p className="lead">{this.props.speaker}</p></div>
-      </div>
-    );
+
+    if(this.props.speaker == this.props.eveningSpeaker) {
+      return (
+        <div className="row news-block-row">
+          <div className="col-md-3"><p>{this.state.date}</p></div>
+          <div className="col-md-9"><p className="lead">{this.props.speaker}</p></div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="row news-block-row">
+          <div className="col-md-3"><p>{this.state.date}</p></div>
+          <div className="col-md-9"><p className="lead">AM:{this.props.speaker} <br></br> PM:{this.props.eveningSpeaker}</p></div>
+        </div>
+      );
+    }
   }
 });
 
@@ -53,7 +63,7 @@ var SundayNewsBlock = React.createClass({
 
     var speakers = this.state.data.map(function(sundayMeeting) {
           return (
-            <SundayNewsBlockRow date={sundayMeeting.date} speaker={sundayMeeting.morning}/>
+            <SundayNewsBlockRow date={sundayMeeting.date} speaker={sundayMeeting.morning} eveningSpeaker={sundayMeeting.evening}/>
           );
     });
 

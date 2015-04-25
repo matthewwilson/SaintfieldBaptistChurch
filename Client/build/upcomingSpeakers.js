@@ -18,12 +18,22 @@ var SundayNewsBlockRow = React.createClass({displayName: "SundayNewsBlockRow",
 
   },
   render: function() {
-    return (
-      React.createElement("div", {className: "row news-block-row"}, 
-        React.createElement("div", {className: "col-md-3"}, React.createElement("p", null, this.state.date)), 
-        React.createElement("div", {className: "col-md-9"}, React.createElement("p", {className: "lead"}, this.props.speaker))
-      )
-    );
+
+    if(this.props.speaker == this.props.eveningSpeaker) {
+      return (
+        React.createElement("div", {className: "row news-block-row"}, 
+          React.createElement("div", {className: "col-md-3"}, React.createElement("p", null, this.state.date)), 
+          React.createElement("div", {className: "col-md-9"}, React.createElement("p", {className: "lead"}, this.props.speaker))
+        )
+      );
+    } else {
+      return (
+        React.createElement("div", {className: "row news-block-row"}, 
+          React.createElement("div", {className: "col-md-3"}, React.createElement("p", null, this.state.date)), 
+          React.createElement("div", {className: "col-md-9"}, React.createElement("p", {className: "lead"}, "AM:", this.props.speaker, " ", React.createElement("br", null), " PM:", this.props.eveningSpeaker))
+        )
+      );
+    }
   }
 });
 
@@ -53,7 +63,7 @@ var SundayNewsBlock = React.createClass({displayName: "SundayNewsBlock",
 
     var speakers = this.state.data.map(function(sundayMeeting) {
           return (
-            React.createElement(SundayNewsBlockRow, {date: sundayMeeting.date, speaker: sundayMeeting.morning})
+            React.createElement(SundayNewsBlockRow, {date: sundayMeeting.date, speaker: sundayMeeting.morning, eveningSpeaker: sundayMeeting.evening})
           );
     });
 

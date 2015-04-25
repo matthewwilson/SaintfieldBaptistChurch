@@ -31,7 +31,7 @@ var SpeakersTable = React.createClass({
             );
           } else {
             return (
-              <tr><td>sundayMeeting.date</td><td><p>AM:{sundayMeeting.morning}</p><p>PM:{sundayMeeting.evening}</p></td></tr>
+              <tr><td>{sundayMeeting.date}</td><td><p>AM:{sundayMeeting.morning}</p><p>PM:{sundayMeeting.evening}</p></td></tr>
             );
           }
     });
