@@ -14,3 +14,19 @@ Server/GetLiveStatus.php
 Server/GetSundaySpeakers.php
 
 Server/UpdateLiveStatus.php
+
+Server/AddSermon.php
+
+Server/error_log
+
+Server/GetBook.php
+
+Server/GetMonth.php
+
+Server/GetOrInsertDay.php
+
+Server/GetOrInsertSermonType.php
+
+Server/GetOrInsertSpeaker.php
+
+Server/GetOrInsertYear.php
