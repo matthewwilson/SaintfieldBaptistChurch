@@ -25,7 +25,7 @@ var Footer = React.createClass({
           </div>
         </div>
         <p></p>
-        <p className="footer-copyright">Saintfield Baptist Church © 2015. All Rights Reserved. <a href="https://github.com/matthewcodes/SaintfieldBaptistChurch">v1.0.1</a></p>
+        <p className="footer-copyright">Saintfield Baptist Church © 2015. All Rights Reserved. <a href="https://github.com/matthewcodes/SaintfieldBaptistChurch">v1.0.2</a></p>
       </div>
     );
   }

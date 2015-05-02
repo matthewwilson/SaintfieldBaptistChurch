@@ -36,7 +36,7 @@ var VideoPlayer = React.createClass({displayName: "VideoPlayer",
         )
       );
     } else {
-      return(React.createElement("h2", {className: "lead"}, "Our live broadcast is offline"));
+      return(React.createElement("h2", {className: "lead"}, "Our live broadcast is offline - player will appear here when service begins."));
     }
   }
 });
