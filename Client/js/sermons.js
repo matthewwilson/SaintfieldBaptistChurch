@@ -52,7 +52,7 @@ var SermonTable = React.createClass({
                 <td>{sermon.speaker}</td>
                 <td className="hidden-xs">{sermon.bibleBook} {sermon.verses}</td>
                 <td className="hidden-xs">{sermon.subject}</td>
-                <td className="audioPlayer"><AudioPlayer url={sermon.downloadLink}/></td>
+                <td className="audioPlayer"><AudioPlayer url={sermon.downloadLink} id={sermon.id}/></td>
               </tr>
             );
       });
@@ -79,11 +79,28 @@ var SermonTable = React.createClass({
 
 var SermonControl = React.createClass({
   getInitialState: function() {
-    return {
-      url : "",
-      searchData : [],
-      searchOption : ""
+
+    if(window.location.hash) {
+      var hash = window.location.hash.substring(1);
+      var idUrl = "http://saintfieldbaptist.org.uk/php/GetSermons.php?id="+hash;
+
+      return {
+        url : idUrl,
+        searchData : [],
+        searchOption : "",
+        specificSermon : true
+      }
+
+    } else {
+      return {
+        url : "",
+        searchData : [],
+        searchOption : "",
+        specificSermon : false
+      }
     }
+
+
   },
   buttonClicked: function(selectedSearchOption) {
     $.ajax({
@@ -93,7 +110,8 @@ var SermonControl = React.createClass({
         this.setState({
           url : this.state.url,
           searchData : data,
-          searchOption : selectedSearchOption
+          searchOption : selectedSearchOption,
+          specificSermon : false
         });
       }.bind(this),
       error: function(xhr, status, err) {
@@ -119,7 +137,8 @@ var SermonControl = React.createClass({
       this.setState({
         url : url,
         searchData : this.state.searchData,
-        searchOption : this.state.searchOption
+        searchOption : this.state.searchOption,
+        specificSermon : false
       });
     }
 
@@ -141,7 +160,14 @@ var SermonControl = React.createClass({
       </div>
     </div>);
 
-    if(this.state.searchOption) {
+    if(this.state.specificSermon) {
+      return (<div>
+        <p className="lead">Select a search option by clicking one of the buttons below</p>
+        {buttons}
+        {searchOptions}
+        <SermonTable url={this.state.url}/>
+      </div>);
+    } else if(this.state.searchOption) {
 
       var searchOptions;
 

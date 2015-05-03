@@ -24,7 +24,7 @@ var NewsBlockRow = React.createClass({displayName: "NewsBlockRow",
         React.createElement("div", {className: "col-md-2"}, React.createElement("p", null, this.state.date)), 
         React.createElement("div", {className: "col-md-5"}, React.createElement("p", {className: "lead"}, this.props.speaker)), 
         React.createElement("div", {className: "col-md-5"}, 
-          React.createElement(AudioPlayer, {url: this.props.downloadLink})
+          React.createElement(AudioPlayer, {url: this.props.downloadLink, id: this.props.sermonId})
         )
       )
     );
@@ -75,7 +75,7 @@ var NewsBlock = React.createClass({displayName: "NewsBlock",
 
     var sermons = this.state.data.map(function(sermon) {
           return (
-            React.createElement(NewsBlockRow, {date: sermon.day + " " +sermon.month + " " + sermon.year, speaker: sermon.speaker, downloadLink: sermon.downloadLink, key: sermon.downloadLink})
+            React.createElement(NewsBlockRow, {date: sermon.day + " " +sermon.month + " " + sermon.year, speaker: sermon.speaker, downloadLink: sermon.downloadLink, key: sermon.downloadLink, sermonId: sermon.id})
           );
     });
 

@@ -52,7 +52,7 @@ var SermonTable = React.createClass({displayName: "SermonTable",
                 React.createElement("td", null, sermon.speaker), 
                 React.createElement("td", {className: "hidden-xs"}, sermon.bibleBook, " ", sermon.verses), 
                 React.createElement("td", {className: "hidden-xs"}, sermon.subject), 
-                React.createElement("td", {className: "audioPlayer"}, React.createElement(AudioPlayer, {url: sermon.downloadLink}))
+                React.createElement("td", {className: "audioPlayer"}, React.createElement(AudioPlayer, {url: sermon.downloadLink, id: sermon.id}))
               )
             );
       });
@@ -79,11 +79,28 @@ var SermonTable = React.createClass({displayName: "SermonTable",
 
 var SermonControl = React.createClass({displayName: "SermonControl",
   getInitialState: function() {
-    return {
-      url : "",
-      searchData : [],
-      searchOption : ""
+
+    if(window.location.hash) {
+      var hash = window.location.hash.substring(1);
+      var idUrl = "http://saintfieldbaptist.org.uk/php/GetSermons.php?id="+hash;
+
+      return {
+        url : idUrl,
+        searchData : [],
+        searchOption : "",
+        specificSermon : true
+      }
+
+    } else {
+      return {
+        url : "",
+        searchData : [],
+        searchOption : "",
+        specificSermon : false
+      }
     }
+
+
   },
   buttonClicked: function(selectedSearchOption) {
     $.ajax({
@@ -93,7 +110,8 @@ var SermonControl = React.createClass({displayName: "SermonControl",
         this.setState({
           url : this.state.url,
           searchData : data,
-          searchOption : selectedSearchOption
+          searchOption : selectedSearchOption,
+          specificSermon : false
         });
       }.bind(this),
       error: function(xhr, status, err) {
@@ -119,7 +137,8 @@ var SermonControl = React.createClass({displayName: "SermonControl",
       this.setState({
         url : url,
         searchData : this.state.searchData,
-        searchOption : this.state.searchOption
+        searchOption : this.state.searchOption,
+        specificSermon : false
       });
     }
 
@@ -141,7 +160,14 @@ var SermonControl = React.createClass({displayName: "SermonControl",
       )
     ));
 
-    if(this.state.searchOption) {
+    if(this.state.specificSermon) {
+      return (React.createElement("div", null, 
+        React.createElement("p", {className: "lead"}, "Select a search option by clicking one of the buttons below"), 
+        buttons, 
+        searchOptions, 
+        React.createElement(SermonTable, {url: this.state.url})
+      ));
+    } else if(this.state.searchOption) {
 
       var searchOptions;
 

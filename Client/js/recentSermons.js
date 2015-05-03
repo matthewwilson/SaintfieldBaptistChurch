@@ -24,7 +24,7 @@ var NewsBlockRow = React.createClass({
         <div className="col-md-2"><p>{this.state.date}</p></div>
         <div className="col-md-5"><p className="lead">{this.props.speaker}</p></div>
         <div className="col-md-5">
-          <AudioPlayer url={this.props.downloadLink}/>
+          <AudioPlayer url={this.props.downloadLink} id={this.props.sermonId}/>
         </div>
       </div>
     );
@@ -75,7 +75,7 @@ var NewsBlock = React.createClass({
 
     var sermons = this.state.data.map(function(sermon) {
           return (
-            <NewsBlockRow date={sermon.day + " " +sermon.month + " " + sermon.year} speaker={sermon.speaker} downloadLink={sermon.downloadLink} key={sermon.downloadLink}/>
+            <NewsBlockRow date={sermon.day + " " +sermon.month + " " + sermon.year} speaker={sermon.speaker} downloadLink={sermon.downloadLink} key={sermon.downloadLink} sermonId={sermon.id}/>
           );
     });
 
