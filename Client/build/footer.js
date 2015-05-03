@@ -25,7 +25,7 @@ var Footer = React.createClass({displayName: "Footer",
           )
         ), 
         React.createElement("p", null), 
-        React.createElement("p", {className: "footer-copyright"}, "Saintfield Baptist Church © 2015. All Rights Reserved. ", React.createElement("a", {href: "https://github.com/matthewcodes/SaintfieldBaptistChurch"}, "v1.0.2"))
+        React.createElement("p", {className: "footer-copyright"}, "Saintfield Baptist Church © 2015. All Rights Reserved. ", React.createElement("a", {href: "https://github.com/matthewcodes/SaintfieldBaptistChurch"}, "v1.0.3"))
       )
     );
   }

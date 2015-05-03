@@ -40,6 +40,7 @@ var NavigationItems = React.createClass({
           <NavigationItem name="Watch Live" currentPage={this.props.currentPage} link="live.html"/>
           <NavigationItem name="Sermon Downloads" currentPage={this.props.currentPage} link="sermons.html"/>
           <NavigationItem name="Contact Us" currentPage={this.props.currentPage} link="contact.html"/>
+          <NavigationItem name="Football & Hockey 4 Christ" currentPage={this.props.currentPage} link="sportsweek.html"/>
         </ul>
       </div>
     );
