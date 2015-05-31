@@ -154,9 +154,6 @@ var SermonControl = React.createClass({displayName: "SermonControl",
       ), 
       React.createElement("div", {className: "btn-group", role: "group"}, 
         React.createElement("button", {type: "button", className: "btn btn-default", onClick: this.buttonClicked.bind(this,'books')}, "Book")
-      ), 
-      React.createElement("div", {className: "btn-group", role: "group"}, 
-        React.createElement("button", {type: "button", className: "btn btn-default", onClick: this.buttonClicked.bind(this,'subjects')}, "Subject")
       )
     ));
 

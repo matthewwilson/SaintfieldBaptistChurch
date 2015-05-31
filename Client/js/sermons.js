@@ -155,9 +155,6 @@ var SermonControl = React.createClass({
       <div className="btn-group" role="group">
         <button type="button" className="btn btn-default" onClick={this.buttonClicked.bind(this,'books')}>Book</button>
       </div>
-      <div className="btn-group" role="group">
-        <button type="button" className="btn btn-default" onClick={this.buttonClicked.bind(this,'subjects')}>Subject</button>
-      </div>
     </div>);
 
     if(this.state.specificSermon) {
