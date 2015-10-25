@@ -39,8 +39,8 @@ var NavigationItems = React.createClass({displayName: "NavigationItems",
           React.createElement(NavigationItem, {name: "Church Bulletin", currentPage: this.props.currentPage, link: "bulletin/bulletin.pdf", target: "_blank"}), 
           React.createElement(NavigationItem, {name: "Watch Live", currentPage: this.props.currentPage, link: "live.html"}), 
           React.createElement(NavigationItem, {name: "Sermon Downloads", currentPage: this.props.currentPage, link: "sermons.html"}), 
-          React.createElement(NavigationItem, {name: "Contact Us", currentPage: this.props.currentPage, link: "contact.html"}), 
-          React.createElement(NavigationItem, {name: "Football & Hockey 4 Christ", currentPage: this.props.currentPage, link: "sportsweek.html"})
+          React.createElement(NavigationItem, {name: "Sports 4 Christ", currentPage: this.props.currentPage, link: "sportsweek.html"}), 
+          React.createElement(NavigationItem, {name: "Contact Us", currentPage: this.props.currentPage, link: "contact.html"})
         )
       )
     );
