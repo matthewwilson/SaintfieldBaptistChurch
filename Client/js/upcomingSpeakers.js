@@ -14,7 +14,7 @@ var SundayNewsBlockRow = React.createClass({
     var day = dateParts[0].replace(/\D/g,'');
     var month = getMonthFromString(dateParts[1]);
 
-    return {date: day+"."+month+".15"};
+    return {date: day+"."+month+".16"};
 
   },
   render: function() {
