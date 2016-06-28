@@ -39,6 +39,12 @@ body {
   padding-bottom:0px;
 }
 
+.sfc-alert {
+  background-color:rgba(12, 146, 12, 0.60);;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
 @media (min-width: 1200px) {
   body {
     padding-bottom:300px;
