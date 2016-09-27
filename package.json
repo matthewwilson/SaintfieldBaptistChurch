@@ -1,0 +1,24 @@
+{
+  "name": "saintfield-baptist-church",
+  "version": "1.0.0",
+  "description": "Saintfield Baptist Church website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewcodes/SaintfieldBaptistChurch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewcodes/SaintfieldBaptistChurch/issues"
+  },
+  "homepage": "https://github.com/matthewcodes/SaintfieldBaptistChurch#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.4",
+    "compression": "^1.6.2",
+    "express": "^4.14.0"
+  }
+}
