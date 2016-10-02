@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+
+    <!-- Place in the <head>, after the three links -->
+    <script type="text/javascript" charset="utf-8">
+      $(window).on('load', function() { $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: 700,
+        itemMargin: 0,
+        startAt:1,
+        directionNav:false,
+        slideshow:false
+      }); });
+    </script>
+
+  </head>
+  <body>
+
+    <div class="container-fluid menu">
+      <div class="row menu-row">
+        <div class="offset-md-1 col-md-2 menu-column">
+          <img src="img/logo_menu.png"/>
+        </div>
+        <div class="col-md-8 menu-column">
+          <ul class="list-inline menu-items">
+            <li class="list-inline-item"><a href=# class="menu-link">About</a></li>
+            <li class="list-inline-item"><a href=# class="menu-link">Ministries</a></li>
+            <li class="list-inline-item"><a href=# class="menu-link">Resources</a></li>
+            <li class="list-inline-item"><a href=# class="menu-link">Visit Us</a></li>
+            <li class="list-inline-item"><a href=# class="menu-link">Watch Live</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid homepage-slider">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="img/slides/isaiah.jpg" />
+          </li>
+          <li>
+            <img src="img/slides/james.jpg" />
+          </li>
+          <li>
+            <img src="img/slides/joseph.jpg" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

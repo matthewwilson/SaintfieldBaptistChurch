@@ -1,0 +1,82 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: Saintfield Baptist Website.ai
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 1280 px x 1760 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+C=0 M=0 Y=0 K=80 (RGB)
+PANTONE 171 C (Lab)
+PANTONE 305 C (Lab)
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Kings Caslon Display Trial Italic (OTF)
+Kings Caslon Trial (OTF)
+Myriad Pro (OTF)
+Raleway (OTF)
+Raleway Medium (OTF)
+Raleway Bold (OTF)
+Raleway ExtraBold (OTF)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Users/stephen/Dropbox/Church Work/Saintfield Baptist/Saintfield Baptist Design/Saintfield Baptist Website/Links/large_train-for-the-fiery-trial-jg4zkntv
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 4218K, 1600 by 900 pixels
+Dimensions: 700 by 400 points 
+Resolution: 164.571 by 162 pixels per inch
+
+
+/Users/stephen/Dropbox/Church Work/Saintfield Baptist/Saintfield Baptist Design/Saintfield Baptist Website/Links/Screen Shot 2016-09-26 at 22.37.38
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 2818K, 1440 by 501 pixels
+Dimensions: 1280 by 445.333 points 
+Resolution: 81 by 81 pixels per inch
+
+
+/Users/stephen/Dropbox/Church Work/Saintfield Baptist/Saintfield Baptist Design/Saintfield Baptist Website/Links/large_how-to-discover-the-bliss-of-sin-rcbvxho4.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 4218K, 1600 by 900 pixels
+Dimensions: 711.111 by 400 points 
+Resolution: 162 by 162 pixels per inch
+
+
+/Users/stephen/Dropbox/Church Work/Saintfield Baptist/Saintfield Baptist Design/Saintfield Baptist Website/Links/large_waiting-for-friendship-j9seqj7u
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 4218K, 1600 by 900 pixels
+Dimensions: 710 by 400 points 
+Resolution: 162.254 by 162 pixels per inch

@@ -1,0 +1,65 @@
+body {
+  background-color: black;
+}
+
+/* unvisited link */
+a:link {
+  color: #000000;
+}
+
+/* visited link */
+a:visited {
+  color: #000000;
+}
+
+/* mouse over link */
+a:hover {
+  color: #000000;
+  text-decoration: none !important;
+  border-bottom: 2px solid #ff5a34;
+}
+
+/* selected link */
+a:active {
+  color: #000000;
+}
+
+.menu {
+  background-color: white;
+  height:120px;
+  padding-top: 30px;
+}
+
+.menu-row {
+  height:60px;
+}
+
+.menu-column {
+  height:60px;
+}
+
+.menu-items {
+  position: absolute;
+  bottom: 0;
+  right:0;
+  margin-bottom: 0px !important;
+  line-height: normal !important;
+}
+
+.menu-link {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 12pt !important;
+}
+
+.list-inline-item:not(:last-child) {
+    margin-right: 30px !important;
+}
+
+.homepage-slider {
+  overflow: hidden;
+}
+
+.flexslider {
+  border:none !important;
+}
