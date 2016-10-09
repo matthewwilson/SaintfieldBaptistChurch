@@ -11,23 +11,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-
-    <!-- Place in the <head>, after the three links -->
-    <script type="text/javascript" charset="utf-8">
-      $(window).on('load', function() { $('.flexslider').flexslider({
-        animation: "slide",
-        animationLoop: true,
-        itemWidth: 700,
-        itemMargin: 0,
-        startAt:1,
-        directionNav:false,
-        slideshow:false
-      }); });
-    </script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 
   </head>
   <body>
@@ -50,23 +36,38 @@
     </div>
 
     <div class="container-fluid homepage-slider">
-      <div class="flexslider">
-        <ul class="slides">
-          <li>
-            <img src="img/slides/isaiah.jpg" />
-          </li>
-          <li>
-            <img src="img/slides/james.jpg" />
-          </li>
-          <li>
-            <img src="img/slides/joseph.jpg" />
-          </li>
-        </ul>
+      <div class="center">
+        <div class="image-slide"><img src="img/slides/isaiah.jpg" /></div>
+        <div class="image-slide"><img src="img/slides/james.jpg" /></div>
+        <div class="image-slide"><img src="img/slides/joseph.jpg" /></div>
       </div>
     </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <script>
+
+      function getPadding() {
+        return ($(window).width() - 700) / 2
+      }
+
+      $('.center').slick({
+        centerMode: true,
+        centerPadding: getPadding()+'px',
+        slidesToShow: 1,
+        autoplay:true,
+        arrows:false
+      });
+
+      $(window).resize(function(){
+          $('.center').slick('slickSetOption',"centerPadding", getPadding()+'px', true);
+      });
+
+
+    </script>
   </body>
 </html>

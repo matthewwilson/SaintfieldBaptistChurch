@@ -58,8 +58,15 @@ a:active {
 
 .homepage-slider {
   overflow: hidden;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
-.flexslider {
-  border:none !important;
+.image-slide {
+  min-width:700px;
+}
+
+.image-slide img {
+  width: auto;
+  margin: 0 auto; /* it centers any block level element */
 }
