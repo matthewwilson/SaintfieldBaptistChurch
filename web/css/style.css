@@ -99,4 +99,46 @@ a:active {
   color:white;
   margin: 0 auto;
   border-color: white;
+  border-radius: 0 !important;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
+
+.image-slide-button:hover {
+    background-color: #ff5a34;
+    border-color: #ff5a34;
+}
+
+.image-slide hr {
+    display: block;
+    height: 2px;
+    border: none;
+    padding: 0;
+    max-width:10%;
+    color: white; /* old IE */
+    background-color: white; /* Modern Browsers */
+}
+
+.homepage-about-wrapper {
+  background-color: #ff5a34;
+}
+
+.homepage-about {
+  background-color: #ff5a34;
+  color:white;
+  padding:60px;
+  text-align: justify;
+  font-family: 'Raleway', sans-serif;
+}
+
+.homepage-vision-wrapper {
+  background-color: white;
+}
+
+.homepage-vision {
+  background-color: white;
+  color:black;
+  padding:60px;
+  text-align: justify;
+  font-family: 'Raleway', sans-serif;
 }
