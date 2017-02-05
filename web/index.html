@@ -103,7 +103,11 @@
     <script>
 
       function getPadding() {
-        return ($(window).width() - 700) / 2
+      	if($(window).width() > 700) {
+        	return ($(window).width() - 700) / 2
+        } else {
+        	return 0;
+        }
       }
 
       $('.center').slick({
