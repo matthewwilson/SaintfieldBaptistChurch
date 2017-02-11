@@ -78,7 +78,7 @@ a:active {
 
 .image-slide-title {
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 36pt !important;
   text-align: center;
   margin-top: 20px;
@@ -114,9 +114,30 @@ a:active {
   font-weight: 300;
 }
 
+.image-slide-button:active {
+  color:white;
+  border-color: white;
+  border-radius: 0 !important;
+  background-color: transparent;
+}
+
+.image-slide-button:active:focus {
+  color:white;
+  border-color: white;
+  border-radius: 0 !important;
+  background-color: transparent;
+  outline-color: white;
+}
+
 .image-slide-button:hover {
     background-color: #ff5a34;
     border-color: #ff5a34;
+}
+
+.image-slide-button:focus {
+  background-color: #ff5a34;
+  border-color: #ff5a34;
+  outline-color: #ff5a34;
 }
 
 .image-slide hr {
@@ -129,26 +150,99 @@ a:active {
     background-color: white; /* Modern Browsers */
 }
 
-.homepage-about-wrapper {
-  background-color: #ff5a34;
+.homepage-text {
+  text-align: justify;
+  font-family: 'Raleway', sans-serif;
+  padding: 80px;
 }
 
-.homepage-about {
+.homepage-text h3 {
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.homepage-text a {
+  font-weight: 800;
+}
+
+.homepage-text-body {
+  font-family: 'Crimson Text', serif;
+}
+
+.homepage-text-about {
   background-color: #ff5a34;
   color:white;
-  padding:60px;
-  text-align: justify;
-  font-family: 'Raleway', sans-serif;
 }
 
-.homepage-vision-wrapper {
-  background-color: white;
+.homepage-text-about a:link {
+  color:white;
 }
 
-.homepage-vision {
-  background-color: white;
+.homepage-text-vision {
+  background-color: #e6e6e6;
   color:black;
-  padding:60px;
-  text-align: justify;
+}
+
+.homepage-welcome {
+  background-color: white;
+  padding: 80px;
+}
+
+.homepage-welcome h2 {
+  color:#ff5a34;
   font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.homepage-welcome h3 {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.what-to-expect-button {
+  color:black;
+  margin: 0 auto;
+  border-color: #ff5a34;;
+  border-radius: 0 !important;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+
+.what-to-expect-button:focus {
+  background-color: #ff5a34;
+  border-color: #ff5a34;
+  outline-color: #ff5a34;
+}
+
+.what-to-expect-button:active {
+    background-color: #ff5a34;
+    border-color: #ff5a34;
+}
+
+.what-to-expect-button:active:focus {
+    background-color: #ff5a34;
+    border-color: #ff5a34;
+    outline-color: #ff5a34;
+}
+
+.what-to-expect-button:hover {
+    background-color: #ff5a34;
+    border-color: #ff5a34;
+}
+
+.map-container {
+  height:400px;
+}
+
+.footer {
+  background-color: #e6e6e6;
+  color:black;
+  padding:80px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer-breadcrumb {
+  margin-bottom: 20px;
 }

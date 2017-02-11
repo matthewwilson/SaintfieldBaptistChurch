@@ -69,26 +69,64 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="homepage-about-wrapper">
-          <div class="offset-md-1 col-md-5 homepage-about">
-            <h3 class="about-header">ABOUT</h3>
-            <br>
-            <p class="about-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <br>
-            <a href="#">LEARN MORE &gt;</a>
+        <div class="col-md-6 homepage-text homepage-text-about">
+          <h3>ABOUT</h3>
+          <br>
+          <p class="homepage-text-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <br>
+          <a href="#">LEARN MORE</a>
+        </div>
+        <div class="col-md-6 homepage-text homepage-text-vision">
+          <h3>OUR VISION</h3>
+          <br>
+          <p class="homepage-text-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <br>
+          <a href="#">LEARN MORE</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid homepage-welcome">
+      <div class="row">
+        <div class="offset-md-3 col-md-6">
+          <h2>AS A CHURCH WE GATHER ON SUNDAYS AT 11.30AM &amp; 7.00PM</h2>
+          <br />
+          <h3>All are welcome and we would love to see you</h3>
+          <br />
+          <div style="text-align:center">
+            <button type="button" class="btn btn-outline-primary what-to-expect-button">WHAT TO EXPECT</button>
           </div>
         </div>
-        <div class="homepage-vision-wrapper">
-          <div class="offset-md-1 col-md-5 homepage-vision">
-            <h3 class="vision-header">OUR VISION</h3>
-            <br>
-            <p class="vision-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <br>
-            <a href="#">LEARN MORE &gt;</a>
+      </div>
+    </div>
+
+    <div class="container-fluid map-container" id="map"></div>
+
+    <div class="container-fluid footer">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="footer-breadcrumb hidden-sm-down">
+            <a>About</a><span>&nbsp&#47</span>
+            <a>Ministries</a><span>&nbsp&#47</span>
+            <a>Resources</a><span>&nbsp&#47</span>
+            <a>Visit Us</a><span>&nbsp&#47</span>
+            <a>Contact</a>
+          </div>
+          <div>
+            <address>
+              <strong>Saintfield Baptist Church</strong><br>
+              51 Crossgar Road, Saintfield<br>
+              2017 &copy; Saintfield Baptist Church<br>
+            </address>
+          </div>
+        </div>
+        <div class="offset-lg-6 col-lg-1">
+          <div class="float-right">
+            <img class="float-right hidden-sm-down" src="img/logo_footer.png"/>
           </div>
         </div>
       </div>
@@ -99,30 +137,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="js/homepageSlider.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="js/homepageMap.js"></script>
 
-    <script>
-
-      function getPadding() {
-      	if($(window).width() > 700) {
-        	return ($(window).width() - 700) / 2
-        } else {
-        	return 0;
-        }
-      }
-
-      $('.center').slick({
-        centerMode: true,
-        centerPadding: getPadding()+'px',
-        slidesToShow: 1,
-        autoplay:true,
-        arrows:false
-      });
-
-      $(window).resize(function(){
-          $('.center').slick('slickSetOption',"centerPadding", getPadding()+'px', true);
-      });
-
-
-    </script>
   </body>
 </html>

@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/matthewcodes/SaintfieldBaptistChurch#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.4",
+    "bootstrap": "^4.0.0-alpha.6",
     "compression": "^1.6.2",
     "express": "^4.14.0"
   }
