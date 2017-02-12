@@ -106,7 +106,7 @@ a:active {
 }
 
 .image-slide-button {
-  color:white;
+  color:white !important;
   margin: 0 auto;
   border-color: white;
   border-radius: 0 !important;
@@ -174,7 +174,7 @@ a:active {
   color:white;
 }
 
-.homepage-text-about a:link {
+.homepage-text-about a {
   color:white;
 }
 
