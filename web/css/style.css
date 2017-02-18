@@ -246,3 +246,19 @@ a:active {
 .footer-breadcrumb {
   margin-bottom: 20px;
 }
+
+.navbar-logo {
+  padding: 15px;
+}
+
+.navbar-white {
+  background-color: white;
+}
+
+.navbar-toggler-center {
+  top:2.5rem;
+}
+
+.nav-link-padded {
+  padding-left:15px !important;
+}
