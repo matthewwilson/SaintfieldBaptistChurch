@@ -28,6 +28,9 @@ a:active {
   background-color: white;
   height:120px;
   padding-top: 30px;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
 }
 
 .menu-row {
@@ -60,6 +63,16 @@ a:active {
   overflow: hidden;
   padding-left: 0px !important;
   padding-right: 0px !important;
+  padding-top: 114px;
+}
+
+@media only screen and (min-width: 768px) {
+  .homepage-slider {
+    overflow: hidden;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 120px;
+  }
 }
 
 .image-slide {
@@ -253,6 +266,9 @@ a:active {
 
 .navbar-white {
   background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar-toggler-center {
