@@ -30,3 +30,5 @@ Server/GetOrInsertSermonType.php
 Server/GetOrInsertSpeaker.php
 
 Server/GetOrInsertYear.php
+
+.DS_Store
