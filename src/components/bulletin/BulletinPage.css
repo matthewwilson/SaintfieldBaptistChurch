@@ -1,0 +1,9 @@
+.bulletin-page {
+  padding: 50px 45px;
+}
+
+@media(min-width: 992px) {
+  .bulletin-page{
+    padding: 50px 100px;
+  }
+}

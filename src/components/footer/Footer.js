@@ -6,7 +6,7 @@ const Footer = (props) => {
   return (
       <div className="footer">
         <div className="footer-links">
-          <Link exact to="/">Home</Link><span className="footer-link-slash">/</span>
+          <Link to="/">Home</Link><span className="footer-link-slash">/</span>
           <Link to="/about">About</Link><span className="footer-link-slash">/</span>
           <Link to="/meetings">Meetings</Link><span className="footer-link-slash">/</span>
           <Link to="/bulletin">Bulletin</Link><span className="footer-link-slash">/</span>
@@ -21,12 +21,12 @@ const Footer = (props) => {
           <div className="col-sm">
             <p className="footer-social-title">STAY CONNECTED</p>
             <div className="footer-social-links">
-              <a href="https://www.facebook.com/Saintfield-Baptist-Church-105178506183089/"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://twitter.com/SaintfieldBC"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.facebook.com/Saintfield-Baptist-Church-105178506183089/"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com/SaintfieldBC"><i className="fab fa-twitter"></i></a>
             </div>
           </div>
           <div className="col-sm d-sm-none d-md-block">
-            <img className="float-right" src="img/logo_footer.png"/>
+            <img alt="footer-logo" className="float-right" src="img/logo_footer.png"/>
           </div>
         </div>
       </div>

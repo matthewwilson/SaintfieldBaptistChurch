@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './HomePageSlide.css'
 
 const HomePageSlide = ({type, title, imageUrl, subtitle, url}) => {
