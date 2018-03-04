@@ -1,25 +1,25 @@
 {
   "name": "saintfield-baptist-church",
-  "version": "1.0.0",
-  "description": "Saintfield Baptist Church website",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/matthewcodes/SaintfieldBaptistChurch.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/matthewcodes/SaintfieldBaptistChurch/issues"
-  },
-  "homepage": "https://github.com/matthewcodes/SaintfieldBaptistChurch#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
-    "compression": "^1.6.2",
-    "express": "^4.14.0",
-    "mustache-express": "^1.2.4"
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-slick": "^0.19.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

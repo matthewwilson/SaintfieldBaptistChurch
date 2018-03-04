@@ -1,0 +1,30 @@
+.sbc-navbar {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: white !important;
+}
+
+@media(min-width: 992px) {
+  .sbc-navbar{
+    padding-left: 45px !important;
+    padding-right: 45px !important;
+  }
+}
+
+.sbc-navbar-collapse {
+  align-self: flex-end;
+}
+
+.nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-link.active {
+  border-bottom: 1px solid #ff5a34;
+}
+
+.nav-link {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
