@@ -41,22 +41,22 @@ class Header extends React.Component {
               <NavLink exact to="/" className="nav-link" activeClassName="active">Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/about" className="nav-link" activeClassName="active">About</NavLink>
+              <NavLink to="/about" className="nav-link" activeClassName="active">About</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/meetings" className="nav-link" activeClassName="active">Meetings</NavLink>
+              <NavLink to="/meetings" className="nav-link" activeClassName="active">Meetings</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/bulletin" className="nav-link" activeClassName="active">Bulletin</NavLink>
+              <NavLink to="/bulletin" className="nav-link" activeClassName="active">Bulletin</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/live" className="nav-link" activeClassName="active">Watch</NavLink>
+              <NavLink to="/live" className="nav-link" activeClassName="active">Watch</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/sermons" className="nav-link" activeClassName="active">Sermons</NavLink>
+              <NavLink to="/sermons" className="nav-link" activeClassName="active">Sermons</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink exact to="/contact" className="nav-link" activeClassName="active">Contact</NavLink>
+              <NavLink to="/contact" className="nav-link" activeClassName="active">Contact</NavLink>
             </li>
           </ul>
         </div>

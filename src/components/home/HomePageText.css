@@ -1,5 +1,11 @@
 .homepage-text {
-  padding: 50px 100px;
+  padding: 50px 45px;
+}
+
+@media(min-width: 992px) {
+  .homepage-text{
+    padding: 50px 100px;
+  }
 }
 
 .homepage-text.about {
@@ -16,6 +22,20 @@
   display: inline-block;
   padding-bottom: 10px;
   margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.homepage-text p {
+  font-family: 'Crimson Text', serif;
+}
+
+.homepage-text.about a {
+  color: white;
+}
+
+.homepage-text.vision a {
+  color: black;
 }
 
 .homepage-text.about h3 {

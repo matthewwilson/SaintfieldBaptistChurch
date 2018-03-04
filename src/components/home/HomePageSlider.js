@@ -66,9 +66,9 @@ class HomePageSlider extends React.Component {
       arrows:false
     };
 
-    const slides = this.state.slides.map(slide=>{
+    const slides = this.state.slides.map((slide,index)=>{
       return(
-        <div>
+        <div key={index}>
           <HomePageSlide {...slide}/>
         </div>
       )
