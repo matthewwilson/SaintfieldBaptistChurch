@@ -22,7 +22,7 @@ class HomePageSlider extends React.Component {
         },{
           "type":"GOSPEL MEETINGS",
           "title":"TESTIMONY MEETINGS",
-          "subtitle":"Let the redeemed of the Lord say so... Psa 107:2",
+          "subtitle":"Let the redeemed of the Lord say so",
           "url":"https://www.sermonaudio.com/search.asp?seriesOnly=true&currSection=sermonstopic&sourceid=saintfieldbaptist&keyword=Testimony+Meetings+2018&keyworddesc=Testimony+Meetings+2018",
           "imageUrl":"img/slides/james.jpg"
         },{
@@ -62,7 +62,7 @@ class HomePageSlider extends React.Component {
       centerMode: true,
       centerPadding: this.state.padding+'px',
       slidesToShow: 1,
-      autoplay:false,
+      autoplay:true,
       arrows:false
     };
 
