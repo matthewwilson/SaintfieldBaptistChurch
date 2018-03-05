@@ -9,7 +9,7 @@ const Footer = (props) => {
           <Link to="/">Home</Link><span className="footer-link-slash">/</span>
           <Link to="/about">About</Link><span className="footer-link-slash">/</span>
           <Link to="/meetings">Meetings</Link><span className="footer-link-slash">/</span>
-          <Link to="/bulletin">Bulletin</Link><span className="footer-link-slash">/</span>
+          <a href="/bulletin/bulletin.pdf" target="_blank">Bulletin</a><span className="footer-link-slash">/</span>
           <Link to="/live">Watch</Link><span className="footer-link-slash">/</span>
           <Link to="/sermons">Sermons</Link><span className="footer-link-slash">/</span>
           <Link to="/contact">Contact</Link>
@@ -26,7 +26,7 @@ const Footer = (props) => {
             </div>
           </div>
           <div className="col-sm d-sm-none d-md-block">
-            <img alt="footer-logo" className="float-right" src="img/logo_footer.png"/>
+            <img alt="footer-logo" srcSet="img/logo_footer@2x.png 2x" className="footer-logo float-right" src="img/logo_footer.png"/>
           </div>
         </div>
       </div>

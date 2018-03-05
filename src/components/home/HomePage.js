@@ -2,7 +2,7 @@ import React from 'react';
 import HomePageSlider from './HomePageSlider';
 import HomePageText from './HomePageText';
 import HomePageMeetingTimes from './HomePageMeetingTimes';
-import HomePageMap from './HomePageMap';
+import Map from '../map/Map';
 import './HomePage.css'
 
 const HomePage = (props) => {
@@ -11,7 +11,7 @@ const HomePage = (props) => {
       <HomePageSlider/>
       <HomePageText/>
       <HomePageMeetingTimes/>
-      <HomePageMap/>
+      <Map/>
     </div>
   )
 }

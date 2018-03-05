@@ -13,6 +13,11 @@
   }
 }
 
+.footer-logo {
+  height:100px;
+  width:23px;
+}
+
 .footer-links {
   display: none;
   padding-bottom:30px;

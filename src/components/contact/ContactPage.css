@@ -1,0 +1,9 @@
+.contact-page {
+  padding: 50px 45px;
+}
+
+@media(min-width: 992px) {
+  .contact-page{
+    padding: 50px 100px;
+  }
+}

@@ -34,7 +34,7 @@ class Header extends React.Component {
     return (
       <nav className="sbc-navbar navbar navbar-expand-lg navbar-light">
         <Link to="/" className="navbar-brand" onClick={this.navLinkClick}>
-          <img src="img/logo_menu.png" alt="Saintfield Baptist Church"/>
+          <img className="sbc-navbar-logo" src="img/logo_menu.png" srcSet="img/logo_menu@2x.png 2x" alt="Saintfield Baptist Church"/>
         </Link>
         <button className="navbar-toggler" type="button" onClick={this.navBarToggleClick}>
           <span className="navbar-toggler-icon"></span>
@@ -53,7 +53,7 @@ class Header extends React.Component {
               <NavLink to="/meetings" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Meetings</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/bulletin" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Bulletin</NavLink>
+              <a href="bulletin/bulletin.pdf" target="_blank" className="nav-link" onClick={this.navLinkClick}>Bulletin</a>
             </li>
             <li className="nav-item">
               <NavLink to="/live" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Watch</NavLink>

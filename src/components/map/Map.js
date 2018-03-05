@@ -1,7 +1,7 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps";
 
-class HomePageMap extends React.Component {
+class Map extends React.Component {
   render() {
     const MyMapComponent = withScriptjs(withGoogleMap((props) =>
       <GoogleMap
@@ -23,4 +23,4 @@ class HomePageMap extends React.Component {
   }
 }
 
-export default HomePageMap;
+export default Map;

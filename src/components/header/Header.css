@@ -17,6 +17,11 @@
   }
 }
 
+.sbc-navbar-logo {
+  width:131px;
+  height:60px;
+}
+
 .sbc-navbar-collapse {
   align-self: flex-end;
 }

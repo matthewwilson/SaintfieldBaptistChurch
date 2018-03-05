@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './MeetingsPage.css'
 
 const MeetingsPage = (props) => {
@@ -31,7 +30,7 @@ const MeetingsPage = (props) => {
       </table>
       <br/>
 
-      <p>For more details including upcoming meetings please view our bulletin <Link to="bulletin">here</Link></p>
+      <p>For more details including upcoming meetings please view our bulletin <a href="bulletin/bulletin.pdf" target="_blank">here</a></p>
     </div>
   )
 }
