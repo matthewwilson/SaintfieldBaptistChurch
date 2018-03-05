@@ -32,7 +32,7 @@ class Header extends React.Component {
     }
 
     return (
-      <nav className="sbc-navbar navbar navbar-expand-lg navbar-light">
+      <nav className="sbc-navbar navbar fixed-top navbar-expand-lg navbar-light">
         <Link to="/" className="navbar-brand" onClick={this.navLinkClick}>
           <img className="sbc-navbar-logo" src="img/logo_menu.png" srcSet="img/logo_menu@2x.png 2x" alt="Saintfield Baptist Church"/>
         </Link>

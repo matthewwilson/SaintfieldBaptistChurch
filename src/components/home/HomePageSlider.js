@@ -61,8 +61,9 @@ class HomePageSlider extends React.Component {
       centerMode: true,
       centerPadding: this.state.padding+'px',
       slidesToShow: 1,
-      autoplay:true,
-      arrows:false
+      autoplay:false,
+      arrows:false,
+
     };
 
     const slides = this.state.slides.map((slide,index)=>{

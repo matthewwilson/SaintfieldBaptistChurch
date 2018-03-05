@@ -13,13 +13,13 @@ class Map extends React.Component {
       </GoogleMap>
     ))
 
-    return(<MyMapComponent
+    return(<div><MyMapComponent
       isMarkerShown
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOe9TPLdG_AXEmXeshgdSMOxaJaPUP2U"
       loadingElement={<div style={{ height: `100%` }} />}
       containerElement={<div style={{ height: `400px` }} />}
       mapElement={<div style={{ height: `100%` }} />}
-    />)
+    /></div>)
   }
 }
 

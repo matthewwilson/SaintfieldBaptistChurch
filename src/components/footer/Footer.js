@@ -25,7 +25,7 @@ const Footer = (props) => {
               <a href="https://twitter.com/SaintfieldBC"><i className="fab fa-twitter"></i></a>
             </div>
           </div>
-          <div className="col-sm d-sm-none d-md-block">
+          <div className="col-sm d-none d-sm-none d-md-none d-lg-block">
             <img alt="footer-logo" srcSet="img/logo_footer@2x.png 2x" className="footer-logo float-right" src="img/logo_footer.png"/>
           </div>
         </div>

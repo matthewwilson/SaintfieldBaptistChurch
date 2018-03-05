@@ -1,5 +1,6 @@
 .live-page {
   padding: 50px 45px;
+  font-family: 'Raleway', sans-serif;
 }
 
 @media(min-width: 992px) {

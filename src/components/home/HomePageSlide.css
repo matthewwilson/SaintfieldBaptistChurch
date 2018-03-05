@@ -1,5 +1,6 @@
 .image-slide {
   min-height: 400px !important;
+  background-size: cover !important;
 }
 
 .image-slide hr {
@@ -30,7 +31,7 @@
 
 .image-slide-sub-title {
   font-family: 'Crimson Text', serif;
-  font-size: 25pt !important;
+  font-size: 20pt !important;
   text-align: center;
   margin-top: 10px;
   color: white;

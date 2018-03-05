@@ -3,12 +3,21 @@ import './SermonsPage.css'
 
 
 const SermonsPage = (props) => {
+
+  var style = {
+    minHeight:"700px",
+    minWidth:"100%",
+    maxWidth:"100%",
+    border: "1px solid #ddd",
+    boxSizing: "border-box"
+  }
+
   return (
     <div className="sermons-page">
       <h1>Sermons</h1>
       <hr/>
-      <div className="embed-responsive embed-responsive-1by1">
-        <iframe title="Sermons" className="embed-responsive-item" src="https://embed.sermonaudio.com/browser/broadcaster/saintfieldbaptist/?sort=newest&page_size=25" frameBorder="0" scrolling="no"></iframe>
+      <div>
+        <iframe style={style} height="700" title="Sermons" src="https://embed.sermonaudio.com/browser/broadcaster/saintfieldbaptist/?sort=newest&page_size=25"></iframe>
       </div>
     </div>
   )

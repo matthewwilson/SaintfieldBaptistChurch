@@ -6,7 +6,7 @@ import './SBC.css';
 
 const SBC = (props) => {
     return (
-      <div className="container-fluid">
+      <div>
           <Header/>
           {props.children}
           <Footer/>
