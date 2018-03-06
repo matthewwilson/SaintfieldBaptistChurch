@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomePageSlide.css'
 
-const HomePageSlide = ({type, title, imageUrl, subtitle, url}) => {
+const HomePageSlide = ({type, title, imageUrl, subtitle, url, subsubtitle}) => {
 
   const slideStyle = {
     background:"linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('"+imageUrl+"')"
@@ -9,6 +9,23 @@ const HomePageSlide = ({type, title, imageUrl, subtitle, url}) => {
 
   const buttonWrapperStyle = {
     textAlign:"center"
+  }
+
+  let lowerSection;
+
+  if(url) {
+    lowerSection = (
+      <div style={buttonWrapperStyle}>
+        <a role="button" target="_blank" className="btn btn-outline-primary image-slide-button center-block" href={url}>LISTEN AGAIN</a>
+      </div>
+    )
+  } else {
+    lowerSection = (
+      <div>
+        <hr/>
+        <p className="image-slide-sub-subtitle">{subsubtitle}</p>
+      </div>
+    )
   }
 
   return (
@@ -19,9 +36,7 @@ const HomePageSlide = ({type, title, imageUrl, subtitle, url}) => {
           <hr/>
           <p className="image-slide-title">{title}</p>
           <p className="image-slide-sub-title">{subtitle}</p>
-          <div style={buttonWrapperStyle}>
-            <a role="button" className="btn btn-outline-primary image-slide-button center-block" href={url}>LISTEN AGAIN</a>
-          </div>
+          {lowerSection}
         </div>
       </div>
     </div>

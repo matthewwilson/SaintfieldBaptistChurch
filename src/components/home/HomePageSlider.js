@@ -13,22 +13,27 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
-          "type":"GOSPEL SERIES",
-          "title":"7 CRIES OF THE CROSS",
-          "subtitle":"",
-          "url":"https://www.sermonaudio.com/search.asp?seriesOnly=true&currSection=sermonstopic&sourceid=saintfieldbaptist&keyword=The+7+Cries+of+the+Cross&keyworddesc=The+7+Cries+of+the+Cross",
-          "imageUrl":"img/slides/isaiah.jpg"
+          "type":"CELEBRATING",
+          "title":"THIRTY YEARS",
+          "subtitle":"of God's Faithfulness",
+          "imageUrl":"img/slides/anniversary.png",
+          "subsubtitle":"1988 - 2018"
         },{
-          "type":"GOSPEL MEETINGS",
-          "title":"TESTIMONY MEETINGS",
-          "subtitle":"Let the redeemed of the Lord say so",
-          "url":"https://www.sermonaudio.com/search.asp?seriesOnly=true&currSection=sermonstopic&sourceid=saintfieldbaptist&keyword=Testimony+Meetings+2018&keyworddesc=Testimony+Meetings+2018",
-          "imageUrl":"img/slides/james.jpg"
+          "type":"GOSPEL SERIES",
+          "title":"WHERE DID IT ALL GO WRONG?",
+          "url":"https://www.sermonaudio.com/search.asp?seriesOnly=true&currSection=sermonstopic&sourceid=saintfieldbaptist&keyword=Where+did+it+all+go+wrong&keyworddesc=Where+did+it+all+go+wrong",
+          "imageUrl":"img/slides/gowrong.jpg"
         },{
           "type":"SUNDAY SERIES",
           "title":"JOURNEYING WITH JOSEPH",
           "url":"https://www.sermonaudio.com/search.asp?seriesOnly=true&currSection=sermonstopic&sourceid=saintfieldbaptist&keyword=Journeying+with+Joseph&keyworddesc=Journeying+with+Joseph",
-          "imageUrl":"img/slides/joseph.jpg"
+          "imageUrl":"img/slides/journey.jpg"
+        },{
+          "type":"ENCOUNTERS WITH GOD",
+          "title":"THE DAY THAT CHANGED MY LIFE",
+          "subtitle":"The lifestory of Billy Patterson",
+          "url":"https://www.sermonaudio.com/sermoninfo.asp?m=t&s=22518159328",
+          "imageUrl":"img/slides/journey.jpg"
         }
       ]
     }
@@ -62,8 +67,7 @@ class HomePageSlider extends React.Component {
       centerPadding: this.state.padding+'px',
       slidesToShow: 1,
       autoplay:false,
-      arrows:false,
-
+      arrows:false
     };
 
     const slides = this.state.slides.map((slide,index)=>{

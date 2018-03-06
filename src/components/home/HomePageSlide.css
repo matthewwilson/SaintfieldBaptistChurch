@@ -31,11 +31,22 @@
 
 .image-slide-sub-title {
   font-family: 'Crimson Text', serif;
-  font-size: 20pt !important;
+  font-size: 22pt !important;
   text-align: center;
   margin-top: 10px;
   color: white;
   font-weight: 200;
+  word-wrap: break-word;
+  font-style: italic;
+}
+
+.image-slide-sub-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  font-size: 12pt !important;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
   word-wrap: break-word;
 }
 
