@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './HomePageText.css';
 
 const HomePageText = (props) => {
@@ -7,14 +6,14 @@ const HomePageText = (props) => {
   return (
     <div className="row">
       <div className="col-md homepage-text about">
-        <h3>ABOUT</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <Link to="/about">LEARN MORE <i className="fas fa-chevron-right"></i></Link>
+        <h3>BREAKING OF BREAD</h3>
+        <hr/>
+        <p>In the upper room, on the night Jesus was betrayed, after breaking bread and taking a cup of wine, He commanded the disciples “this do in remembrance of me.” (Luke 22, 1 Corinthians 11)  So, following the pattern of the disicples and the early church, (Acts 2:42, Acts 20:7) we break bread on the first day of the week as the climax of our morning worship. We do this &quot;till He come&quot;.</p>
       </div>
       <div className="col-md homepage-text vision">
-        <h3>OUR VISION</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <Link to="/about">LEARN MORE <i className="fas fa-chevron-right"></i></Link>
+        <h3>BELIVER'S BAPTISM</h3>
+        <hr/>
+        <p>In keeping with the Lord’s command (Matthew 28:18-20) and following the Lord’s example (Matthew 3:13-17) we believe that all born again Christians, upon profession of faith in Christ as their Saviour, should be baptised by immersion. This was the practice of the early church (Acts 2:41, 8:12,) as a public demonstration of a personal transformation.</p>
       </div>
     </div>
   );

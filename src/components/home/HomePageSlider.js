@@ -33,7 +33,7 @@ class HomePageSlider extends React.Component {
           "title":"THE DAY THAT CHANGED MY LIFE",
           "subtitle":"The lifestory of Billy Patterson",
           "url":"https://www.sermonaudio.com/sermoninfo.asp?m=t&s=22518159328",
-          "imageUrl":"img/slides/journey.jpg"
+          "imageUrl":"img/slides/testimony.png"
         }
       ]
     }
@@ -66,7 +66,7 @@ class HomePageSlider extends React.Component {
       centerMode: true,
       centerPadding: this.state.padding+'px',
       slidesToShow: 1,
-      autoplay:false,
+      autoplay:true,
       arrows:false
     };
 

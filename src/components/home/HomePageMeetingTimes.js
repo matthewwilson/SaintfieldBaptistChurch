@@ -3,10 +3,6 @@ import './HomePageMeetingTimes.css';
 
 const HomePageMeetingTimes = (props) => {
 
-  var buttonWrapperStyle = {
-    textAlign:"center"
-  }
-
   return (
     <div className="row">
       <div className="offset-md-2 col-md-8">
@@ -15,9 +11,6 @@ const HomePageMeetingTimes = (props) => {
           <br />
           <h3>All are welcome and we would love to see you</h3>
           <br />
-          <div style={buttonWrapperStyle}>
-            <button type="button" className="btn btn-outline-primary what-to-expect-button">WHAT TO EXPECT</button>
-          </div>
         </div>
       </div>
     </div>

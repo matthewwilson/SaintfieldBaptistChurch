@@ -19,15 +19,16 @@
 }
 
 .homepage-text h3 {
-  display: inline-block;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
 .homepage-text p {
   font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
 }
 
 .homepage-text.about a {
@@ -38,10 +39,14 @@
   color: black;
 }
 
-.homepage-text.about h3 {
-  border-bottom: 2px solid white;
+.homepage-text.about hr {
+  border: 1px solid white;
+  width: 20%;
+  margin: 15px auto;
 }
 
-.homepage-text.vision h3 {
-  border-bottom: 2px solid black;
+.homepage-text.vision hr {
+  border: 1px solid black;
+  width: 20%;
+  margin: 15px auto;
 }

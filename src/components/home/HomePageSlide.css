@@ -1,7 +1,14 @@
 .image-slide {
-  min-height: 400px !important;
+  min-height: 450px !important;
   background-size: cover !important;
 }
+
+@media(min-width: 992px) {
+  .image-slide {
+    min-height: 400px !important;
+  }
+}
+
 
 .image-slide hr {
   border: 1px solid white;

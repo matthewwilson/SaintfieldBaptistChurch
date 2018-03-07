@@ -7,7 +7,7 @@ const AboutPage = (props) => {
     <div className="about-page">
       <h1>About Us</h1>
       <hr/>
-      <p>Thank you for visiting our web site. Saintfield Baptist Church is a relatively young church having recently celebrated its twentieth year.  Our desire is to exalt the Name of our Saviour the Lord Jesus Christ.</p>
+      <p>Thank you for visiting our web site. Saintfield Baptist Church is a relatively young church currently celebrating it's 30th anniversary.  Our desire is to exalt the Name of our Saviour the Lord Jesus Christ.</p>
 
       <blockquote className="blockquote">
         <p className="mb-0">And he is the head of the body, the church: who is the beginning, the firstborn from the dead; that in all things he might have the pre-eminence.</p>

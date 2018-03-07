@@ -1,0 +1,22 @@
+.home-page-intro {
+  text-align: center;
+  padding: 50px 45px;
+}
+
+@media(min-width: 992px) {
+  .home-page-intro{
+    padding: 50px 100px;
+  }
+}
+
+.home-page-intro h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color:#ff5a34;
+}
+
+.home-page-intro p {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: 22px;
+}
