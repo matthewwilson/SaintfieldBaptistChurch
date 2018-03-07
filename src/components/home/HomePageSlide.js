@@ -4,7 +4,7 @@ import './HomePageSlide.css'
 const HomePageSlide = ({type, title, imageUrl, subtitle, url, subsubtitle}) => {
 
   const slideStyle = {
-    background:"linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url('"+imageUrl+"')"
+    background:"url("+imageUrl+")"
   }
 
   const buttonWrapperStyle = {
@@ -31,7 +31,7 @@ const HomePageSlide = ({type, title, imageUrl, subtitle, url, subsubtitle}) => {
   return (
     <div className="image-slide" style={slideStyle}>
       <div className="row image-slide-fullheight-row">
-        <div className="col align-self-center">
+        <div className="col align-self-center image-slide-content">
           <p className="image-slide-type">{type}</p>
           <hr/>
           <p className="image-slide-title">{title}</p>

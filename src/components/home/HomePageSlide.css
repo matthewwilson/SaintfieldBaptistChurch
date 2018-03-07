@@ -1,11 +1,12 @@
 .image-slide {
-  min-height: 450px !important;
+  min-height: 500px !important;
   background-size: cover !important;
 }
 
 @media(min-width: 992px) {
   .image-slide {
     min-height: 400px !important;
+    background-size: contain !important;
   }
 }
 
@@ -34,6 +35,7 @@
   margin-top: 20px;
   color: white;
   word-wrap: break-word;
+  line-height: 33pt;
 }
 
 .image-slide-sub-title {
@@ -82,5 +84,17 @@
 .image-slide-fullheight-row {
   height:100%;
   overflow: hidden;
-  min-height: 400px !important;
+  min-height: 500px !important;
+}
+
+@media(min-width: 992px) {
+  .image-slide-fullheight-row {
+    min-height: 400px !important;
+  }
+}
+
+@media(min-width: 992px) {
+  .image-slide-content {
+    padding: 30px;
+  }
 }

@@ -27,8 +27,11 @@
 .homepage-text p {
   font-family: 'Crimson Text', serif;
   font-size: 18px;
-  font-style: italic;
   text-align: center;
+}
+
+.homepage-text span {
+  font-style: italic;
 }
 
 .homepage-text.about a {

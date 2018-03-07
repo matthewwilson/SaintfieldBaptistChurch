@@ -4,6 +4,7 @@ import $ from 'jquery';
 import HomePageSlide from './HomePageSlide'
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+import "./HomePageSlider.css"
 
 
 class HomePageSlider extends React.Component {
@@ -30,7 +31,7 @@ class HomePageSlider extends React.Component {
           "imageUrl":"img/slides/journey.jpg"
         },{
           "type":"ENCOUNTERS WITH GOD",
-          "title":"THE DAY THAT CHANGED MY LIFE",
+          "title":"A LIFE CHANGING DAY",
           "subtitle":"The lifestory of Billy Patterson",
           "url":"https://www.sermonaudio.com/sermoninfo.asp?m=t&s=22518159328",
           "imageUrl":"img/slides/testimony.png"
@@ -67,7 +68,9 @@ class HomePageSlider extends React.Component {
       centerPadding: this.state.padding+'px',
       slidesToShow: 1,
       autoplay:true,
-      arrows:false
+      arrows:false,
+      autoplaySpeed:5000,
+      dots:true
     };
 
     const slides = this.state.slides.map((slide,index)=>{
