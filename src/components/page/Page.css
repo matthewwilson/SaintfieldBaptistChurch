@@ -1,0 +1,10 @@
+.page {
+  margin: 0 45px;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media(min-width: 992px) {
+  .page{
+    margin: 0 100px;
+  }
+}

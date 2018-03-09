@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './AboutPage.css'
+import Page from '../page/Page';
+import PageBanner from '../page/PageBanner';
 
 const AboutPage = (props) => {
   return (
-    <div className="about-page">
-      <h1>About Us</h1>
-      <hr/>
+    <Page>
+      <PageBanner title="ABOUT US" imageUrl="img/about_us.jpg" titleColour="white"/>
+
       <p>Thank you for visiting our web site. Saintfield Baptist Church is a relatively young church currently celebrating it's 30th anniversary.  Our desire is to exalt the Name of our Saviour the Lord Jesus Christ.</p>
 
       <blockquote className="blockquote">
@@ -25,7 +26,7 @@ const AboutPage = (props) => {
       <p>If you are visiting in the area or seeking a place to worship we heartily invite you to come along and enjoy the fellowship of God’s people.  We assure you of a warm welcome at all times.</p>
       <br/>
       <p>To see our weekly meeting times and upcoming speakers <Link to="/meetings">click here</Link></p>
-    </div>
+    </Page>
   )
 }
 
