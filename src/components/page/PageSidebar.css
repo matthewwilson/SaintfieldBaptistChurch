@@ -1,0 +1,44 @@
+.page-sidebar-wrapper {
+  min-height: 400px;
+  margin-top: 60px;
+  margin-bottom: 60px
+}
+
+.page-sidebar-menu-list {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.page-sidebar-section h1 {
+  font-family: Raleway, serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.btn-page-sidebar-link {
+  font-family: Raleway, serif;
+  font-size: 14pt;
+  color: #5a5756;
+  text-decoration: none;
+}
+
+.btn-page-sidebar-link:hover {
+  color:#ff5a34;
+  text-decoration: none;
+}
+
+.btn-page-sidebar-link:focus {
+  color:#ff5a34;
+  text-decoration: none;
+}
+
+.btn-page-sidebar-link:active {
+  color:#ff5a34;
+  text-decoration: none;
+}
+
+.btn-page-sidebar-link-active {
+  color:#ff5a34;
+  font-weight: 500;
+  text-decoration: none;
+}
