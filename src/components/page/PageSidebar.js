@@ -12,10 +12,22 @@ class PageSidebar extends React.Component {
   }
 
   sectionLinkClicked = (event) => {
+
+    const newSection = this.props.children[event.target.dataset.index]
+    let title = newSection.props.linkTitle
+    if(newSection.props.bannerTitle) {
+      title = newSection.props.bannerTitle
+    }
+    
+    const bannerImageUrl = newSection.props.bannerImageUrl
+
+    this.props.onSectionChange(bannerImageUrl, title.toUpperCase())
+
     this.setState({
       currentSection:event.target.dataset.index,
       collapsed:true
     })
+
   }
 
   toggleMobileMenu = (event) => {
@@ -62,12 +74,13 @@ class PageSidebar extends React.Component {
     }
   }
 
+
   render() {
     const links = this.props.children.map((section, index) => {
 
       let classes = "";
 
-      if(this.state.currentSection === index) {
+      if(this.state.currentSection == index) {
         classes = "btn-page-sidebar-link-active"
       }
 

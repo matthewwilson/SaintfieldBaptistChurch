@@ -13,7 +13,7 @@ const MeetingsPage = (props) => {
         <tr><td>Searchers</td><td>Every Wednesday night at 6:45pm</td></tr>
         <tr><td>Bible study and prayer meeting</td><td>Every Wednesday night at 8pm</td></tr>
         <tr><td>Friendly hour</td><td>First Thursday of each month at 10:45am</td></tr>
-        <tr><td>Sports 4 Christ</td><td>ages 6-10 : 6.30-7.45<br/>ages 11-15 : 8.00-9.30</td></tr>
+        <tr><td>Sports 4 Christ</td><td>Ages 6-10 : 6.30-7.45<br/>Ages 11-15 : 8.00-9.30</td></tr>
         </tbody>
       </table>
       <br/>

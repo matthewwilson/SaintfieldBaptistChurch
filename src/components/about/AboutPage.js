@@ -8,21 +8,41 @@ import WhatWeBelieveSection from './WhatWeBelieveSection';
 import ConstitutionSection from './ConstitutionSection';
 import LeadershipSection from './LeadershipSection';
 import FAQSection from './FAQSection';
+import './AboutPage.css'
 
-const AboutPage = (props) => {
-  return (
-    <Page>
-      <PageBanner title="ABOUT US" imageUrl="img/about_us.jpg" titleColour="white"/>
-      <PageSidebar>
-        <WelcomeSection linkTitle="About Us"/>
-        <HistorySection linkTitle="History"/>
-        <WhatWeBelieveSection linkTitle="What We Believe"/>
-        <ConstitutionSection linkTitle="Constitution"/>
-        <LeadershipSection linkTitle="Leadership"/>
-        <FAQSection linkTitle="FAQ"/>
-      </PageSidebar>
-    </Page>
-  )
+class AboutPage extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentBannerImage: "img/about_us.jpg",
+      title:"ABOUT US"
+    }
+  }
+
+  handleSectionChange = (bannerImage, title) => {
+    this.setState({
+      currentBannerImage: bannerImage,
+      title:title
+    })
+  }
+
+  render() {
+    return (
+      <Page>
+        <PageBanner title={this.state.title} imageUrl={this.state.currentBannerImage} titleColour="white"/>
+        <PageSidebar onSectionChange={this.handleSectionChange}>
+          <WelcomeSection linkTitle="About Us" bannerImageUrl="img/about_us.jpg"/>
+          <HistorySection linkTitle="History" bannerTitle="HOW IT ALL BEGAN" bannerImageUrl="img/history.jpg"/>
+          <WhatWeBelieveSection linkTitle="What We Believe" bannerImageUrl="img/about_us.jpg"/>
+          <ConstitutionSection linkTitle="Constitution" bannerImageUrl="img/about_us.jpg"/>
+          <LeadershipSection linkTitle="Leadership" bannerImageUrl="img/about_us.jpg"/>
+          <FAQSection linkTitle="FAQ" bannerImageUrl="img/about_us.jpg"/>
+        </PageSidebar>
+      </Page>
+    )
+  }
+
 }
 
 export default AboutPage;

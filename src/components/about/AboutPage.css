@@ -1,0 +1,23 @@
+.history-section-button {
+  padding: 0;
+  color: #ff5a34;
+}
+
+.history-section-button-bold {
+  font-weight: 700;
+}
+
+.history-section-button:hover {
+  color:#ff5a34;
+  text-decoration: none;
+}
+
+.history-section-button:focus {
+  color:#ff5a34;
+  text-decoration: none;
+}
+
+.history-section-button:active {
+  color:#ff5a34;
+  text-decoration: none;
+}
