@@ -20,15 +20,15 @@ class HomePageSlider extends React.Component {
           "imageUrl":"img/slides/anniversary.png",
           "subsubtitle":"1988 - 2018"
         },{
-          "type":"GOSPEL SERIES",
-          "title":"WHERE DID IT ALL GO WRONG?",
-          "url":"https://www.sermonaudio.com/search.asp?seriesOnly=true&currSection=sermonstopic&sourceid=saintfieldbaptist&keyword=Where+did+it+all+go+wrong&keyworddesc=Where+did+it+all+go+wrong",
-          "imageUrl":"img/slides/gowrong.jpg"
-        },{
           "type":"SUNDAY SERIES",
           "title":"JOURNEYING WITH JOSEPH",
           "url":"https://www.sermonaudio.com/search.asp?seriesOnly=true&currSection=sermonstopic&sourceid=saintfieldbaptist&keyword=Journeying+with+Joseph&keyworddesc=Journeying+with+Joseph",
           "imageUrl":"img/slides/journey.jpg"
+        },{
+          "type":"GOSPEL SERIES",
+          "title":"WHERE DID IT ALL GO WRONG?",
+          "url":"https://www.sermonaudio.com/search.asp?seriesOnly=true&currSection=sermonstopic&sourceid=saintfieldbaptist&keyword=Where+did+it+all+go+wrong&keyworddesc=Where+did+it+all+go+wrong",
+          "imageUrl":"img/slides/gowrong.jpg"
         },{
           "type":"ENCOUNTERS WITH GOD",
           "title":"A LIFE CHANGING DAY",

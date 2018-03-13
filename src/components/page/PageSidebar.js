@@ -6,14 +6,60 @@ class PageSidebar extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentSection:0
+      currentSection:0,
+      collapsed:true
     }
   }
 
   sectionLinkClicked = (event) => {
     this.setState({
-      currentSection:event.target.dataset.index
+      currentSection:event.target.dataset.index,
+      collapsed:true
     })
+  }
+
+  toggleMobileMenu = (event) => {
+    this.setState({
+      collapsed: this.state.collapsed ? false : true
+    })
+  }
+
+  renderMobileMenu(links) {
+
+    const collapsed = this.state.collapsed;
+
+    const buttonContents = collapsed ? "+" : "-"
+
+    const toggleButton = (
+      <button className="btn btn-link btn-page-sidebar-link btn-page-sidebar-mobile-toggle" onClick={this.toggleMobileMenu}>{buttonContents}</button>
+    )
+
+    if(collapsed) {
+      return (
+        <div className="col-md-3 d-lg-none d-xl-none page-sidebar-wrapper-mobile">
+          <div className="row">
+            <div className="offset-10 col-2">
+              {toggleButton}
+            </div>
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <div className="col-md-3 d-lg-none d-xl-none page-sidebar-wrapper-mobile">
+          <div className="row">
+            <div className="col-10">
+              <ul className="page-sidebar-menu-list">
+                {links}
+              </ul>
+            </div>
+            <div className="col-2">
+              {toggleButton}
+            </div>
+          </div>
+        </div>
+      )
+    }
   }
 
   render() {
@@ -34,14 +80,17 @@ class PageSidebar extends React.Component {
       )
     })
 
+    const mobileMenu = this.renderMobileMenu(links);
+
     return (
       <div className="page-sidebar-wrapper">
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-3 d-none d-sm-none d-md-none d-lg-block">
             <ul className="page-sidebar-menu-list">
               {links}
             </ul>
           </div>
+          {mobileMenu}
           <div className="col-md-9 page-sidebar-section">
               {this.props.children[this.state.currentSection]}
           </div>

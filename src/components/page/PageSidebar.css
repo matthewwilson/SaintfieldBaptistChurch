@@ -1,8 +1,17 @@
 .page-sidebar-wrapper {
   min-height: 400px;
-  margin-top: 60px;
-  margin-bottom: 60px
+  margin-top: 30px;
+  margin-bottom: 30px
 }
+
+@media(min-width: 992px) {
+  .page-sidebar-wrapper {
+    min-height: 400px;
+    margin-top: 60px;
+    margin-bottom: 60px
+  }
+}
+
 
 .page-sidebar-menu-list {
   list-style-type: none;
@@ -41,4 +50,10 @@
   color:#ff5a34;
   font-weight: 500;
   text-decoration: none;
+}
+
+.btn-page-sidebar-mobile-toggle {
+  line-height: 14px;
+  font-size: 32px !important;
+  color:#ff5a34;
 }

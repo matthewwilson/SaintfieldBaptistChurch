@@ -3,7 +3,7 @@ import React from 'react';
 const HistorySection = (props) => {
   return (
     <div>
-      <h1>History</h1>
+      <h2>HISTORY</h2>
       <p>Coming soon</p>
     </div>
   )

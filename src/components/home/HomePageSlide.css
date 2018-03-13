@@ -19,12 +19,18 @@
 
 .image-slide-type {
   font-family: 'Raleway', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 12pt !important;
   text-align: center;
   margin-top: 30px;
   color: white;
   word-wrap: break-word;
+}
+
+@media(min-width: 992px) {
+  .image-slide-type {
+    font-weight: 200;
+  }
 }
 
 .image-slide-title {
@@ -51,12 +57,18 @@
 
 .image-slide-sub-subtitle {
   font-family: 'Raleway', sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 12pt !important;
   text-align: center;
   margin-top: 20px;
   color: white;
   word-wrap: break-word;
+}
+
+@media(min-width: 992px) {
+  .image-slide-sub-subtitle {
+    font-weight: 200;
+  }
 }
 
 .image-slide-button {

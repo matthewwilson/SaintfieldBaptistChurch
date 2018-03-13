@@ -3,7 +3,7 @@ import React from 'react';
 const ConstitutionSection = (props) => {
   return (
     <div>
-      <h1>Constitution</h1>
+      <h2>CONSTITUTION</h2>
       <p>Coming soon</p>
     </div>
   )

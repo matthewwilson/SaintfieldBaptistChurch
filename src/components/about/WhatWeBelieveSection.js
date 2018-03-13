@@ -3,7 +3,7 @@ import React from 'react';
 const WhatWeBelieveSection = (props) => {
   return (
     <div>
-      <h1>What We Believe</h1>
+      <h2>WHAT WE BELIEVE</h2>
       <p>Coming soon</p>
     </div>
   )

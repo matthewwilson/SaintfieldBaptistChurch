@@ -3,7 +3,7 @@ import React from 'react';
 const LeadershipSection = (props) => {
   return (
     <div>
-      <h1>Location</h1>
+      <h2>LOCATION</h2>
       <p>Coming soon</p>
     </div>
   )
