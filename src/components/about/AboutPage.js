@@ -14,9 +14,14 @@ class AboutPage extends React.Component {
 
   constructor(props) {
     super(props);
+    this.getInitialPage(props)
+  }
+
+  getInitialPage = (props) => {
     this.state = {
-      currentBannerImage: "img/about_us.jpg",
-      title:"ABOUT US"
+      currentBannerImage: "/img/about_us.jpg",
+      title:"ABOUT US",
+      currentSection:0
     }
   }
 
@@ -31,13 +36,13 @@ class AboutPage extends React.Component {
     return (
       <Page>
         <PageBanner title={this.state.title} imageUrl={this.state.currentBannerImage} titleColour="white"/>
-        <PageSidebar onSectionChange={this.handleSectionChange}>
-          <WelcomeSection linkTitle="About Us" bannerImageUrl="img/about_us.jpg"/>
-          <HistorySection linkTitle="History" bannerTitle="HOW IT ALL BEGAN" bannerImageUrl="img/history.jpg"/>
-          <WhatWeBelieveSection linkTitle="What We Believe" bannerImageUrl="img/about_us.jpg"/>
-          <ConstitutionSection linkTitle="Constitution" bannerImageUrl="img/about_us.jpg"/>
-          <LeadershipSection linkTitle="Leadership" bannerImageUrl="img/about_us.jpg"/>
-          <FAQSection linkTitle="FAQ" bannerImageUrl="img/about_us.jpg"/>
+        <PageSidebar onSectionChange={this.handleSectionChange} currentSection={this.state.currentSection}>
+          <WelcomeSection linkTitle="About Us" bannerImageUrl="/img/about_us.jpg"/>
+          <HistorySection linkTitle="History" bannerTitle="HOW IT ALL BEGAN" bannerImageUrl="/img/history.jpg"/>
+          <WhatWeBelieveSection linkTitle="What We Believe" bannerImageUrl="/img/about_us.jpg"/>
+          <ConstitutionSection linkTitle="Constitution" bannerImageUrl="/img/about_us.jpg"/>
+          <LeadershipSection linkTitle="Leadership" bannerImageUrl="/img/about_us.jpg"/>
+          <FAQSection linkTitle="FAQ" bannerImageUrl="/img/about_us.jpg"/>
         </PageSidebar>
       </Page>
     )

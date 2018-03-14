@@ -6,7 +6,7 @@ class PageSidebar extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentSection:0,
+      currentSection:props.currentSection,
       collapsed:true
     }
   }
@@ -18,7 +18,7 @@ class PageSidebar extends React.Component {
     if(newSection.props.bannerTitle) {
       title = newSection.props.bannerTitle
     }
-    
+
     const bannerImageUrl = newSection.props.bannerImageUrl
 
     this.props.onSectionChange(bannerImageUrl, title.toUpperCase())

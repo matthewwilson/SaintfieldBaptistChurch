@@ -13,11 +13,11 @@ const Index = () => (
   <BrowserRouter>
     <SBC>
       <Route exact path="/" component={HomePage}/>
-      <Route exact path="/about" component={AboutPage}/>
-      <Route exact path="/meetings" component={MeetingsPage}/>
-      <Route exact path="/live" component={LivePage}/>
-      <Route exact path="/sermons" component={SermonsPage}/>
-      <Route exact path="/contact" component={ContactPage}/>
+      <Route path="/about" component={AboutPage}/>
+      <Route path="/meetings" component={MeetingsPage}/>
+      <Route path="/live" component={LivePage}/>
+      <Route path="/sermons" component={SermonsPage}/>
+      <Route path="/contact" component={ContactPage}/>
     </SBC>
   </BrowserRouter>
 )
