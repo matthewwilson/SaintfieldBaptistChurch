@@ -7,6 +7,15 @@
     <loc>https://www.saintfieldbaptist.org.uk/about</loc>
   </url>
   <url>
+    <loc>https://www.saintfieldbaptist.org.uk/about/history</loc>
+  </url>
+  <url>
+    <loc>https://www.saintfieldbaptist.org.uk/about/what_we_believe</loc>
+  </url>
+  <url>
+    <loc>https://www.saintfieldbaptist.org.uk/about/faq</loc>
+  </url>
+  <url>
     <loc>https://www.saintfieldbaptist.org.uk/meetings</loc>
   </url>
   <url>
@@ -16,6 +25,6 @@
     <loc>https://www.saintfieldbaptist.org.uk/sermons</loc>
   </url>
   <url>
-    <loc>https://www.saintfieldbaptist.org.uk/contact</loc> 
+    <loc>https://www.saintfieldbaptist.org.uk/contact</loc>
   </url>
 </urlset>

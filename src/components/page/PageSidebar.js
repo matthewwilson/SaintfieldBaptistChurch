@@ -1,33 +1,63 @@
 import React from 'react';
+import { withRouter } from "react-router-dom";
 import './PageSidebar.css'
 
 class PageSidebar extends React.Component {
 
   constructor(props) {
     super(props)
+
     this.state = {
-      currentSection:props.currentSection,
+      currentSection:this.getCurrentSection(props),
       collapsed:true
     }
   }
 
-  sectionLinkClicked = (event) => {
-
-    const newSection = this.props.children[event.target.dataset.index]
-    let title = newSection.props.linkTitle
-    if(newSection.props.bannerTitle) {
-      title = newSection.props.bannerTitle
+  getCurrentSection = (props) => {
+    let currentSection = 0;
+    for(var i = 0; i < props.children.length; i++) {
+      if(props.location.pathname === props.children[i].props.url) {
+        currentSection = i;
+        break;
+      }
     }
+    return currentSection;
+  }
 
+  componentDidMount() {
+    const newSection = this.getNewSection(this.state.currentSection)
+    const title = this.getTitle(newSection)
+    const bannerImageUrl = newSection.props.bannerImageUrl
+    this.props.onSectionChange(bannerImageUrl, title.toUpperCase())
+  }
+
+  sectionLinkClicked = (event) => {
+   const newSection = this.getNewSection(event.target.dataset.index)
+   this.changeSection(newSection);
+   this.setState({
+     currentSection:event.target.dataset.index,
+     collapsed:true
+   })
+  }
+
+  changeSection = (newSection) => {
+    const title = this.getTitle(newSection)
     const bannerImageUrl = newSection.props.bannerImageUrl
 
+    this.props.history.push(newSection.props.url);
     this.props.onSectionChange(bannerImageUrl, title.toUpperCase())
+  }
 
-    this.setState({
-      currentSection:event.target.dataset.index,
-      collapsed:true
-    })
+  getNewSection = (index) => {
+    return this.props.children[index]
+  }
 
+  getTitle = (section) => {
+    let title = section.props.linkTitle
+    if(section.props.bannerTitle) {
+      title = section.props.bannerTitle
+    }
+    return title;
   }
 
   toggleMobileMenu = (event) => {
@@ -113,4 +143,4 @@ class PageSidebar extends React.Component {
   }
 }
 
-export default PageSidebar;
+export default withRouter(PageSidebar);

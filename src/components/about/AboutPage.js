@@ -2,9 +2,12 @@ import React from 'react';
 import Page from '../page/Page';
 import PageBanner from '../page/PageBanner';
 import PageSidebar from '../page/PageSidebar';
+import PageSection from '../page/PageSection';
 import WelcomeSection from './WelcomeSection';
 import HistorySection from './HistorySection';
+import HistorySectionMore from './HistorySectionMore';
 import WhatWeBelieveSection from './WhatWeBelieveSection';
+import WhatWeBelieveSectionMore from './WhatWeBelieveSectionMore';
 import FAQSection from './FAQSection';
 import './AboutPage.css'
 
@@ -12,15 +15,7 @@ class AboutPage extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = this.getInitialPage(props)
-  }
-
-  getInitialPage = (props) => {
-    return {
-      currentBannerImage: "/img/about_us.jpg",
-      title:"ABOUT US",
-      currentSection:0
-    }
+    this.state = {}
   }
 
   handleSectionChange = (bannerImage, title) => {
@@ -35,10 +30,38 @@ class AboutPage extends React.Component {
       <Page>
         <PageBanner title={this.state.title} imageUrl={this.state.currentBannerImage} titleColour="white"/>
         <PageSidebar onSectionChange={this.handleSectionChange} currentSection={this.state.currentSection}>
-          <WelcomeSection linkTitle="About Us" bannerImageUrl="/img/about_us.jpg"/>
-          <HistorySection linkTitle="History" bannerTitle="HOW IT ALL BEGAN" bannerImageUrl="/img/history.jpg"/>
-          <WhatWeBelieveSection linkTitle="What We Believe" bannerImageUrl="/img/what_we_believe.png"/>
-          <FAQSection linkTitle="FAQ" bannerImageUrl="/img/about_us.jpg"/>
+
+          <PageSection
+            linkTitle="About Us"
+            bannerImageUrl="/img/about_us.jpg"
+            url="/about">
+            <WelcomeSection/>
+          </PageSection>
+
+          <PageSection
+            linkTitle="History"
+            bannerTitle="HOW IT ALL BEGAN"
+            bannerImageUrl="/img/history.jpg"
+            url="/about/history">
+            <HistorySection/>
+            <HistorySectionMore/>
+          </PageSection>
+
+          <PageSection
+            linkTitle="What We Believe"
+            bannerImageUrl="/img/what_we_believe.png"
+            url="/about/what_we_believe">
+            <WhatWeBelieveSection />
+            <WhatWeBelieveSectionMore />
+          </PageSection>
+
+          <PageSection
+            linkTitle="FAQ"
+            bannerImageUrl="/img/about_us.jpg"
+            url="/about/faq">
+            <FAQSection/>
+          </PageSection>
+
         </PageSidebar>
       </Page>
     )
