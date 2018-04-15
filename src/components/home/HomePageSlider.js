@@ -31,9 +31,9 @@ class HomePageSlider extends React.Component {
           "imageUrl":"img/slides/gowrong.jpg"
         },{
           "type":"ENCOUNTERS WITH GOD",
-          "title":"A LIFE CHANGING DAY",
-          "subtitle":"The lifestory of Billy Patterson",
-          "url":"https://www.sermonaudio.com/sermoninfo.asp?m=t&s=22518159328",
+          "title":"REDEMPTION FROM RELIGION",
+          "subtitle":"The lifestory of Donald Fleming",
+          "url":"https://www.sermonaudio.com/sermoninfo.asp?SID=325181516593",
           "imageUrl":"img/slides/testimony.png"
         }
       ]

@@ -5,8 +5,6 @@ import PageSidebar from '../page/PageSidebar';
 import WelcomeSection from './WelcomeSection';
 import HistorySection from './HistorySection';
 import WhatWeBelieveSection from './WhatWeBelieveSection';
-import ConstitutionSection from './ConstitutionSection';
-import LeadershipSection from './LeadershipSection';
 import FAQSection from './FAQSection';
 import './AboutPage.css'
 
@@ -40,8 +38,6 @@ class AboutPage extends React.Component {
           <WelcomeSection linkTitle="About Us" bannerImageUrl="/img/about_us.jpg"/>
           <HistorySection linkTitle="History" bannerTitle="HOW IT ALL BEGAN" bannerImageUrl="/img/history.jpg"/>
           <WhatWeBelieveSection linkTitle="What We Believe" bannerImageUrl="/img/what_we_believe.png"/>
-          <ConstitutionSection linkTitle="Constitution" bannerImageUrl="/img/about_us.jpg"/>
-          <LeadershipSection linkTitle="Leadership" bannerImageUrl="/img/about_us.jpg"/>
           <FAQSection linkTitle="FAQ" bannerImageUrl="/img/about_us.jpg"/>
         </PageSidebar>
       </Page>
