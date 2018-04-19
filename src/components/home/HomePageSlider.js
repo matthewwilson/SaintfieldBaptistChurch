@@ -14,6 +14,14 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
+          "type":"MINISTRY MEETINGS",
+          "title":"WHAT ON EARTH IS GOING ON?",
+          "subtitle":"Sunday 22nd - Friday 27th April (D.V.)",
+          "imageUrl":"img/slides/ministry.png",
+          "url":"media/SBC_Ministry_Meetings_Invite.pdf",
+          "buttonText":"MORE INFO",
+          "target":"_blank"
+        },{
           "type":"CELEBRATING",
           "title":"THIRTY YEARS",
           "subtitle":"of God's Faithfulness",
@@ -22,19 +30,22 @@ class HomePageSlider extends React.Component {
         },{
           "type":"SUNDAY SERIES",
           "title":"JOURNEYING WITH JOSEPH",
-          "url":"https://www.sermonaudio.com/search.asp?seriesOnly=true&currSection=sermonstopic&sourceid=saintfieldbaptist&keyword=Journeying+with+Joseph&keyworddesc=Journeying+with+Joseph",
-          "imageUrl":"img/slides/journey.jpg"
+          "url":"/sermons/series/Journeying%20with%20Joseph",
+          "imageUrl":"img/slides/journey.jpg",
+          "internalLink":true
         },{
           "type":"GOSPEL SERIES",
           "title":"WHERE DID IT ALL GO WRONG?",
-          "url":"https://www.sermonaudio.com/search.asp?seriesOnly=true&currSection=sermonstopic&sourceid=saintfieldbaptist&keyword=Where+did+it+all+go+wrong&keyworddesc=Where+did+it+all+go+wrong",
-          "imageUrl":"img/slides/gowrong.jpg"
+          "url":"/sermons/series/Where%20did%20it%20all%20go%20wrong",
+          "imageUrl":"img/slides/gowrong.jpg",
+          "internalLink":true
         },{
           "type":"ENCOUNTERS WITH GOD",
           "title":"REDEMPTION FROM RELIGION",
           "subtitle":"The lifestory of Donald Fleming",
-          "url":"https://www.sermonaudio.com/sermoninfo.asp?SID=325181516593",
-          "imageUrl":"img/slides/testimony.png"
+          "url":"/sermon/325181516593/Redemption%20from%20religion%20-%20Donald%20Fleming",
+          "imageUrl":"img/slides/D_Flemming_TestimonyImage-01.png",
+          "internalLink":true
         }
       ]
     }

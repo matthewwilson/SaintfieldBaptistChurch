@@ -1,7 +1,8 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './HomePageSlide.css'
 
-const HomePageSlide = ({type, title, imageUrl, subtitle, url, subsubtitle}) => {
+const HomePageSlide = ({type, title, imageUrl, subtitle, url, subsubtitle, buttonText="LISTEN AGAIN", target="_self", internalLink=false}) => {
 
   const slideStyle = {
     background:"url("+imageUrl+")"
@@ -13,10 +14,18 @@ const HomePageSlide = ({type, title, imageUrl, subtitle, url, subsubtitle}) => {
 
   let lowerSection;
 
-  if(url) {
+  if(url && internalLink) {
     lowerSection = (
       <div style={buttonWrapperStyle}>
-        <a role="button" target="_blank" className="btn btn-outline-primary image-slide-button center-block" href={url}>LISTEN AGAIN</a>
+        <Link to={url} role="button" className="btn btn-outline-primary image-slide-button center-block">
+          {buttonText}
+        </Link>
+      </div>
+    )
+  } else if(url) {
+    lowerSection = (
+      <div style={buttonWrapperStyle}>
+        <a role="button" target={target} className="btn btn-outline-primary image-slide-button center-block" href={url}>{buttonText}</a>
       </div>
     )
   } else {

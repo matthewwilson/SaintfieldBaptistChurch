@@ -1,15 +1,14 @@
 import React from 'react';
+import Page from '../page/Page';
 import Map from '../map/Map';
 import './ContactPage.css'
 
 
 const ContactPage = (props) => {
   return (
-    <div className="contact-page">
-      <h1>Contact Us</h1>
-      <hr/>
+    <Page>
       <Map/>
-      <div>
+      <div className="contact-page">
         <br/>
         <p>
           Saintfield Baptist Church<br/>
@@ -19,7 +18,7 @@ const ContactPage = (props) => {
         <br/>
         <a href="mailto:pastor@saintfieldbaptist.org.uk"><i className="far fa-envelope"></i> Email Us</a>
       </div>
-    </div>
+    </Page>
   )
 }
 

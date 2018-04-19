@@ -1,5 +1,6 @@
 import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker} from "react-google-maps";
+import './Map.css'
 
 class Map extends React.Component {
   render() {
@@ -13,7 +14,7 @@ class Map extends React.Component {
       </GoogleMap>
     ))
 
-    return(<div><MyMapComponent
+    return(<div className="full-width-map"><MyMapComponent
       isMarkerShown
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOe9TPLdG_AXEmXeshgdSMOxaJaPUP2U"
       loadingElement={<div style={{ height: `100%` }} />}

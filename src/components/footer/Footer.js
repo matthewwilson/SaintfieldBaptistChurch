@@ -6,13 +6,11 @@ const Footer = (props) => {
   return (
       <div className="footer">
         <div className="footer-links">
-          <Link to="/">Home</Link><span className="footer-link-slash">/</span>
           <Link to="/about">About</Link><span className="footer-link-slash">/</span>
-          <Link to="/meetings">Meetings</Link><span className="footer-link-slash">/</span>
           <a href="/bulletin/bulletin.pdf" target="_blank">Bulletin</a><span className="footer-link-slash">/</span>
-          <Link to="/live">Watch</Link><span className="footer-link-slash">/</span>
           <Link to="/sermons">Sermons</Link><span className="footer-link-slash">/</span>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact">Contact</Link><span className="footer-link-slash">/</span>
+          <Link to="/live">Watch Live</Link>
         </div>
         <div className="row">
           <div className="col-sm">

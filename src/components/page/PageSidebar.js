@@ -28,7 +28,8 @@ class PageSidebar extends React.Component {
     const newSection = this.getNewSection(this.state.currentSection)
     const title = this.getTitle(newSection)
     const bannerImageUrl = newSection.props.bannerImageUrl
-    this.props.onSectionChange(bannerImageUrl, title.toUpperCase())
+    const bannerMobilePosition = newSection.props.bannerMobilePosition
+    this.props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition)
   }
 
   sectionLinkClicked = (event) => {
@@ -43,9 +44,10 @@ class PageSidebar extends React.Component {
   changeSection = (newSection) => {
     const title = this.getTitle(newSection)
     const bannerImageUrl = newSection.props.bannerImageUrl
+    const bannerMobilePosition = newSection.props.bannerMobilePosition
 
     this.props.history.push(newSection.props.url);
-    this.props.onSectionChange(bannerImageUrl, title.toUpperCase())
+    this.props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition)
   }
 
   getNewSection = (index) => {

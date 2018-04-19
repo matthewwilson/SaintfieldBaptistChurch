@@ -1,0 +1,13 @@
+.full-width-map {
+  margin-left: -10px;
+  margin-right: -10px;
+  min-height: 300px;
+}
+
+@media(min-width: 992px) {
+  .full-width-map {
+    margin-left: -100px;
+    margin-right: -100px;
+    min-height: 350px;
+  }
+}

@@ -8,6 +8,7 @@ import HistorySection from './HistorySection';
 import HistorySectionMore from './HistorySectionMore';
 import WhatWeBelieveSection from './WhatWeBelieveSection';
 import WhatWeBelieveSectionMore from './WhatWeBelieveSectionMore';
+import WhatsOnSection from './WhatsOnSection';
 import FAQSection from './FAQSection';
 import './AboutPage.css'
 
@@ -18,23 +19,25 @@ class AboutPage extends React.Component {
     this.state = {}
   }
 
-  handleSectionChange = (bannerImage, title) => {
+  handleSectionChange = (bannerImage, title, bannerMobilePosition) => {
     this.setState({
       currentBannerImage: bannerImage,
-      title:title
+      title:title,
+      bannerMobilePosition:bannerMobilePosition
     })
   }
 
   render() {
     return (
       <Page>
-        <PageBanner title={this.state.title} imageUrl={this.state.currentBannerImage} titleColour="white"/>
+        <PageBanner title={this.state.title} imageUrl={this.state.currentBannerImage} bannerMobilePosition={this.state.bannerMobilePosition} titleColour="white"/>
         <PageSidebar onSectionChange={this.handleSectionChange} currentSection={this.state.currentSection}>
 
           <PageSection
             linkTitle="About Us"
             bannerImageUrl="/img/about_us.jpg"
-            url="/about">
+            url="/about"
+            bannerMobilePosition="right">
             <WelcomeSection/>
           </PageSection>
 
@@ -42,7 +45,8 @@ class AboutPage extends React.Component {
             linkTitle="History"
             bannerTitle="HOW IT ALL BEGAN"
             bannerImageUrl="/img/history.jpg"
-            url="/about/history">
+            url="/about/history"
+            bannerMobilePosition="right">
             <HistorySection/>
             <HistorySectionMore/>
           </PageSection>
@@ -50,15 +54,25 @@ class AboutPage extends React.Component {
           <PageSection
             linkTitle="What We Believe"
             bannerImageUrl="/img/what_we_believe.png"
-            url="/about/what_we_believe">
+            url="/about/what-we-believe"
+            bannerMobilePosition="center">
             <WhatWeBelieveSection />
             <WhatWeBelieveSectionMore />
           </PageSection>
 
           <PageSection
+            linkTitle="What's On"
+            bannerImageUrl="/img/about_us.jpg"
+            url="/about/whats-on"
+            bannerMobilePosition="center">
+            <WhatsOnSection/>
+          </PageSection>
+
+          <PageSection
             linkTitle="FAQ"
             bannerImageUrl="/img/about_us.jpg"
-            url="/about/faq">
+            url="/about/faq"
+            bannerMobilePosition="right">
             <FAQSection/>
           </PageSection>
 

@@ -10,13 +10,13 @@
     <loc>https://www.saintfieldbaptist.org.uk/about/history</loc>
   </url>
   <url>
-    <loc>https://www.saintfieldbaptist.org.uk/about/what_we_believe</loc>
+    <loc>https://www.saintfieldbaptist.org.uk/about/what-we-believe</loc>
+  </url>
+  <url>
+    <loc>https://www.saintfieldbaptist.org.uk/about/whats-on</loc>
   </url>
   <url>
     <loc>https://www.saintfieldbaptist.org.uk/about/faq</loc>
-  </url>
-  <url>
-    <loc>https://www.saintfieldbaptist.org.uk/meetings</loc>
   </url>
   <url>
     <loc>https://www.saintfieldbaptist.org.uk/watch</loc>
@@ -26,5 +26,11 @@
   </url>
   <url>
     <loc>https://www.saintfieldbaptist.org.uk/contact</loc>
+  </url>
+  <url>
+    <loc>https://saintfieldbaptist.org.uk/sermons/series/Journeying%20with%20Joseph</loc>
+  </url>
+  <url>
+    <loc>https://saintfieldbaptist.org.uk/sermons/series/Where%20did%20it%20all%20go%20wrong</loc>
   </url>
 </urlset>

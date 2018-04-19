@@ -44,25 +44,19 @@ class Header extends React.Component {
           <ul className="navbar-nav mr-auto"></ul>
           <ul className="navbar-nav sbc-navbar-content">
             <li className="nav-item">
-              <NavLink exact to="/" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Home</NavLink>
-            </li>
-            <li className="nav-item">
               <NavLink to="/about" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>About</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/meetings" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Meetings</NavLink>
-            </li>
-            <li className="nav-item">
               <a href="bulletin/bulletin.pdf" target="_blank" className="nav-link" onClick={this.navLinkClick}>Bulletin</a>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/live" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Watch</NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/sermons" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Sermons</NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/contact" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Contact</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/live" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Watch Live</NavLink>
             </li>
           </ul>
         </div>

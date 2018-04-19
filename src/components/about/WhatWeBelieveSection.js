@@ -4,7 +4,7 @@ import BibleVerse from '../utils/BibleVerse'
 const WhatWeBelieveSection = (props) => {
   return (
     <div>
-      <h2>WHAT WE BELIEVE</h2>
+      <h2>BASIS OF BELIEF</h2>
       <h4>The Scriptures</h4>
       <p>We believe in the verbal inspiration, total inerrancy and infallibility of the Holy Scriptures in their entirety. These being God breathed, we believe the bible to be solely-sufficient and the final authority in all matters of faith, doctrine and practice. (<BibleVerse reference="1TH.2.13" text="1 Thessalonians 2:13"/>,
         <BibleVerse reference="2TI.3.16" text="2 Timothy 3:16"/>)</p>
@@ -29,7 +29,7 @@ const WhatWeBelieveSection = (props) => {
         <BibleVerse reference="2CO.3.6" text="2 Corinthians 3:6"/>;
         <BibleVerse reference="ROM.8.9" text="Romans 8:9"/>;
         <BibleVerse reference="EPH.1.13-14" text="Ephesians 1:13-14"/>) We believe that the sign gifts of the Holy Spirit (eg: speaking in tongues, gifts of healing, gifts of prophecy) have ceased in this age. (<BibleVerse reference="1CO.13.8" text="1 Corinthians 13:8"/>).</p>
-        
+
     </div>
   )
 }

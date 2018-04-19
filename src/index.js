@@ -4,9 +4,10 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import SBC from './components/sbc/SBC'
 import HomePage from './components/home/HomePage'
 import AboutPage from './components/about/AboutPage';
-import MeetingsPage from './components/meetings/MeetingsPage';
 import LivePage from './components/live/LivePage';
 import SermonsPage from './components/sermons/SermonsPage'
+import SermonSeriesPage from './components/sermons/SermonSeriesPage'
+import SermonPage from './components/sermons/SermonPage'
 import ContactPage from './components/contact/ContactPage'
 
 const Index = () => (
@@ -14,9 +15,10 @@ const Index = () => (
     <SBC>
       <Route exact path="/" component={HomePage}/>
       <Route path="/about" component={AboutPage}/>
-      <Route path="/meetings" component={MeetingsPage}/>
       <Route path="/live" component={LivePage}/>
-      <Route path="/sermons" component={SermonsPage}/>
+      <Route path="/sermons" exact component={SermonsPage}/>
+      <Route path="/sermons/series/:title" component={SermonSeriesPage}/>
+      <Route path="/sermon/:sermonId/:title" component={SermonPage}/>
       <Route path="/contact" component={ContactPage}/>
     </SBC>
   </BrowserRouter>

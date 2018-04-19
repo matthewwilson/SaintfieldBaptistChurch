@@ -1,12 +1,9 @@
 import React from 'react';
-import './MeetingsPage.css'
 
-const MeetingsPage = (props) => {
+const WhatsOnSection = (props) => {
   return (
-    <div className="meeting-page">
-      <h1>Weekly Meetings</h1>
-      <hr/>
-      <p className="lead">Midweek Meetings</p>
+    <div>
+      <h2>Midweek Meetings</h2>
       <table className="table">
         <tbody>
         <tr><td>Womens Meeting</td><td>Last Tuesday of each month at 8pm</td></tr>
@@ -18,7 +15,7 @@ const MeetingsPage = (props) => {
       </table>
       <br/>
 
-      <p className="lead">Sunday Meetings</p>
+      <h2>Sunday Meetings</h2>
       <table className="table">
         <tbody>
         <tr><td>Sunday school</td><td>10.30am</td></tr>
@@ -28,11 +25,8 @@ const MeetingsPage = (props) => {
         <tr><td colSpan="2">Both the morning and gospel services are preceded by times of prayer</td></tr>
         </tbody>
       </table>
-      <br/>
-
-      <p>For more details including upcoming meetings please view our bulletin <a href="bulletin/bulletin.pdf" target="_blank">here</a></p>
     </div>
   )
 }
 
-export default MeetingsPage;
+export default WhatsOnSection;
