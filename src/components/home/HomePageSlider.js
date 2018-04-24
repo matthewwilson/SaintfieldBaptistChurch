@@ -18,9 +18,8 @@ class HomePageSlider extends React.Component {
           "title":"WHAT ON EARTH IS GOING ON?",
           "subtitle":"Sunday 22nd - Friday 27th April (D.V.)",
           "imageUrl":"img/slides/ministry.png",
-          "url":"media/SBC_Ministry_Meetings_Invite.pdf",
-          "buttonText":"MORE INFO",
-          "target":"_blank"
+          "url":"/sermons/series/These%20last%20days",
+          "internalLink":true
         },{
           "type":"CELEBRATING",
           "title":"THIRTY YEARS",

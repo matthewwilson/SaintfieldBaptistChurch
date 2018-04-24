@@ -14,7 +14,13 @@ class Map extends React.Component {
       </GoogleMap>
     ))
 
-    return(<div className="full-width-map"><MyMapComponent
+    var className = "";
+
+    if(this.props.fullWidth) {
+      className = "full-width-map"
+    }
+
+    return(<div className={className}><MyMapComponent
       isMarkerShown
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOe9TPLdG_AXEmXeshgdSMOxaJaPUP2U"
       loadingElement={<div style={{ height: `100%` }} />}
