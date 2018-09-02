@@ -14,13 +14,6 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
-          "type":"MINISTRY MEETINGS",
-          "title":"WHAT ON EARTH IS GOING ON?",
-          "subtitle":"Sunday 22nd - Friday 27th April (D.V.)",
-          "imageUrl":"img/slides/ministry.png",
-          "url":"/sermons/series/These%20last%20days",
-          "internalLink":true
-        },{
           "type":"CELEBRATING",
           "title":"THIRTY YEARS",
           "subtitle":"of God's Faithfulness",
@@ -28,9 +21,9 @@ class HomePageSlider extends React.Component {
           "subsubtitle":"1988 - 2018"
         },{
           "type":"SUNDAY SERIES",
-          "title":"JOURNEYING WITH JOSEPH",
-          "url":"/sermons/series/Journeying%20with%20Joseph",
-          "imageUrl":"img/slides/journey.jpg",
+          "title":"The Rare Jewel of Contentment ",
+          "url":"/sermons/series/The%20Rare%20Jewel%20of%20Contentment",
+          "imageUrl":"img/slides/jewel.jpg",
           "internalLink":true
         },{
           "type":"GOSPEL SERIES",
@@ -40,10 +33,10 @@ class HomePageSlider extends React.Component {
           "internalLink":true
         },{
           "type":"ENCOUNTERS WITH GOD",
-          "title":"REDEMPTION FROM RELIGION",
-          "subtitle":"The lifestory of Donald Fleming",
-          "url":"/sermon/325181516593/Redemption%20from%20religion%20-%20Donald%20Fleming",
-          "imageUrl":"img/slides/D_Flemming_TestimonyImage-01.png",
+          "title":"Redemption, Rebellion & Reconciliation",
+          "subtitle":"The lifestory of Norman Paynter",
+          "url":"/sermon/527181520197/Redemption,%20Rebellion%20and%20Reconciliation",
+          "imageUrl":"img/slides/paynter.jpeg",
           "internalLink":true
         }
       ]
