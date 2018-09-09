@@ -12,7 +12,7 @@ const LivePage = (props) => {
   const contents = (
     <div>
       <br/>
-      <h3 class="text-center">Tonight’s service will not be broadcast live. We are sorry for any inconvenience caused. Please tune in next Sunday morning at 11.30am</h3>
+      <h3 class="text-center">Tonight&#39;s service will not be broadcast live. We are sorry for any inconvenience caused. Please tune in next Sunday morning at 11.30am</h3>
     </div>
   );
 
