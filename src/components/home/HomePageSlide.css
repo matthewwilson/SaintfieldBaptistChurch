@@ -1,6 +1,19 @@
 .image-slide {
   min-height: 500px !important;
   background-size: cover !important;
+  text-decoration: none;
+}
+
+.image-slide-content {
+  text-decoration: none !important;
+}
+
+.image-slide-content p {
+  text-decoration: none !important;
+}
+
+.image-slide-link {
+  text-decoration: none !important;
 }
 
 @media(min-width: 992px) {
@@ -37,7 +50,7 @@
 .image-slide-title {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 36pt !important;
+  font-size: 34pt !important;
   text-align: center;
   margin-top: 20px;
   color: white;

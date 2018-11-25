@@ -14,6 +14,14 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
+          "type":"30/09 - 14/10",
+          "title":"BEHOLD!",
+          "subtitle":"Gospel Mission",
+          "subsubtitle":"Sundays 7pm + Weeknights 8pm",
+          "imageUrl":"img/slides/behold.png",
+          "url":"/media/BEHOLD.pdf",
+          "buttonText":"MORE INFO"
+        },{
           "type":"CELEBRATING",
           "title":"THIRTY YEARS",
           "subtitle":"of God's Faithfulness",
@@ -30,13 +38,6 @@ class HomePageSlider extends React.Component {
           "title":"WHERE DID IT ALL GO WRONG?",
           "url":"/sermons/series/Where%20did%20it%20all%20go%20wrong",
           "imageUrl":"img/slides/gowrong.jpg",
-          "internalLink":true
-        },{
-          "type":"ENCOUNTERS WITH GOD",
-          "title":"Redemption, Rebellion & Reconciliation",
-          "subtitle":"The lifestory of Norman Paynter",
-          "url":"/sermon/527181520197/Redemption,%20Rebellion%20and%20Reconciliation",
-          "imageUrl":"img/slides/paynter.jpeg",
           "internalLink":true
         }
       ]
