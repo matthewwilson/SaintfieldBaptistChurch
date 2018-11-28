@@ -17,7 +17,14 @@
 
 .sbc-navbar-logo {
   width:auto;
-  height:45px;
+  height:40px;
+}
+
+@media(min-width: 330px) {
+  .sbc-navbar-logo {
+    width:auto;
+    height:45px;
+  }
 }
 
 @media(min-width: 992px) {

@@ -14,25 +14,26 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
-          "type":"30/09 - 14/10",
-          "title":"BEHOLD!",
-          "subtitle":"Gospel Mission",
-          "subsubtitle":"Sundays 7pm + Weeknights 8pm",
-          "imageUrl":"img/slides/behold.png",
-          "url":"/media/BEHOLD.pdf",
-          "buttonText":"MORE INFO"
+          "type":"CAROL SERVICE",
+          "title":"The real reason for the season",
+          "subtitle": "Sunday 23rd December - 6.30pm (D.V.)",
+          "imageUrl":"img/slides/christmas.png",
+          "url":"/media/SBC_Christmas_Invite_18_Web.pdf",
+          "buttonText": "More Info",
+          "internalLink":true
+        },{
+          "type":"SUNDAY SERIES",
+          "title":"Against The Grain",
+          "subtitle": "A study from Daniel",
+          "url":"/sermons/series/Against%20The%20Grain",
+          "imageUrl":"img/slides/daniel.jpg",
+          "internalLink":true
         },{
           "type":"CELEBRATING",
           "title":"THIRTY YEARS",
           "subtitle":"of God's Faithfulness",
           "imageUrl":"img/slides/anniversary.png",
           "subsubtitle":"1988 - 2018"
-        },{
-          "type":"SUNDAY SERIES",
-          "title":"The Rare Jewel of Contentment ",
-          "url":"/sermons/series/The%20Rare%20Jewel%20of%20Contentment",
-          "imageUrl":"img/slides/jewel.jpg",
-          "internalLink":true
         },{
           "type":"GOSPEL SERIES",
           "title":"WHERE DID IT ALL GO WRONG?",
