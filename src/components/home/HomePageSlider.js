@@ -19,8 +19,7 @@ class HomePageSlider extends React.Component {
           "subtitle": "Sunday 23rd December - 6.30pm (D.V.)",
           "imageUrl":"img/slides/christmas.png",
           "url":"/media/SBC_Christmas_Invite_18_Web.pdf",
-          "buttonText": "More Info",
-          "internalLink":true
+          "buttonText": "More Info"
         },{
           "type":"SUNDAY SERIES",
           "title":"Against The Grain",
