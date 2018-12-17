@@ -22,6 +22,12 @@ class HomePageSlider extends React.Component {
           "buttonText": "More Info",
           "backgroundPosition":"center"
         },{
+          "type":"BIBLE STUDY SERIES",
+          "title":"WHAT IS A BIBLICAL BAPTIST?",
+          "url":"/sermons/series/What%20is%20a%20Biblical%20Baptist%3F",
+          "imageUrl":"img/slides/baptist.jpg",
+          "internalLink":true
+        },{
           "type":"SUNDAY SERIES",
           "title":"Against The Grain",
           "subtitle": "A study from Daniel",
@@ -29,17 +35,17 @@ class HomePageSlider extends React.Component {
           "imageUrl":"img/slides/daniel.jpg",
           "internalLink":true
         },{
+          "type":"GOSPEL SERIES",
+          "title":"WHERE DID IT ALL GO WRONG?",
+          "url":"/sermons/series/Where%20did%20it%20all%20go%20wrong%3F",
+          "imageUrl":"img/slides/gowrong.jpg",
+          "internalLink":true
+        },{
           "type":"CELEBRATING",
           "title":"THIRTY YEARS",
           "subtitle":"of God's Faithfulness",
           "imageUrl":"img/slides/anniversary.png",
           "subsubtitle":"1988 - 2018"
-        },{
-          "type":"GOSPEL SERIES",
-          "title":"WHERE DID IT ALL GO WRONG?",
-          "url":"/sermons/series/Where%20did%20it%20all%20go%20wrong",
-          "imageUrl":"img/slides/gowrong.jpg",
-          "internalLink":true
         }
       ]
     }

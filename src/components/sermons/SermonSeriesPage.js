@@ -2,13 +2,13 @@ import React from 'react';
 import SermonAudioSeries from './SermonAudioSeries'
 
 const SermonSeriesPage = (props) => {
-
+  const title = decodeURIComponent(props.match.params.title)
   return (
     <div className="sermons-page">
-      <h1>{props.match.params.title}</h1>
+      <h1>{title}</h1>
       <hr/>
       <div>
-        <SermonAudioSeries title={props.match.params.title} showHeader={false}/>
+        <SermonAudioSeries title={title} showHeader={false}/>
       </div>
     </div>
   )
