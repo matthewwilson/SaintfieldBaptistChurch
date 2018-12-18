@@ -22,17 +22,17 @@ class HomePageSlider extends React.Component {
           "buttonText": "More Info",
           "backgroundPosition":"center"
         },{
-          "type":"BIBLE STUDY SERIES",
-          "title":"WHAT IS A BIBLICAL BAPTIST?",
-          "url":"/sermons/series/What%20is%20a%20Biblical%20Baptist%3F",
-          "imageUrl":"img/slides/baptist.jpg",
-          "internalLink":true
-        },{
           "type":"SUNDAY SERIES",
           "title":"Against The Grain",
           "subtitle": "A study from Daniel",
           "url":"/sermons/series/Against%20The%20Grain",
           "imageUrl":"img/slides/daniel.jpg",
+          "internalLink":true
+        },{
+          "type":"BIBLE STUDY SERIES",
+          "title":"WHAT IS A BIBLICAL BAPTIST?",
+          "url":"/sermons/series/What%20is%20a%20Biblical%20Baptist%3F",
+          "imageUrl":"img/slides/baptist.jpg",
           "internalLink":true
         },{
           "type":"GOSPEL SERIES",
