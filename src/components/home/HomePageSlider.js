@@ -16,11 +16,10 @@ class HomePageSlider extends React.Component {
       slides: [{
           "type":"CAROL SERVICE",
           "title":"The real reason for the season",
-          "subtitle": "Sunday 23rd December - 6.30pm (D.V.)",
           "imageUrl":"img/slides/christmas.png",
-          "url":"/media/SBC_Christmas_Invite_18_Web.pdf",
-          "buttonText": "More Info",
-          "backgroundPosition":"center"
+          "url":"/sermons/series/The%20real%20reason%20for%20the%20season",
+          "backgroundPosition":"center",
+          "internalLink":true
         },{
           "type":"SUNDAY SERIES",
           "title":"Against The Grain",
