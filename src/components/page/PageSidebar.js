@@ -112,7 +112,7 @@ class PageSidebar extends React.Component {
 
       let classes = "";
 
-      if(this.state.currentSection == index) {
+      if(this.state.currentSection && this.state.currentSection.toString() === index.toString()) {
         classes = "btn-page-sidebar-link-active"
       }
 
