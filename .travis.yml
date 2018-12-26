@@ -6,6 +6,6 @@ cache:
         - "node_modules"
 script: npm run build
 env:
-	- FTP_HOST=host
-	- FTP_USER=user
-	- FTP_PASSWORD=password
+    - FTP_HOST=host
+    - FTP_USER=user
+    - FTP_PASSWORD=password
