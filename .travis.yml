@@ -7,8 +7,3 @@ cache:
 script:
   - npm run build
   - npm run deploy
-env:
-    global:
-        - FTP_HOST=host
-        - FTP_USER=user
-        - FTP_PASSWORD=password
