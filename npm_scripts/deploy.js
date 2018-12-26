@@ -11,7 +11,7 @@ var config = {
     remoteRoot: '/',
    	include: ['*', '**/*'],
     deleteRemote: true,
-    forcePasv: true
+    forcePasv: false
 }
 
 ftpDeploy.on('uploading', function(data) {
