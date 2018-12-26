@@ -3,9 +3,9 @@ var FtpDeploy = require('ftp-deploy');
 var ftpDeploy = new FtpDeploy();
 
 var config = {
-    user: "macbook-instil@saintfieldbaptist.org.uk", //process.ENV.FTP_USER,
-    password: "jrQtqMCTX9YLvjamwQTVhWAV", //process.ENV.FTP_PASSWORD,
-    host: "ftp.saintfieldbaptist.org.uk", //process.ENV.FTP_HOST,
+    user: process.ENV.FTP_USER,
+    password: process.ENV.FTP_PASSWORD,
+    host: process.ENV.FTP_HOST,
     port: 21,
     localRoot: path.join(__dirname, '..', '/build'),
     remoteRoot: '/',
