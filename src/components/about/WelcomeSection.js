@@ -5,7 +5,7 @@ const WelcomeSection = (props) => {
     <div>
       <h2>WELCOME</h2>
       <p>
-        Saintfield Baptist Church is a relatively young church. We are currently celebrating its 30th anniversary.
+        Saintfield Baptist Church is a relatively young church. We recently celebrated our 30th anniversary.
         <br/>
         Our desire is to exalt the Name of our Saviour the Lord Jesus Christ.
       </p>

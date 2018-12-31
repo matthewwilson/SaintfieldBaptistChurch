@@ -14,13 +14,6 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
-          "type":"CAROL SERVICE",
-          "title":"The real reason for the season",
-          "imageUrl":"img/slides/christmas.png",
-          "url":"/sermons/series/The%20real%20reason%20for%20the%20season",
-          "backgroundPosition":"center",
-          "internalLink":true
-        },{
           "type":"SUNDAY SERIES",
           "title":"Against The Grain",
           "subtitle": "A study from Daniel",
@@ -39,12 +32,6 @@ class HomePageSlider extends React.Component {
           "url":"/sermons/series/Where%20did%20it%20all%20go%20wrong%3F",
           "imageUrl":"img/slides/gowrong.jpg",
           "internalLink":true
-        },{
-          "type":"CELEBRATING",
-          "title":"THIRTY YEARS",
-          "subtitle":"of God's Faithfulness",
-          "imageUrl":"img/slides/anniversary.png",
-          "subsubtitle":"1988 - 2018"
         }
       ]
     }
