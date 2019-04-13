@@ -9,7 +9,7 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'saintfieldbaptist.eu.auth0.com',
     clientID: 'Z1kMtZGepUuW8J7R7e1joUyJR0GBFMdZ',
-    redirectUri: process.env.FTP_HOST || 'http://localhost:3000/callback',
+    redirectUri: process.env.AUTH_CALLBACK_URL || 'http://localhost:3000/callback',
     responseType: 'token id_token',
     audience: 'https://api.saintfieldbaptist.org.uk',
     scope: 'openid'
