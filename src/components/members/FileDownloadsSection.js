@@ -26,7 +26,7 @@ class FileDownloadsSection extends React.Component {
         files: response.data.map(file => file.key)
       })
     }).catch((error) => {
-      if (error.response && error.response.status && error.response.status.toString().indexOf("4") > -1) {
+      if (error.response && error.response.status && error.response.status.toString().indexOf("4") === 0) {
         auth.logout()
       }
       console.error(error)
