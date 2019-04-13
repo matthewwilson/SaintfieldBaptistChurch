@@ -1,24 +1,18 @@
 import React from 'react';
 import Page from '../page/Page';
 import FileDownloadsSection from './FileDownloadsSection'
+import './MembersPage.css'
 
-class MembersPage extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {}
-  }
-
-  render() {
+const MembersPage = (props) => {
     return (
       <Page>
-        <h1>Members</h1>
-        <hr/>
-        <FileDownloadsSection/>
+        <div className="members-page-section">
+          <h1>Members</h1>
+          <hr/>
+          <FileDownloadsSection/>
+        </div>
       </Page>
     )
-  }
-
 }
 
 export default MembersPage;

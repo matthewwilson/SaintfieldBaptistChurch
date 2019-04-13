@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Auth from '../auth/Auth';
 import FileDownloadRow from './FileDownloadRow';
+import loading from '../auth/Loading.svg'
 
 class FileDownloadsSection extends React.Component {
   constructor(props) {
@@ -27,14 +28,40 @@ class FileDownloadsSection extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <h2>Downloads</h2>
+
+    var content
+
+    if (this.state.files.length === 0) {
+      const style = {
+        display: 'flex',
+        justifyContent: 'center',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        backgroundColor: 'white',
+        height: '50px'
+      }
+
+      content = (
+        <div style={style}>
+          <img src={loading} alt="loading"/>
+        </div>
+      )
+    } else {
+      content = (
         <table className="table">
           <tbody>
           { this.state.files.map((file, index) => <FileDownloadRow key={`file-download-${index}`} file={file}/>)}
           </tbody>
         </table>
+      )
+    }
+
+    return (
+      <div>
+        <h2>Downloads</h2>
+        {content}
       </div>
     )
   }
