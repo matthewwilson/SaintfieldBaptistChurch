@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink, Link} from 'react-router-dom';
+import Auth from '../auth/Auth.js'
 import './Header.css';
 
 class Header extends React.Component {
@@ -9,6 +10,7 @@ class Header extends React.Component {
     this.state = {
       collapsed:true
     }
+    this.auth = new Auth();
   }
 
   navBarToggleClick = (event) => {
@@ -23,12 +25,22 @@ class Header extends React.Component {
     });
   }
 
+  login = (event) => {
+    this.auth.login();
+  }
+
   render() {
 
     let collapsedClass = "collapse";
 
     if(!this.state.collapsed) {
       collapsedClass = "";
+    }
+
+    var loginNavItem = (<button className="btn btn-link nav-link login-btn" onClick={this.login}>Login</button>)
+
+    if(this.auth.isAuthenticated()) {
+      loginNavItem = (<NavLink to="/members" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Members</NavLink>)
     }
 
     return (
@@ -57,6 +69,9 @@ class Header extends React.Component {
             </li>
             <li className="nav-item">
               <NavLink to="/live" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Watch Live</NavLink>
+            </li>
+            <li className="nav-item">
+              {loginNavItem}
             </li>
           </ul>
         </div>

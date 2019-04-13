@@ -51,3 +51,9 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
 }
+
+.login-btn {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500 !important;
+  border-style: none !important;
+}
