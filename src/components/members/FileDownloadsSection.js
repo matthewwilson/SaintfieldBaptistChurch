@@ -13,7 +13,8 @@ class FileDownloadsSection extends React.Component {
   }
 
   componentDidMount() {
-    const accessToken = new Auth().getAccessToken()
+    const auth = new Auth()
+    const accessToken = auth.getAccessToken()
     const headers = { 'Authorization': `Bearer ${accessToken}`}
 
     axios.get('https://api.saintfieldbaptist.org.uk/api/v1/members/files', { headers })
@@ -24,7 +25,13 @@ class FileDownloadsSection extends React.Component {
       this.setState({
         files: response.data.map(file => file.key)
       })
+    }).catch((error) => {
+      if (error.response && error.response.status && error.response.status.toString().indexOf("4") > -1) {
+        auth.logout()
+      }
+      console.error(error)
     })
+
   }
 
   render() {
