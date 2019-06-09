@@ -4,7 +4,7 @@ import './LivePage.css'
 
 const LivePage = (props) => {
 
-  /* const style = {
+  const style = {
     position: 'relative',
     width: '100%',
     height: 0,
@@ -15,9 +15,9 @@ const LivePage = (props) => {
     position: 'absolute',
     left: 0,
     top: 0
-  } */
+  }
 
-  /* const contents = (
+   const contents = (
     <div style={style}>
       <iframe
         title="Live"
@@ -31,14 +31,14 @@ const LivePage = (props) => {
         scrolling="no">
       </iframe>
     </div>
-  ); */
+  );
 
-  const contents = (
+  /* const contents = (
      <div>
        <br/>
        <h3 class="text-center">This morning&#39;s service will not be broadcast live. We are sorry for any inconvenience caused. Please tune in to our gospel service at 6:30pm</h3>
      </div>
-   );
+   ); */
 
   return (
     <div className="live-page">
