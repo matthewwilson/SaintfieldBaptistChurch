@@ -4,7 +4,7 @@ import './LivePage.css'
 
 const LivePage = (props) => {
 
-  const style = {
+  /* const style = {
     position: 'relative',
     width: '100%',
     height: 0,
@@ -15,7 +15,7 @@ const LivePage = (props) => {
     position: 'absolute',
     left: 0,
     top: 0
-  }
+  } */
 
   /* const contents = (
     <div style={style}>
