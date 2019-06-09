@@ -17,7 +17,7 @@ const LivePage = (props) => {
     top: 0
   }
 
-  const contents = (
+  /* const contents = (
     <div style={style}>
       <iframe
         title="Live"
@@ -31,14 +31,14 @@ const LivePage = (props) => {
         scrolling="no">
       </iframe>
     </div>
-  );
+  ); */
 
-  // const contents = (
-  //   <div>
-  //     <br/>
-  //     <h3 class="text-center">Tonight&#39;s service will not be broadcast live. We are sorry for any inconvenience caused. Please tune in next Sunday morning at 11.30am</h3>
-  //   </div>
-  // );
+  const contents = (
+     <div>
+       <br/>
+       <h3 class="text-center">This morning&#39;s service will not be broadcast live. We are sorry for any inconvenience caused. Please tune in to our gospel service at 6:30pm</h3>
+     </div>
+   );
 
   return (
     <div className="live-page">
