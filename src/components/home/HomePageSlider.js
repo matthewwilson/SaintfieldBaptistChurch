@@ -14,6 +14,14 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
+          "type":"REGISTRATION OPEN",
+          "title":"Sports 4 Christ",
+          "subtitle": "19th - 21st August 2019",
+          "url":"https://sports4christ.saintfieldbaptist.org.uk",
+          "imageUrl":"img/slides/sports.jpg",
+          "internalLink":false,
+          "buttonText":"REGISTER NOW"
+        },{
           "type":"SUNDAY SERIES",
           "title":"Against The Grain",
           "subtitle": "A study from Daniel",
