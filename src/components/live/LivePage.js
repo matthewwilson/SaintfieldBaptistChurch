@@ -4,18 +4,18 @@ import './LivePage.css'
 
 const LivePage = (props) => {
 
-  const style = {
+  /*const style = {
     position: 'relative',
     width: '100%',
     height: 0,
     paddingBottom: '56.25%'
-  }
+  }*/
 
-  const iFrameStyle = {
+  /*const iFrameStyle = {
     position: 'absolute',
     left: 0,
     top: 0
-  }
+  }*/
 
    /*const contents = (
     <div style={style}>
