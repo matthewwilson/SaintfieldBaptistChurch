@@ -36,7 +36,7 @@ const LivePage = (props) => {
   const contents = (
      <div>
        <br/>
-       <h3 class="text-center">This evening&#39;s service will not be broadcast live. We are sorry for any inconvenience caused.</h3>
+       <h3 class="text-center">Our services will not be broadcast live today. We are sorry for any inconvenience caused.</h3>
      </div>
    );
 
