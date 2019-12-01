@@ -14,6 +14,11 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
+          "type":"CAROL SERVICE",
+          "title":"From the Crib to the Cross",
+          "subtitle": "Sunday 22nd December - 6.30pm",
+          "imageUrl":"img/slides/cradle_to_cross.jpg"
+        },{
           "type":"SUNDAY SERIES",
           "title":"Against The Grain",
           "subtitle": "A study from Daniel",
