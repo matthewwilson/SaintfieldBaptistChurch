@@ -4,20 +4,20 @@ import './LivePage.css'
 
 const LivePage = (props) => {
 
-  /*const style = {
+  const style = {
     position: 'relative',
     width: '100%',
     height: 0,
     paddingBottom: '56.25%'
-  }*/
+  }
 
-  /*const iFrameStyle = {
+  const iFrameStyle = {
     position: 'absolute',
     left: 0,
     top: 0
-  }*/
+  }
 
-   /*const contents = (
+   const contents = (
     <div style={style}>
       <iframe
         title="Live"
@@ -31,14 +31,14 @@ const LivePage = (props) => {
         scrolling="no">
       </iframe>
     </div>
-  );*/
+  );
 
-  const contents = (
+  /*const contents = (
      <div>
        <br/>
-       <h3 class="text-center">This evening&#39;s service will not be broadcast live. We are sorry for any inconvenience caused.</h3>
+       <h3 class="text-center">Our services will not be broadcast live today. We are sorry for any inconvenience caused.</h3>
      </div>
-   );
+   );*/
 
   return (
     <div className="live-page">
