@@ -20,6 +20,12 @@ class HomePageSlider extends React.Component {
           "imageUrl":"img/slides/cradle_to_cross.jpg"
         },{
           "type":"SUNDAY SERIES",
+          "title":"The First Noël",
+          "url":"/sermons/series/The%20First%20Noel",
+          "imageUrl":"img/slides/first_noel.jpg",
+          "internalLink":true
+        },{
+          "type":"SUNDAY SERIES",
           "title":"Against The Grain",
           "subtitle": "A study from Daniel",
           "url":"/sermons/series/Against%20The%20Grain",
