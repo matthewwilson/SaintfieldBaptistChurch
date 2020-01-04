@@ -20,7 +20,7 @@ class HomePageSlider extends React.Component {
           "imageUrl":"img/slides/family.jpg",
           "backgroundPosition":"center"
         },{
-          "type":"BIBLE STUDY SERIES",
+          "type":"GOSPEL SERIES",
           "title":"The Romance of Redemption",
           "subtitle":"Studies in Ruth",
           "imageUrl":"img/slides/romance.jpg"
