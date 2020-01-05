@@ -18,7 +18,9 @@ class HomePageSlider extends React.Component {
           "title":"Family Ties",
           "subtitle": "God's design for our homes",
           "imageUrl":"img/slides/family.jpg",
-          "backgroundPosition":"center"
+          "backgroundPosition":"center",
+          "internalLink":true,
+          "url":"/sermons/series/Family%20Ties"
         },{
           "type":"GOSPEL SERIES",
           "title":"The Romance of Redemption",
