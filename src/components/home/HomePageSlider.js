@@ -25,7 +25,9 @@ class HomePageSlider extends React.Component {
           "type":"GOSPEL SERIES",
           "title":"The Romance of Redemption",
           "subtitle":"Studies in Ruth",
-          "imageUrl":"img/slides/romance.jpg"
+          "imageUrl":"img/slides/romance.jpg",
+          "internalLink":true,
+          "url":"/sermons/series/The%20Romance%20of%20Redemption"
         },{
           "type":"BIBLE STUDY SERIES",
           "title":"WHAT IS A BIBLICAL BAPTIST?",
