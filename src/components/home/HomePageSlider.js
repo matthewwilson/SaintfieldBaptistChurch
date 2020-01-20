@@ -30,6 +30,13 @@ class HomePageSlider extends React.Component {
           "url":"/sermons/series/The%20Romance%20of%20Redemption"
         },{
           "type":"BIBLE STUDY SERIES",
+          "title":"UNSEARCHABLE RICHES",
+          "subtitle":"Studies in Ephesians",
+          "url":"/sermons/series/Unsearchable%20Riches",
+          "imageUrl":"img/slides/riches.jpg",
+          "internalLink":true
+        },{
+          "type":"BIBLE STUDY SERIES",
           "title":"WHAT IS A BIBLICAL BAPTIST?",
           "url":"/sermons/series/What%20is%20a%20Biblical%20Baptist%3F",
           "imageUrl":"img/slides/baptist.jpg",
