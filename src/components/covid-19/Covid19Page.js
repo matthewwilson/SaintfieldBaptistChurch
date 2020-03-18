@@ -25,7 +25,7 @@ class Covid19Page extends React.Component {
           <p>
             In Romans 13 we are called by God to obey the authorities He has placed over us, as His servants.
             As the Covid-19 virus continues to spread across the world, we are seeking to adhere to the guidelines
-            given by our government. Particularity applicable to us is the advice concerning the avoidance of all
+            given by our government. Particularly applicable to us is the advice concerning the avoidance of all
             unnecessary social contact and large gatherings.
           </p>
 
