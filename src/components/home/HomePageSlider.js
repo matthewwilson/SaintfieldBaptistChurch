@@ -14,6 +14,14 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
+          "type":"LEADERSHIP STATEMENT",
+          "title":"COVID-19 ",
+          "subtitle": "The Church's Response",
+          "backgroundColor":"#ff5a34",
+          "internalLink":true,
+          "url":"/covid19",
+          "buttonText": "READ HERE"
+        },{
           "type":"SUNDAY SERIES",
           "title":"Family Ties",
           "subtitle": "God's design for our homes",

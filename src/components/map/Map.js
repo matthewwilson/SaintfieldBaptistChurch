@@ -22,7 +22,7 @@ class Map extends React.Component {
 
     return(<div className={className}><MyMapComponent
       isMarkerShown
-      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJDcl6vM9d_PwtDAuN50oKmw3_Mdk5dcY"
+      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKvpOh_Utj7xoWn1KU5nS00Dz_3t_8jRw"
       loadingElement={<div style={{ height: `100%` }} />}
       containerElement={<div style={{ height: `400px` }} />}
       mapElement={<div style={{ height: `100%` }} />}

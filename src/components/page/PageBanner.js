@@ -4,9 +4,16 @@ import './PageBanner.css'
 
 const PageBanner = (props) => {
 
-  const style = {
+  let style = {
     background:"url("+props.imageUrl+")",
     color:props.titleColour
+  }
+
+  if (props.backgroundColor) {
+    style = {
+      background: props.backgroundColor,
+      color: props.titleColour
+    }
   }
 
   var className = "page-banner-mobile-center";

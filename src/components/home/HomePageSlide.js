@@ -14,12 +14,20 @@ const HomePageSlide = ({
   internalLink=false,
   textColour="text-white",
   fullHeightLink=false,
-  backgroundPosition="left"
+  backgroundPosition="left",
+  backgroundColor
 }) => {
 
-  const slideStyle = {
+  let slideStyle = {
     background:"url("+imageUrl+")",
     backgroundPosition: backgroundPosition
+  }
+
+  if(backgroundColor) {
+    slideStyle = {
+      background: backgroundColor,
+      backgroundPosition: backgroundPosition
+    }
   }
 
   const buttonWrapperStyle = {
