@@ -45,9 +45,9 @@ class Covid19Page extends React.Component {
 
           <p>
             Throughout, our Pastor will be preaching messages of encouragement and comfort via <a href="/live">Live Webcast
-            each Sunday morning at 11:30am on our usual SermonAudio feed (commencing 22nd March)</a>. Additionally we are encouraging
+            each Sunday morning at 11:30am on our usual SermonAudio feed</a> <strong>(commencing 22nd March)</strong>. Additionally we are encouraging
             the congregation to unite in essential prayer at home each Wednesday night, from 8pm-9pm, to pray
-            about this situation. Again this time will begin with a short devotional from our Pastor via Live Webcast. (commencing 25th March)
+            about this situation. Again this time will begin with a short devotional from our Pastor via Live Webcast <strong>(commencing 25th March).</strong>
           </p>
 
           <p>
