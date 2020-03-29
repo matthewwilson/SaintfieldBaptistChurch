@@ -11,6 +11,12 @@
 
       gtag('config', 'UA-62087946-1');
     </script>
+    
+    <script>
+      if(window.location.protocol != 'https:') {
+        location.href = location.href.replace("http://", "https://");
+      }
+    </script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
