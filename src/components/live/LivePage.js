@@ -44,6 +44,12 @@ const LivePage = (props) => {
     <div className="live-page">
       <h1>Watch Live</h1>
       <hr/>
+      <div className="alert alert-warning">
+        <p>COVID-19 Update: Please note that SermonAudio is experiencing unprecented users during this global pandemic.</p>
+        <p>If your stream <strong>freezes</strong>, please be patient and let the video player load the next segment of video, this can take up-to 30 seconds</p>
+        <p>If your stream <strong>stops and says that it is offline</strong>, please refresh this page and try again</p>
+      </div>
+      <hr/>
       {contents}
     </div>
   )
