@@ -24,11 +24,12 @@ const LivePage = (props) => {
         tabIndex="-1"
         width="100%"
         height="100%"
-        src="https://embed.sermonaudio.com/player/l/saintfieldbaptist/"
+        src="https://embed.sermonaudio.com/player/l/saintfieldbaptist/?autoplay=true"
         style={iFrameStyle}
         allowFullScreen
         frameborder="0"
-        scrolling="no">
+        scrolling="no"
+        allow="autoplay">
       </iframe>
     </div>
   );
@@ -46,8 +47,10 @@ const LivePage = (props) => {
       <hr/>
       <div className="alert alert-warning">
         <p>COVID-19 Update: Please note that SermonAudio is experiencing unprecented users during this global pandemic.</p>
+        <p>Although the stream is advertised to start at our usual meeting times, there can sometimes be a delay of a few minutes while sermon audio processes the video stream.</p>
         <p>If your stream <strong>freezes</strong>, please be patient and let the video player load the next segment of video, this can take up-to 30 seconds</p>
         <p>If your stream <strong>stops and says that it is offline</strong>, please refresh this page and try again</p>
+        <p>If you are still having issues, <a href="https://www.saintfieldbaptist.org.uk/live">click here</a> and try again.</p>
       </div>
       <hr/>
       {contents}
