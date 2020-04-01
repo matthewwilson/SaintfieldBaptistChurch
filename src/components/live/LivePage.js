@@ -46,11 +46,12 @@ const LivePage = (props) => {
       <h1>Watch Live</h1>
       <hr/>
       <div className="alert alert-warning">
-        <p>COVID-19 Update: Please note that SermonAudio is experiencing unprecented users during this global pandemic.</p>
-        <p>Although the stream is advertised to start at our usual meeting times, there can sometimes be a delay of a few minutes while sermon audio processes the video stream.</p>
-        <p>If your stream <strong>freezes</strong>, please be patient and let the video player load the next segment of video, this can take up-to 30 seconds</p>
-        <p>If your stream <strong>stops and says that it is offline</strong>, please refresh this page and try again</p>
-        <p>If you are still having issues, <a href="https://www.saintfieldbaptist.org.uk/live">click here</a> and try again.</p>
+        <h5>COVID-19 Update: Please note that SermonAudio is experiencing unprecented users during this global pandemic.</h5>
+        <hr/>
+        <p>Although the stream is advertised to start at our usual meeting times, there can sometimes be a <strong>delay of a few minutes</strong> while sermon audio processes the video stream.</p>
+        <p>If, during playback, your stream <strong>freezes</strong>, please be patient and let the video player load the next segment of video, this can take up-to 30 seconds</p>
+        <p>If, during playback, your stream <strong>stops and says that it is offline</strong>, please refresh this page and try again</p>
+        <p>If you are still having issues, <a href="https://www.saintfieldbaptist.org.uk/live">click here to refresh</a> and try again.</p>
       </div>
       <hr/>
       {contents}
