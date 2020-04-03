@@ -24,9 +24,9 @@ class GivingPage extends React.Component {
           <p>Please contact our church treasurer, Gary McNeill, at <a href="mailto:treasurer@saintfieldbaptist.org.uk?subject=Enquiry%20about%20giving&body=Hi%20Gary,%0A%0AI%20would%20like%20to%20enquire%20about%20the%20process%20for%20supporting%20the%20Lord’s%20work%20financially while%20the%20normal%20weekly%20meetings%20are%20suspended.%0A%0AThank%20You">treasurer@saintfieldbaptist.org.uk</a> and details of how you can do this will be sent to you by email.</p>
           <p>If you are a tax payer and do not already give by Gift Aid, we would encourage to do so. You can download the gift form at the bottom of this page. Please print, complete, scan and return to the treasurer via email.</p>
           <br/>
-          <a href="public/media/gift-aid.doc">Gift Aid Form (Word Document)</a>
+          <a href="media/gift-aid.doc">Gift Aid Form (Word Document)</a>
           <br/>
-          <a href="public/media/gift-aid.pdf">Gift Aid Form (PDF)</a>
+          <a href="media/gift-aid.pdf">Gift Aid Form (PDF)</a>
         </div>
       </Page>
     )
