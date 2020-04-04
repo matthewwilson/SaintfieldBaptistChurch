@@ -9,7 +9,6 @@ import HistorySectionMore from './HistorySectionMore';
 import WhatWeBelieveSection from './WhatWeBelieveSection';
 import WhatWeBelieveSectionMore from './WhatWeBelieveSectionMore';
 import WhatsOnSection from './WhatsOnSection';
-import FAQSection from './FAQSection';
 import './AboutPage.css'
 
 class AboutPage extends React.Component {
@@ -66,14 +65,6 @@ class AboutPage extends React.Component {
             url="/about/whats-on"
             bannerMobilePosition="center">
             <WhatsOnSection/>
-          </PageSection>
-
-          <PageSection
-            linkTitle="FAQ"
-            bannerImageUrl="/img/about_us.jpg"
-            url="/about/faq"
-            bannerMobilePosition="right">
-            <FAQSection/>
           </PageSection>
 
         </PageSidebar>
