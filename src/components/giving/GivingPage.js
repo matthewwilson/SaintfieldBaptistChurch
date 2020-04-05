@@ -16,7 +16,7 @@ class GivingPage extends React.Component {
         <PageBanner imageUrl="/img/giving.jpeg" titleColour="white" title="GIVING"/>
         <div className="ml-3 mr-3 pt-4 pb-4">
           <p>
-            Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver.
+            <strong>Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver.</strong>
             <br/>
             <span className="page-bible-reference">2 Corinthians 9:7</span>
           </p>
