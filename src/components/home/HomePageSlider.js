@@ -23,12 +23,11 @@ class HomePageSlider extends React.Component {
           "buttonText": "READ HERE"
         },{
           "type":"SUNDAY SERIES",
-          "title":"Family Ties",
-          "subtitle": "God's design for our homes",
-          "imageUrl":"img/slides/family.jpg",
-          "backgroundPosition":"center",
+          "title":"In Christ Alone",
+          "subtitle":"Studies in Philippians",
+          "imageUrl":"img/slides/in-christ-alone.jpg",
           "internalLink":true,
-          "url":"/sermons/series/Family%20Ties"
+          "url":"/sermons/series/In%20Christ%20Alone"
         },{
           "type":"GOSPEL SERIES",
           "title":"The Romance of Redemption",
@@ -36,6 +35,14 @@ class HomePageSlider extends React.Component {
           "imageUrl":"img/slides/romance.jpg",
           "internalLink":true,
           "url":"/sermons/series/The%20Romance%20of%20Redemption"
+        },{
+          "type":"SUNDAY SERIES",
+          "title":"Family Ties",
+          "subtitle": "God's design for our homes",
+          "imageUrl":"img/slides/family.jpg",
+          "backgroundPosition":"center",
+          "internalLink":true,
+          "url":"/sermons/series/Family%20Ties"
         },{
           "type":"BIBLE STUDY SERIES",
           "title":"UNSEARCHABLE RICHES",
