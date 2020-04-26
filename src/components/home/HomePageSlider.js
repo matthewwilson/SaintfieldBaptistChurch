@@ -27,7 +27,8 @@ class HomePageSlider extends React.Component {
           "subtitle":"Studies in Philippians",
           "imageUrl":"img/slides/in-christ-alone.jpg",
           "internalLink":true,
-          "url":"/sermons/series/In%20Christ%20Alone"
+          "url":"/sermons/series/In%20Christ%20Alone",
+          "backgroundPosition":"center"
         },{
           "type":"GOSPEL SERIES",
           "title":"The Romance of Redemption",
