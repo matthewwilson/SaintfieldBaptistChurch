@@ -14,6 +14,7 @@ import Auth from './components/auth/Auth'
 import Callback from './components/auth/Callback'
 import Covid19Page from './components/covid-19/Covid19Page'
 import GivingPage from './components/giving/GivingPage'
+import WordForTheWeekPage from './components/word-for-the-week/WordForTheWeekPage'
 
 const auth = new Auth();
 
@@ -45,6 +46,7 @@ const Index = () => (
       <Route path="/contact" component={ContactPage}/>
       <Route path="/covid19" component={Covid19Page}/>
       <Route path="/giving" component={GivingPage}/>
+      <Route path="/word-for-the-week" component={WordForTheWeekPage}/>
       <Route path="/members" render={(props) => privateRoute(auth, <MembersPage {...props}/>, props)}/>
       <Route path="/callback" render={(props) => {
         handleAuthentication(props);
