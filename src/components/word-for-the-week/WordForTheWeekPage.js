@@ -30,11 +30,11 @@ class WordForTheWeekPage extends React.Component {
         <PageSidebar onSectionChange={this.handleSectionChange} currentSection={this.state.currentSection}>
 
           <PageSection
-            linkTitle="Week 1 - Our Burden Bearer"
-            bannerImageUrl="/img/word-for-the-week/burden.jpg"
-            url="/word-for-the-week/our-burden-bearer"
+            linkTitle="Week 3 - The Comforting Care of God"
+            bannerImageUrl="/img/word-for-the-week/comfort.jpg"
+            url="/word-for-the-week/the-comforting-care-of-god"
             bannerMobilePosition="center">
-            <OurBurdenBearer/>
+            <TheComfortingCareOfGod/>
           </PageSection>
 
           <PageSection
@@ -46,11 +46,11 @@ class WordForTheWeekPage extends React.Component {
           </PageSection>
 
           <PageSection
-            linkTitle="Week 3 - The Comforting Care of God"
-            bannerImageUrl="/img/word-for-the-week/comfort.jpg"
-            url="/word-for-the-week/the-comforting-care-of-god"
-            bannerMobilePosition="right">
-            <TheComfortingCareOfGod/>
+            linkTitle="Week 1 - Our Burden Bearer"
+            bannerImageUrl="/img/word-for-the-week/burden.jpg"
+            url="/word-for-the-week/our-burden-bearer"
+            bannerMobilePosition="center">
+            <OurBurdenBearer/>
           </PageSection>
 
         </PageSidebar>
