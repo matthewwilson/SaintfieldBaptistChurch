@@ -29,6 +29,8 @@
   font-size: 14pt;
   color: #5a5756;
   text-decoration: none;
+  white-space: break-spaces !important;
+  text-align: left;
 }
 
 .btn-page-sidebar-link:hover {
