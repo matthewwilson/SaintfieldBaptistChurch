@@ -37,12 +37,6 @@ class Header extends React.Component {
       collapsedClass = "";
     }
 
-    var loginNavItem = (<button className="btn btn-link nav-link login-btn" onClick={this.login}>Login</button>)
-
-    if(this.auth.isAuthenticated()) {
-      loginNavItem = (<NavLink to="/members" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Members</NavLink>)
-    }
-
     return (
       <nav className="sbc-navbar navbar fixed-top navbar-expand-xl navbar-light">
         <Link to="/" className="navbar-brand" onClick={this.navLinkClick}>
@@ -79,9 +73,6 @@ class Header extends React.Component {
             <li className="nav-item">
               <NavLink to="/word-for-the-week" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Word for the Week</NavLink>
             </li>
-            // <li className="nav-item">
-            //   {loginNavItem}
-            // </li>
           </ul>
         </div>
       </nav>
