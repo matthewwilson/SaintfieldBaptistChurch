@@ -21,7 +21,7 @@ class GivingPage extends React.Component {
             <span className="page-bible-reference">2 Corinthians 9:7</span>
           </p>
           <p>A number of people have been asking about how they can continue to support the Lord’s work financially while the normal weekly meetings are suspended.</p>
-          <p>Please contact our church treasurer, Gary McNeill, at <a href="mailto:treasurer@saintfieldbaptist.org.uk?subject=Enquiry%20about%20giving&body=Hi%20Gary,%0A%0AI%20would%20like%20to%20enquire%20about%20the%20process%20for%20supporting%20the%20Lord’s%20work%20financially while%20the%20normal%20weekly%20meetings%20are%20suspended.%0A%0AThank%20You">treasurer@saintfieldbaptist.org.uk</a> and details of how you can do this will be sent to you by email.</p>
+          <p>You can give via a bank transfer: Sort Code: 95-04-34, Account Number: 61041002</p>
           <p>If you are a tax payer and do not already give by Gift Aid, we would encourage you to do so. You can fill in the form online <a href="https://forms.gle/yaRkusVi7LDHJkdQ7" target="_blank" rel="noopener noreferrer">here</a>. Alternatively you can download the gift form at the bottom of this page. Please print, complete, scan and return to the treasurer via email.</p>
           <br/>
           <a href="https://forms.gle/yaRkusVi7LDHJkdQ7" target="_blank" rel="noopener noreferrer">Gift Aid Form (Online)</a>
@@ -29,6 +29,8 @@ class GivingPage extends React.Component {
           <a href="media/gift-aid.doc">Gift Aid Form (Word Document)</a>
           <br/>
           <a href="media/gift-aid.pdf">Gift Aid Form (PDF)</a>
+          <br/>
+          <p>For other ways to give please contact our treasurer, Gary McNeill, at <a href="mailto:treasurer@saintfieldbaptist.org.uk">treasurer@saintfieldbaptist.org.uk</a></p>
         </div>
       </Page>
     )
