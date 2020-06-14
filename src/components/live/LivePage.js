@@ -45,6 +45,9 @@ const LivePage = (props) => {
     <div className="live-page">
       <h1>Watch Live</h1>
       <hr/>
+      <div className="alert alert-danger">
+        <h5>We are experiencing a technical issue this morning with our live broadcast. We hope to be back online at 12pm.</h5>
+      </div>
       <div className="alert alert-warning">
         <h5>COVID-19 Update: Please note that SermonAudio is experiencing unprecented users during this global pandemic.</h5>
         <hr/>
