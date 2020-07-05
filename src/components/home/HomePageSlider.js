@@ -14,13 +14,14 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
-          "type":"LEADERSHIP STATEMENT",
-          "title":"COVID-19 ",
-          "subtitle": "The Church's Response",
-          "backgroundColor":"#ff5a34",
-          "internalLink":true,
-          "url":"/covid19",
-          "buttonText": "READ HERE"
+          "type":"ONLINE",
+          "title":"Holiday Bible Club",
+          "subtitle":"6th - 10th July",
+          "imageUrl":"img/slides/hbc.png",
+          "internalLink":false,
+          "url":"https://www.youtube.com/channel/UC7sSruVuIxBFaGEu7avBVFA",
+          "backgroundPosition":"center",
+          "buttonText":"Watch Live"
         },{
           "type":"SUNDAY SERIES",
           "title":"In Christ Alone",
