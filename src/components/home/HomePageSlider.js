@@ -21,7 +21,7 @@ class HomePageSlider extends React.Component {
           "internalLink":false,
           "url":"https://www.youtube.com/channel/UC7sSruVuIxBFaGEu7avBVFA",
           "backgroundPosition":"center",
-          "buttonText":"Watch Live"
+          "buttonText":"WATCH LIVE"
         },{
           "type":"LEADERSHIP STATEMENT",
           "title":"COVID-19",
