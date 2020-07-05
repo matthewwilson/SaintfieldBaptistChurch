@@ -23,6 +23,14 @@ class HomePageSlider extends React.Component {
           "backgroundPosition":"center",
           "buttonText":"Watch Live"
         },{
+          "type":"LEADERSHIP STATEMENT",
+          "title":"COVID-19",
+          "subtitle": "Getting back to church",
+          "backgroundColor":"#ff5a34",
+          "internalLink":true,
+          "url":"/covid19",
+          "buttonText": "WATCH HOW"
+        },{
           "type":"SUNDAY SERIES",
           "title":"In Christ Alone",
           "subtitle":"Studies in Philippians",
