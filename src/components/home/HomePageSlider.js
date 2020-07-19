@@ -14,15 +14,6 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
-          "type":"ONLINE",
-          "title":"Holiday Bible Club",
-          "subtitle":"6th - 10th July",
-          "imageUrl":"img/slides/hbc.png",
-          "internalLink":false,
-          "url":"https://www.youtube.com/channel/UC7sSruVuIxBFaGEu7avBVFA",
-          "backgroundPosition":"center",
-          "buttonText":"WATCH LIVE"
-        },{
           "type":"LEADERSHIP STATEMENT",
           "title":"COVID-19",
           "subtitle": "Getting back to church",
