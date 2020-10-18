@@ -48,6 +48,9 @@ const Index = () => (
       <Route path="/giving" component={GivingPage}/>
       <Route path="/word-for-the-week" component={WordForTheWeekPage}/>
       <Route path="/members" render={(props) => privateRoute(auth, <MembersPage {...props}/>, props)}/>
+      <Route path="/consent">
+        <Redirect to="https://forms.gle/G6gAcdf6bbQNLbKY6"/>
+      </Route>
       <Route path="/callback" render={(props) => {
         handleAuthentication(props);
         return <Callback {...props}/>
