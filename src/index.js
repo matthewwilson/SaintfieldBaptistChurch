@@ -48,6 +48,10 @@ const Index = () => (
       <Route path="/giving" component={GivingPage}/>
       <Route path="/word-for-the-week" component={WordForTheWeekPage}/>
       <Route path="/members" render={(props) => privateRoute(auth, <MembersPage {...props}/>, props)}/>
+      <Route path="/consent" component={() => { 
+        window.location.href = 'https://forms.gle/cHAfBy2otWhFTTfM7'; 
+        return null;
+      }}/>
       <Route path="/callback" render={(props) => {
         handleAuthentication(props);
         return <Callback {...props}/>
