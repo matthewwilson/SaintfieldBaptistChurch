@@ -16,11 +16,11 @@ class HomePageSlider extends React.Component {
       slides: [{
           "type":"LEADERSHIP STATEMENT",
           "title":"COVID-19",
-          "subtitle": "Getting back to church",
+          "subtitle": "In-building services suspended",
           "backgroundColor":"#ff5a34",
           "internalLink":true,
           "url":"/covid19",
-          "buttonText": "WATCH HOW"
+          "buttonText": "READ MORE"
         },{
           "type":"SUNDAY SERIES",
           "title":"In Christ Alone",
