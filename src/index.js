@@ -52,6 +52,10 @@ const Index = () => (
         window.location.href = 'https://forms.gle/cHAfBy2otWhFTTfM7'; 
         return null;
       }}/>
+      <Route path="/hbc" component={() => {
+        window.location.href = 'https://forms.gle/q8q2o79CwF3fZNZPA';
+        return null;
+      }}/>
       <Route path="/callback" render={(props) => {
         handleAuthentication(props);
         return <Callback {...props}/>
