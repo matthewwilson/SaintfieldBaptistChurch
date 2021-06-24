@@ -1,6 +1,6 @@
 # Saintfield Baptist Church #
 
-[![Build Status](https://travis-ci.org/matthewwilson/SaintfieldBaptistChurch.svg?branch=master)](https://travis-ci.org/matthewwilson/SaintfieldBaptistChurch)
+[![Build Status](https://www.travis-ci.com/matthewwilson/SaintfieldBaptistChurch.svg?branch=master)](https://www.travis-ci.com/matthewwilson/SaintfieldBaptistChurch)
 
 [saintfieldbaptist.org.uk](http://www.saintfieldbaptist.org.uk)
 
