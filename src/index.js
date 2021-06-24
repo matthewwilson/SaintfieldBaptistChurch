@@ -44,7 +44,6 @@ const Index = () => (
       <Route path="/sermons/series/:title" component={SermonSeriesPage}/>
       <Route path="/sermon/:sermonId/:title" component={SermonPage}/>
       <Route path="/contact" component={ContactPage}/>
-      <Route path="/covid19" component={Covid19Page}/>
       <Route path="/giving" component={GivingPage}/>
       <Route path="/word-for-the-week" component={WordForTheWeekPage}/>
       <Route path="/members" render={(props) => privateRoute(auth, <MembersPage {...props}/>, props)}/>

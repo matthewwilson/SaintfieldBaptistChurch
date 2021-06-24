@@ -14,14 +14,6 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
-          "type":"LEADERSHIP STATEMENT",
-          "title":"COVID-19",
-          "subtitle": "In-building services suspended",
-          "backgroundColor":"#ff5a34",
-          "internalLink":true,
-          "url":"/covid19",
-          "buttonText": "READ MORE"
-        },{
           "type":"SUNDAY SERIES",
           "title":"SOLOMON",
           "subtitle":"The story of history’s wisest fool",
@@ -29,21 +21,6 @@ class HomePageSlider extends React.Component {
           "internalLink":true,
           "url":"/sermons/series/The%20Life%20Of%20Solomon",
           "backgroundPosition":"center"
-        },{
-          "type":"SUNDAY SERIES",
-          "title":"In Christ Alone",
-          "subtitle":"Studies in Philippians",
-          "imageUrl":"img/slides/in-christ-alone.jpg",
-          "internalLink":true,
-          "url":"/sermons/series/In%20Christ%20Alone",
-          "backgroundPosition":"center"
-        },{
-          "type":"GOSPEL SERIES",
-          "title":"The Romance of Redemption",
-          "subtitle":"Studies in Ruth",
-          "imageUrl":"img/slides/romance.jpg",
-          "internalLink":true,
-          "url":"/sermons/series/The%20Romance%20of%20Redemption"
         },{
           "type":"SUNDAY SERIES",
           "title":"Family Ties",
