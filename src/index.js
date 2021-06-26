@@ -12,7 +12,6 @@ import ContactPage from './components/contact/ContactPage'
 import MembersPage from './components/members/MembersPage'
 import Auth from './components/auth/Auth'
 import Callback from './components/auth/Callback'
-import Covid19Page from './components/covid-19/Covid19Page'
 import GivingPage from './components/giving/GivingPage'
 import WordForTheWeekPage from './components/word-for-the-week/WordForTheWeekPage'
 
