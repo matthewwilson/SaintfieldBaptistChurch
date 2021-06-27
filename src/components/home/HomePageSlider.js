@@ -14,6 +14,13 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
+          "type":"SUNDAY NIGHT SERIES",
+          "title":"CHRIST IN ALL THE SCRIPTURES",
+          "imageUrl":"img/slides/christ-in-all-the-scriptures.jpeg",
+          "internalLink":true,
+          "url":"/sermons/series/Christ%20In%20All%20The%20Scriptures",
+          "backgroundPosition":"center"
+        },{
           "type":"SUNDAY SERIES",
           "title":"SOLOMON",
           "subtitle":"The story of history’s wisest fool",
