@@ -28,8 +28,13 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - run: npm run deploy
-      env:
-        FTP_HOST: ${{secrets.FTP_HOST}}
-        FTP_USER: ${{secrets.FTP_USER}}
-        FTP_PASSWORD: ${{secrets.FTP_PASSWORD}}
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./build/
+        server-dir: public_html/
+        protocol: ftp
+        port: 21
