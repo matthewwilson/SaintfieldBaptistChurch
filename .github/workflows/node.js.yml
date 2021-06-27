@@ -28,7 +28,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - name: 📂 Sync files
+    - name: deploy
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
         server: ${{ secrets.FTP_HOST }}
