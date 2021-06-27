@@ -25,11 +25,11 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-      env:
-        FTP_HOST: ${{secrets.FTP_HOST}}
-        FTP_USER: ${{secrets.FTP_USER}}
-        FTP_PASSWORD: ${{secrets.FTP_PASSWORD}}
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
     - run: npm run deploy
+      env:
+        FTP_HOST: ${{secrets.FTP_HOST}}
+        FTP_USER: ${{secrets.FTP_USER}}
+        FTP_PASSWORD: ${{secrets.FTP_PASSWORD}}
