@@ -22,6 +22,13 @@ class HomePageSlider extends React.Component {
           "backgroundPosition":"center"
         },{
           "type":"SUNDAY SERIES",
+          "title":"STRENGTH RENEWED",
+          "imageUrl":"img/slides/strength-renewed.jpeg",
+          "internalLink":true,
+          "url":"/sermons/series/Strength%20Renewed",
+          "backgroundPosition":"center"
+        },{
+          "type":"SUNDAY SERIES",
           "title":"SOLOMON",
           "subtitle":"The story of history’s wisest fool",
           "imageUrl":"img/slides/solomon.jpeg",
