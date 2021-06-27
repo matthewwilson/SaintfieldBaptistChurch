@@ -3,10 +3,6 @@ import React from 'react';
 const WhatsOnSection = (props) => {
   return (
     <div>
-      <div className="alert alert-warning">
-        <p>After much prayer, research and deliberation the oversight have decided to suspend all of our scheduled church gatherings for the foreseeable future.</p>
-        <a href="/covid19">Read more</a>
-      </div>
       <h2>Midweek Meetings</h2>
       <table className="table">
         <tbody>
