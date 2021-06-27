@@ -15,7 +15,7 @@ class HomePageSlider extends React.Component {
       padding: this.getPadding(),
       slides: [{
           "subtitle":"SAINTFIELD COMMUNITY CENTRE CARPARK",
-          "type": "EVERY SUNDAY @ 6:30PM"
+          "type": "EVERY SUNDAY @ 6:30PM",
           "title":"DRIVE-IN CHURCH",
           "imageUrl":"img/slides/drive-in.jpeg",
           "internalLink":true,
