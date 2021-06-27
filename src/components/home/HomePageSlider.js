@@ -14,6 +14,14 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
+          "subsubtitle":"SAINTFIELD COMMUNITY CENTRE CARPARK",
+          "subtitle": "Every Sunday @ 6:30PM"
+          "title":"DRIVE-IN CHURCH",
+          "imageUrl":"img/slides/drive-in.jpeg",
+          "internalLink":true,
+          "url":"/sermons/series/Drive-In%20Church%202021",
+          "backgroundPosition":"center"
+        },{
           "type":"SUNDAY NIGHT SERIES",
           "title":"CHRIST IN ALL THE SCRIPTURES",
           "imageUrl":"img/slides/christ-in-all-the-scriptures.jpeg",
