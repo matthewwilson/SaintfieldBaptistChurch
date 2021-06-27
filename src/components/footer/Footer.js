@@ -14,7 +14,7 @@ const Footer = (props) => {
         </div>
         <div className="row">
           <div className="col-sm">
-            <p>Saintfield Baptist Church<br/>51 Crossgar Road, Saintfield<br/>2020 &copy; Saintfield Baptist Church</p>
+            <p>Saintfield Baptist Church<br/>51 Crossgar Road, Saintfield<br/>2021 &copy; Saintfield Baptist Church</p>
           </div>
           <div className="col-sm">
             <p className="footer-social-title">STAY CONNECTED</p>
