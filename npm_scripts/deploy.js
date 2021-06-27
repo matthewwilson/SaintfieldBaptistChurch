@@ -5,7 +5,7 @@ var options = {
     host: process.env.FTP_HOST,
     username: process.env.FTP_USER,
     password: process.env.FTP_PASSWORD,
-    port: 1050,
+    port: 21,
     path: path.join(__dirname, '..', '/build'),
     remoteDir: 'public_html'
 }
