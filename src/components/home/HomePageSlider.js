@@ -17,7 +17,7 @@ class HomePageSlider extends React.Component {
           "subtitle":"Saintfield Community Centre Carpark",
           "type": "EVERY SUNDAY @ 6:30PM",
           "title":"DRIVE-IN CHURCH",
-          "imageUrl":"img/slides/drive-in.jpeg",
+          "imageUrl":"img/slides/drive-in.jpg",
           "internalLink":true,
           "url":"/sermons/series/Drive-In%20Church%202021",
           "backgroundPosition":"center"
