@@ -47,11 +47,7 @@ const Index = () => (
       <Route path="/word-for-the-week" component={WordForTheWeekPage}/>
       <Route path="/members" render={(props) => privateRoute(auth, <MembersPage {...props}/>, props)}/>
       <Route path="/consent" component={() => { 
-        window.location.href = 'https://forms.gle/cHAfBy2otWhFTTfM7'; 
-        return null;
-      }}/>
-      <Route path="/hbc" component={() => {
-        window.location.href = 'https://forms.gle/q8q2o79CwF3fZNZPA';
+        window.location.href = 'https://forms.gle/Uu21ADNG8Ddznm7DA'; 
         return null;
       }}/>
       <Route path="/callback" render={(props) => {
