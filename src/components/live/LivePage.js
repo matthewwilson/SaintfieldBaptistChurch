@@ -45,16 +45,6 @@ const LivePage = (props) => {
     <div className="live-page">
       <h1>Watch Live</h1>
       <hr/>
-      <div className="alert alert-warning">
-        <h5>COVID-19 Update: Please note that SermonAudio is experiencing unprecented users during this global pandemic.</h5>
-        <hr/>
-        <p>Although the stream is advertised to start at our usual meeting times, there can sometimes be a <strong>delay of a few minutes</strong> while sermon audio processes the video stream.</p>
-        <p>If, during playback, your stream <strong>freezes</strong>, please be patient and let the video player load the next segment of video, this can take up-to 30 seconds</p>
-        <p>If, during playback, your stream <strong>stops and says that it is offline</strong>, please refresh this page and try again</p>
-        <p>If, during playback, your volume is low, ensure that you have set your devices volume to full <strong>and</strong> you have set the SermonAudio player volume to full in the video controls. The two things are independent of each other.</p>
-        <p>If you are still having issues, <a href="https://www.saintfieldbaptist.org.uk/live">click here to refresh</a> and try again.</p>
-      </div>
-      <hr/>
       {contents}
     </div>
   )

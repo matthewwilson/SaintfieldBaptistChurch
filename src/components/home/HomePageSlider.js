@@ -14,55 +14,25 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
-          "subtitle":"Saintfield Community Centre",
-          "type": "EVERY SUNDAY @ 6:30PM",
-          "title":"DRIVE-IN CHURCH",
-          "imageUrl":"img/slides/drive-in.jpg",
+          "type":"SUNDAY SERIES",
+          "title":"SHIPS OF SCRIPTURE",
+          "imageUrl":"img/slides/ships.jpg",
           "internalLink":true,
-          "url":"/sermons/series/Drive-In%20Church%202021",
+          "url":"/sermons/series/The%20Ships%20of%20Scripture",
           "backgroundPosition":"center"
         },{
           "type":"SUNDAY NIGHT SERIES",
-          "title":"CHRIST IN ALL THE SCRIPTURES",
-          "imageUrl":"img/slides/christ-in-all-the-scriptures.jpeg",
+          "title":"WHAT IS A CHRISTIAN?",
+          "imageUrl":"img/slides/christ-in-all-the-scriptures.jpg",
           "internalLink":true,
-          "url":"/sermons/series/Christ%20In%20All%20The%20Scriptures",
+          "url":"/sermons/series/What%20is%20a%20Christian%3F",
           "backgroundPosition":"center"
-        },{
-          "type":"SUNDAY SERIES",
-          "title":"STRENGTH RENEWED",
-          "imageUrl":"img/slides/strength-renewed.jpeg",
-          "internalLink":true,
-          "url":"/sermons/series/Strength%20Renewed",
-          "backgroundPosition":"center"
-        },{
-          "type":"SUNDAY SERIES",
-          "title":"SOLOMON",
-          "subtitle":"The story of history’s wisest fool",
-          "imageUrl":"img/slides/solomon.jpeg",
-          "internalLink":true,
-          "url":"/sermons/series/The%20Life%20Of%20Solomon",
-          "backgroundPosition":"center"
-        },{
-          "type":"SUNDAY SERIES",
-          "title":"Family Ties",
-          "subtitle": "God's design for our homes",
-          "imageUrl":"img/slides/family.jpg",
-          "backgroundPosition":"center",
-          "internalLink":true,
-          "url":"/sermons/series/Family%20Ties"
         },{
           "type":"BIBLE STUDY SERIES",
           "title":"UNSEARCHABLE RICHES",
           "subtitle":"Studies in Ephesians",
           "url":"/sermons/series/Unsearchable%20Riches",
           "imageUrl":"img/slides/riches.jpg",
-          "internalLink":true
-        },{
-          "type":"BIBLE STUDY SERIES",
-          "title":"WHAT IS A BIBLICAL BAPTIST?",
-          "url":"/sermons/series/What%20is%20a%20Biblical%20Baptist%3F",
-          "imageUrl":"img/slides/baptist.jpg",
           "internalLink":true
         }
       ]
