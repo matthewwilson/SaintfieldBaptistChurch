@@ -13,7 +13,7 @@ class HomePageSlider extends React.Component {
     super(props)
     this.state = {
       padding: this.getPadding(),
-      slides: [[{
+      slides: [{
           "type":"REGISTRATION OPEN",
           "title":"Sports 4 Christ",
           "subtitle": "22th - 25st August 2022",
