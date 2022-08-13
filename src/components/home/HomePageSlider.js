@@ -16,7 +16,7 @@ class HomePageSlider extends React.Component {
       slides: [{
           "type":"REGISTRATION OPEN",
           "title":"Sports 4 Christ",
-          "subtitle": "22th - 25st August 2022",
+          "subtitle": "22nd - 25th August 2022",
           "url":"/s4c",
           "imageUrl":"img/slides/sports.jpg",
           "internalLink":true,
