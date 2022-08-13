@@ -13,7 +13,15 @@ class HomePageSlider extends React.Component {
     super(props)
     this.state = {
       padding: this.getPadding(),
-      slides: [{
+      slides: [[{
+          "type":"REGISTRATION OPEN",
+          "title":"Sports 4 Christ",
+          "subtitle": "22th - 25st August 2022",
+          "url":"/s4c",
+          "imageUrl":"img/slides/sports.jpg",
+          "internalLink":true,
+          "buttonText":"REGISTER NOW"
+        },{
           "type":"SUNDAY SERIES",
           "title":"SHIPS OF SCRIPTURE",
           "imageUrl":"img/slides/ships.jpg",
