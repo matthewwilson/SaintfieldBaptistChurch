@@ -16,7 +16,7 @@ const ContactPage = (props) => {
           Saintfield<br/>
         </p>
         <br/>
-        <a href="mailto:pastor@saintfieldbaptist.org.uk"><i className="far fa-envelope"></i> Email Us</a>
+        <a href="mailto:secretary@saintfieldbaptist.org.uk"><i className="far fa-envelope"></i> Email Us</a>
       </div>
     </Page>
   )
