@@ -14,6 +14,23 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
+          "type":"REGISTRATION OPEN",
+          "title":"Holiday Bible Club",
+          "subtitle":"26th - 30th June",
+          "imageUrl":"img/slides/hbc.png",
+          "url":"/hbc",
+          "backgroundPosition":"center",
+          "internalLink":true,
+          "buttonText":"Register Now"
+        },{
+          "type":"REGISTRATION OPEN",
+          "title":"Sports 4 Christ",
+          "subtitle": "21st - 24th August",
+          "url":"/s4c",
+          "imageUrl":"img/slides/sports.jpg",
+          "internalLink":true,
+          "buttonText":"REGISTER NOW"
+        },{
           "type":"SUNDAY SERIES",
           "title":"SHIPS OF SCRIPTURE",
           "imageUrl":"img/slides/ships.jpg",
