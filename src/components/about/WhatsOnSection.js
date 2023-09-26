@@ -16,7 +16,7 @@ const WhatsOnSection = (props) => {
       <h2>Sunday Services</h2>
       <table class="table">
         <tbody>
-          <tr><td>Sunday School and Bible Class</td><td>10.30am (term-time) - <a href="/consent">Register here</a></td></tr>
+          <tr><td>Sunday School and Bible Class</td><td>10.15am (term-time) - <a href="/consent">Register here</a></td></tr>
           <tr><td>Morning Service</td><td>11.30am</td></tr>
           <tr><td>Gospel Service</td><td>6.30pm</td></tr>
           <tr><td>Youth Fellowship</td><td>Alternate Sundays at 8:00pm (term-time) - <a href="/consent">Register here</a></td></tr>
