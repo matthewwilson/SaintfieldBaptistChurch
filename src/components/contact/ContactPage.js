@@ -7,7 +7,6 @@ import './ContactPage.css'
 const ContactPage = (props) => {
   return (
     <Page>
-      <Map fullWidth={true}/>
       <div className="contact-page">
         <br/>
         <p>
@@ -15,6 +14,8 @@ const ContactPage = (props) => {
           51 Crossgar Road<br/>
           Saintfield<br/>
         </p>
+        <br/>
+        <a href="https://maps.app.goo.gl/cCK2hDGhzcyUX23M9" target="_blank" rel="noopener noreferrer">Google Maps</a>
         <br/>
         <a href="mailto:secretary@saintfieldbaptist.org.uk"><i className="far fa-envelope"></i> Email Us</a>
       </div>
