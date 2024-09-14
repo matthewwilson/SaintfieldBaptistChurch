@@ -1,6 +1,5 @@
 import React from 'react';
 import Page from '../page/Page';
-import Map from '../map/Map';
 import './ContactPage.css'
 
 
