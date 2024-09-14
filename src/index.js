@@ -49,15 +49,19 @@ const Index = () => (
       <Route path="/consent" component={() => { 
         window.location.href = 'https://forms.gle/Uu21ADNG8Ddznm7DA'; 
         return null;
-            }} />
+      }} />
       <Route path="/hbc" component={() => {
         window.location.href = 'https://forms.gle/sLyqc8vLZdAYhsAh8';
         return null;
-            }} />
+      }} />
       <Route path="/s4c" component={() => {
         window.location.href = 'https://forms.gle/LGJWhhwdfzdz8joW8';
         return null;
-            }} />
+      }} />
+      <Route path="/bc" component={() => {
+        window.location.href = 'https://forms.gle/k7UjoYDYywCTLmSX6';
+        return null;
+      }}/>      
       <Route path="/callback" render={(props) => {
         handleAuthentication(props);
         return <Callback {...props}/>
