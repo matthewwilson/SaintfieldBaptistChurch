@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from '../page/Page';
+import PageBanner from '../page/PageBanner';
 import './ContactPage.css'
 
 
@@ -7,6 +8,7 @@ const ContactPage = (props) => {
   return (
     <Page>
       <div className="contact-page">
+        <PageBanner imageUrl="/img/contact.jpg" titleColour="white" title="CONTACT US"/>
         <br/>
         <p>
           Saintfield Baptist Church<br/>

@@ -1,6 +1,7 @@
 .page {
   margin: 0 10px;
   font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
 }
 
 @media(min-width: 992px) {
