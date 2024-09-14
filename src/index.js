@@ -13,7 +13,6 @@ import MembersPage from './components/members/MembersPage'
 import Auth from './components/auth/Auth'
 import Callback from './components/auth/Callback'
 import GivingPage from './components/giving/GivingPage'
-import WordForTheWeekPage from './components/word-for-the-week/WordForTheWeekPage'
 
 const auth = new Auth();
 
@@ -44,7 +43,6 @@ const Index = () => (
       <Route path="/sermon/:sermonId/:title" component={SermonPage}/>
       <Route path="/contact" component={ContactPage}/>
       <Route path="/giving" component={GivingPage}/>
-      <Route path="/word-for-the-way" component={WordForTheWeekPage}/>
       <Route path="/members" render={(props) => privateRoute(auth, <MembersPage {...props}/>, props)}/>
       <Route path="/consent" component={() => { 
         window.location.href = 'https://forms.gle/Uu21ADNG8Ddznm7DA'; 

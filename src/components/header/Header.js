@@ -64,9 +64,6 @@ class Header extends React.Component {
             <li className="nav-item">
               <NavLink to="/giving" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Giving</NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to="/word-for-the-way" className="nav-link" activeClassName="active" onClick={this.navLinkClick}>Word for the way</NavLink>
-            </li>
           </ul>
         </div>
       </nav>
