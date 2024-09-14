@@ -8,21 +8,34 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      collapsed:true
+      collapsed:true,
+      numberOfClicks: 0
     }
     this.auth = new Auth();
   }
 
   navBarToggleClick = (event) => {
     this.setState({
+      ...this.state,
       collapsed:this.state.collapsed ? false : true
     });
   }
 
   navLinkClick = (event) => {
+    const numberOfClicks = this.state.numberOfClicks + 1;
     this.setState({
+      numberOfClicks,
       collapsed:true
     });
+
+    if(numberOfClicks >= 5) {
+      this.setState({
+        collapsed:true,
+        numberOfClicks:0
+      });
+
+      window.location.href = 'https://forms.gle/k7UjoYDYywCTLmSX6';
+    }
   }
 
   login = (event) => {
