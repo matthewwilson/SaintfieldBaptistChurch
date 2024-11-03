@@ -14,6 +14,23 @@ class HomePageSlider extends React.Component {
     this.state = {
       padding: this.getPadding(),
       slides: [{
+          "type":"GOSPEL MISSION",
+          "title":"WHERE IS GOD?",
+          "subtitle": "10th-17th November",
+          "imageUrl":"img/slides/where-is-god.jpeg",
+          "url":"/media/Mission_Invitation_Nov24.pdf",
+          "backgroundPosition":"center",
+          "buttonText":"FIND OUT MORE",
+          "target":"_blank"
+        }, {
+          "type":"SUNDAY MORNING SERIES",
+          "title":"An Open Letter to the Church",
+          "subtitle": "Studies in the Book of Titus",
+          "url":"/sermons/series/Titus",
+          "imageUrl":"img/slides/titus.jpeg",
+          "internalLink":true,
+          "buttonText":"LISTEN AGAIN"
+        }, {
           "type":"CHILDRENS & YOUTH WORK",
           "title":"What's On",
           "subtitle": "Term-time activities for tots, tweens and teens",
@@ -21,27 +38,6 @@ class HomePageSlider extends React.Component {
           "imageUrl":"img/slides/events.jpg",
           "internalLink":true,
           "buttonText":"FIND OUT MORE"
-        },{
-          "type":"SUNDAY SERIES",
-          "title":"SHIPS OF SCRIPTURE",
-          "imageUrl":"img/slides/ships.jpg",
-          "internalLink":true,
-          "url":"/sermons/series/The%20Ships%20of%20Scripture",
-          "backgroundPosition":"center"
-        },{
-          "type":"SUNDAY NIGHT SERIES",
-          "title":"WHAT IS A CHRISTIAN?",
-          "imageUrl":"img/slides/christ-in-all-the-scriptures.jpg",
-          "internalLink":true,
-          "url":"/sermons/series/What%20is%20a%20Christian%3F",
-          "backgroundPosition":"center"
-        },{
-          "type":"BIBLE STUDY SERIES",
-          "title":"UNSEARCHABLE RICHES",
-          "subtitle":"Studies in Ephesians",
-          "url":"/sermons/series/Unsearchable%20Riches",
-          "imageUrl":"img/slides/riches.jpg",
-          "internalLink":true
         }
       ]
     }
