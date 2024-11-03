@@ -22,6 +22,12 @@ class Header extends React.Component {
   }
 
   navLinkClick = (event) => {
+    this.setState({
+      collapsed:true
+    });
+  }
+
+  navLinkLogoClick = (event) => {
     const numberOfClicks = this.state.numberOfClicks + 1;
     this.setState({
       numberOfClicks,
@@ -52,7 +58,7 @@ class Header extends React.Component {
 
     return (
       <nav className="sbc-navbar navbar fixed-top navbar-expand-xl navbar-light">
-        <Link to="/" className="navbar-brand" onClick={this.navLinkClick}>
+        <Link to="/" className="navbar-brand" onClick={this.navLinkLogoClick}>
           <img className="sbc-navbar-logo" src="/img/logo_menu.png" srcSet="/img/logo_menu@2x.png 2x" alt="Saintfield Baptist Church"/>
         </Link>
         <button className="navbar-toggler" type="button" onClick={this.navBarToggleClick}>
