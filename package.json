@@ -16,7 +16,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-slick": "^0.19.0",
-    "sftp-upload": "^1.0.0",
+    "sftp-upload": "^1.0.4",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
