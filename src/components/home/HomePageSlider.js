@@ -16,12 +16,12 @@ class HomePageSlider extends React.Component {
       slides: [{
           "type":"GOSPEL MISSION",
           "title":"WHERE IS GOD?",
-          "subtitle": "10th-17th November",
+          "subtitle": "The search for reason in a troubled world",
           "imageUrl":"img/slides/where-is-god.jpeg",
-          "url":"/media/Mission_Invitation_Nov24.pdf",
+          "url":"/sermons/series/Where%20is%20God%3F",
           "backgroundPosition":"center",
-          "buttonText":"FIND OUT MORE",
-          "target":"_blank"
+          "buttonText":"LISTEN AGAIN",
+          "internalLink":true,
         }, {
           "type":"SUNDAY MORNING SERIES",
           "title":"An Open Letter to the Church",
