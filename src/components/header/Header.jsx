@@ -55,8 +55,7 @@ class Header extends React.Component {
         </button>
 
         <div className={`${collapsedClass} navbar-collapse sbc-navbar-collapse`} id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto"></ul>
-          <ul className="navbar-nav sbc-navbar-content">
+          <ul className="navbar-nav sbc-navbar-content ms-auto">
             <li className="nav-item">
               <NavLink to="/about" className={navClass} onClick={this.navLinkClick}>About</NavLink>
             </li>
