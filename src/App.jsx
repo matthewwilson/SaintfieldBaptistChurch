@@ -20,7 +20,7 @@ const App = () => (
     <SBC>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/about/*" element={<AboutPage />} />
         <Route path="/live" element={<LivePage />} />
         <Route path="/sermons" element={<SermonsPage />} />
         <Route path="/sermons/series/:title" element={<SermonSeriesPage />} />
