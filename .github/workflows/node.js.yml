@@ -1,4 +1,4 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests for pull requests.
+# This workflow runs CI for pull requests targeting master.
 
 name: Pull Request CI
 
@@ -10,16 +10,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 'lts/*'
+        cache: npm
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
