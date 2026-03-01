@@ -37,7 +37,7 @@ const slides = [
   },
   {
     type: 'SUNDAY EVENING SERIES',
-    title: 'Seven Cries from the Cross',
+    title: 'Cries from the Cross',
     imageUrl: 'img/slides/seven-cries.png',
     url: '/sermons/series/Cries%20from%20the%20Cross',
     backgroundPosition: 'center',
