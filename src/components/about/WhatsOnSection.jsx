@@ -3,7 +3,10 @@ import React from 'react';
 const WhatsOnSection = (props) => {
   return (
     <div>
-      <table class="table">
+      <table className="table">
+        <thead>
+          <tr><th scope="col">Activity</th><th scope="col">Time</th></tr>
+        </thead>
         <tbody>
           <tr><td>Ladies Fellowship</td><td>Last Tuesday of each month at 8pm</td></tr>
           <tr><td>Searchers Bible Club</td><td>Wednesday at 6:45pm (term-time) -  <a href="/consent">Register here</a></td></tr>
@@ -14,7 +17,10 @@ const WhatsOnSection = (props) => {
       </table>
       <br />
       <h2>Sunday Services</h2>
-      <table class="table">
+      <table className="table">
+        <thead>
+          <tr><th scope="col">Activity</th><th scope="col">Time</th></tr>
+        </thead>
         <tbody>
           <tr><td>Sunday School and Bible Class</td><td>10.15am (term-time) - <a href="/consent">Register here</a></td></tr>
           <tr><td>Morning Service</td><td>11.30am</td></tr>

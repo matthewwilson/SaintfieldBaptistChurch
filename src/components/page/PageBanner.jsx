@@ -25,13 +25,17 @@ const PageBanner = (props) => {
   return (
     <div className={"page-banner "+className} style={style}>
       <Helmet>
-        <meta property="og:image" content={`http://saintfieldbaptist.org.uk${props.imageUrl}`}/>
-        <meta itemprop="thumbnailUrl" content={`http://saintfieldbaptist.org.uk${props.imageUrl}`}/>
-        <link rel="image_src" href={`http://saintfieldbaptist.org.uk${props.imageUrl}`} />
-        <meta itemprop="image" content={`http://saintfieldbaptist.org.uk${props.imageUrl}`}/>
-        <meta name="twitter:image" content={`http://saintfieldbaptist.org.uk${props.imageUrl}`}/>
+        <title>{props.title} - Saintfield Baptist Church</title>
+        {props.description && <meta name="description" content={props.description} />}
+        {props.description && <meta property="og:description" content={props.description} />}
+        <meta property="og:image" content={`https://www.saintfieldbaptist.org.uk${props.imageUrl}`}/>
+        <meta itemprop="thumbnailUrl" content={`https://www.saintfieldbaptist.org.uk${props.imageUrl}`}/>
+        <link rel="image_src" href={`https://www.saintfieldbaptist.org.uk${props.imageUrl}`} />
+        <meta itemprop="image" content={`https://www.saintfieldbaptist.org.uk${props.imageUrl}`}/>
+        <meta name="twitter:image" content={`https://www.saintfieldbaptist.org.uk${props.imageUrl}`}/>
         <meta property="og:title" content={props.title}/>
         <meta name="twitter:title" content={props.title}/>
+        <link rel="canonical" href={`https://www.saintfieldbaptist.org.uk${window.location.pathname}`} />
       </Helmet>
       <div className="row">
         <div className="col align-self-center">

@@ -5,7 +5,13 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Saintfield Baptist Church website" />
+    <meta name="description" content="Saintfield Baptist Church – a Bible-believing church on the Crossgar Road, Saintfield. Join us for Sunday services, midweek Bible study, and youth activities." />
+    <meta property="og:site_name" content="Saintfield Baptist Church" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.saintfieldbaptist.org.uk/" />
+    <meta property="og:description" content="Saintfield Baptist Church – a Bible-believing church on the Crossgar Road, Saintfield. Join us for Sunday services, midweek Bible study, and youth activities." />
+    <meta property="og:image" content="https://www.saintfieldbaptist.org.uk/img/about_us.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,5 +26,25 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Church",
+        "name": "Saintfield Baptist Church",
+        "url": "https://www.saintfieldbaptist.org.uk",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "51 Crossgar Road",
+          "addressLocality": "Saintfield",
+          "addressCountry": "GB"
+        },
+        "email": "secretary@saintfieldbaptist.org.uk",
+        "sameAs": [
+          "https://www.facebook.com/Saintfield-Baptist-Church-105178506183089/",
+          "https://twitter.com/SaintfieldBC",
+          "https://www.youtube.com/@saintfieldbaptistchurch6743"
+        ]
+      }
+    </script>
   </body>
 </html>

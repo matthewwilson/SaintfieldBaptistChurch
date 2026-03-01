@@ -39,7 +39,8 @@ class PageSidebar extends React.Component {
     const title = this.getTitle(newSection);
     const bannerImageUrl = newSection.props.bannerImageUrl;
     const bannerMobilePosition = newSection.props.bannerMobilePosition;
-    this.props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition);
+    const description = newSection.props.description;
+    this.props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition, description);
   }
 
   sectionLinkClicked = (event) => {
@@ -55,9 +56,10 @@ class PageSidebar extends React.Component {
     const title = this.getTitle(newSection);
     const bannerImageUrl = newSection.props.bannerImageUrl;
     const bannerMobilePosition = newSection.props.bannerMobilePosition;
+    const description = newSection.props.description;
 
     this.props.navigate(newSection.props.url);
-    this.props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition);
+    this.props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition, description);
   }
 
   getNewSection = (index) => React.Children.toArray(this.props.children)[index]
@@ -83,7 +85,7 @@ class PageSidebar extends React.Component {
     const buttonContents = collapsed ? '+' : '-';
 
     const toggleButton = (
-      <button className="btn btn-link btn-page-sidebar-link btn-page-sidebar-mobile-toggle" onClick={this.toggleMobileMenu}>{buttonContents}</button>
+      <button className="btn btn-link btn-page-sidebar-link btn-page-sidebar-mobile-toggle" onClick={this.toggleMobileMenu} aria-label={collapsed ? 'Show menu' : 'Hide menu'}>{buttonContents}</button>
     );
 
     if (collapsed) {

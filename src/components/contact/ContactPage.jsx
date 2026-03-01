@@ -8,7 +8,7 @@ const ContactPage = (props) => {
   return (
     <Page>
       <div className="contact-page">
-        <PageBanner imageUrl="/img/contact.jpg" titleColour="white" title="CONTACT US"/>
+        <PageBanner imageUrl="/img/contact.jpg" titleColour="white" title="CONTACT US" description="Get in touch with Saintfield Baptist Church – 51 Crossgar Road, Saintfield."/>
         <br/>
         <p>
           Saintfield Baptist Church<br/>

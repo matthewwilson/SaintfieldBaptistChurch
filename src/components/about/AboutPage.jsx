@@ -18,25 +18,27 @@ class AboutPage extends React.Component {
     this.state = {}
   }
 
-  handleSectionChange = (bannerImage, title, bannerMobilePosition) => {
+  handleSectionChange = (bannerImage, title, bannerMobilePosition, description) => {
     this.setState({
       currentBannerImage: bannerImage,
       title:title,
-      bannerMobilePosition:bannerMobilePosition
+      bannerMobilePosition:bannerMobilePosition,
+      description:description
     })
   }
 
   render() {
     return (
       <Page>
-        <PageBanner title={this.state.title} imageUrl={this.state.currentBannerImage} bannerMobilePosition={this.state.bannerMobilePosition} titleColour="white"/>
+        <PageBanner title={this.state.title} imageUrl={this.state.currentBannerImage} bannerMobilePosition={this.state.bannerMobilePosition} titleColour="white" description={this.state.description}/>
         <PageSidebar onSectionChange={this.handleSectionChange} currentSection={this.state.currentSection}>
 
           <PageSection
             linkTitle="About Us"
             bannerImageUrl="/img/about_us.jpg"
             url="/about"
-            bannerMobilePosition="right">
+            bannerMobilePosition="right"
+            description="Learn about Saintfield Baptist Church – a Bible-believing church on the Crossgar Road, Saintfield.">
             <WelcomeSection/>
           </PageSection>
 
@@ -45,7 +47,8 @@ class AboutPage extends React.Component {
             bannerTitle="HOW IT ALL BEGAN"
             bannerImageUrl="/img/history.jpg"
             url="/about/history"
-            bannerMobilePosition="right">
+            bannerMobilePosition="right"
+            description="The history of Saintfield Baptist Church – how it all began.">
             <HistorySection/>
             <HistorySectionMore/>
           </PageSection>
@@ -54,7 +57,8 @@ class AboutPage extends React.Component {
             linkTitle="What We Believe"
             bannerImageUrl="/img/what_we_believe.png"
             url="/about/what-we-believe"
-            bannerMobilePosition="center">
+            bannerMobilePosition="center"
+            description="Our statement of faith – what Saintfield Baptist Church believes.">
             <WhatWeBelieveSection />
             <WhatWeBelieveSectionMore />
           </PageSection>
@@ -63,7 +67,8 @@ class AboutPage extends React.Component {
             linkTitle="What's On"
             bannerImageUrl="/img/about_us.jpg"
             url="/about/whats-on"
-            bannerMobilePosition="center">
+            bannerMobilePosition="center"
+            description="Weekly meetings and activities at Saintfield Baptist Church.">
             <WhatsOnSection/>
           </PageSection>
 

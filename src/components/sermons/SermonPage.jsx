@@ -1,14 +1,21 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
+import { useParams } from 'react-router-dom';
 import SermonAudioSermon from './SermonAudioSermon'
 
-const SermonPage = (props) => {
+const SermonPage = () => {
+  const { sermonId, title } = useParams();
 
   return (
     <div className="sermons-page">
-      <h1>{props.match.params.title}</h1>
+      <Helmet>
+        <title>{title} - Saintfield Baptist Church</title>
+        <meta name="description" content={`Listen to "${title}" from Saintfield Baptist Church.`} />
+      </Helmet>
+      <h1>{title}</h1>
       <hr/>
       <div>
-        <SermonAudioSermon title={props.match.params.title} sermonId={props.match.params.sermonId}/>
+        <SermonAudioSermon title={title} sermonId={sermonId}/>
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 import './LivePage.css'
 
 
@@ -27,7 +28,7 @@ const LivePage = (props) => {
         src="https://embed.sermonaudio.com/player/l/saintfieldbaptist/?autoplay=true"
         style={iFrameStyle}
         allowFullScreen
-        frameborder="0"
+        frameBorder="0"
         scrolling="no"
         allow="autoplay">
       </iframe>
@@ -43,6 +44,11 @@ const LivePage = (props) => {
 
   return (
     <div className="live-page">
+      <Helmet>
+        <title>Watch Live - Saintfield Baptist Church</title>
+        <meta name="description" content="Watch the live service from Saintfield Baptist Church." />
+        <link rel="canonical" href="https://www.saintfieldbaptist.org.uk/live" />
+      </Helmet>
       <h1>Watch Live</h1>
       <hr/>
       {contents}

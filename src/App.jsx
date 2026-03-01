@@ -9,6 +9,7 @@ import SermonSeriesPage from './components/sermons/SermonSeriesPage.jsx';
 import SermonPage from './components/sermons/SermonPage.jsx';
 import ContactPage from './components/contact/ContactPage.jsx';
 import GivingPage from './components/giving/GivingPage.jsx';
+import NotFoundPage from './components/not-found/NotFoundPage.jsx';
 
 const ExternalRedirect = ({ to }) => {
   window.location.href = to;
@@ -31,6 +32,7 @@ const App = () => (
         <Route path="/hbc" element={<ExternalRedirect to="https://forms.gle/sLyqc8vLZdAYhsAh8" />} />
         <Route path="/s4c" element={<ExternalRedirect to="https://forms.gle/LGJWhhwdfzdz8joW8" />} />
         <Route path="/bc" element={<ExternalRedirect to="https://forms.gle/k7UjoYDYywCTLmSX6" />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </SBC>
   </BrowserRouter>

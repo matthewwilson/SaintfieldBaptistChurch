@@ -7,8 +7,11 @@ import './SBC.css';
 const SBC = (props) => {
     return (
       <div>
+          <a href="#main-content" className="skip-link">Skip to main content</a>
           <Header/>
-          {props.children}
+          <main id="main-content">
+            {props.children}
+          </main>
           <Footer/>
       </div>
     );
