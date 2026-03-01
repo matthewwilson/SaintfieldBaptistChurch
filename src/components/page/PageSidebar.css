@@ -28,7 +28,7 @@
   font-size: 14pt;
   color: #5a5756;
   text-decoration: none;
-  white-space: break-spaces;
+  white-space: break-spaces !important;
   text-align: left;
 }
 
@@ -55,6 +55,6 @@
 
 .btn-page-sidebar-mobile-toggle {
   line-height: 14px;
-  font-size: 32px;
+  font-size: 32px !important;
   color: #ff5a34;
 }

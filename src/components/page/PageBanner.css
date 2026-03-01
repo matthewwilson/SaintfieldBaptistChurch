@@ -2,16 +2,16 @@
   margin-left: -10px;
   margin-right: -10px;
   min-height: 300px;
-  background-size: cover;
+  background-size: cover !important;
   margin-bottom: 20px;
 }
 
 .page-banner-mobile-center {
-  background-position: center;
+  background-position: center !important;
 }
 
 .page-banner-mobile-right {
-  background-position: right;
+  background-position: right !important;
 }
 
 .page-banner h1 {
@@ -29,7 +29,7 @@
     margin-left: -100px;
     margin-right: -100px;
     min-height: 350px;
-    background-position: center;
+    background-position: center !important;
   }
   .page-banner .row {
     height: 350px;
