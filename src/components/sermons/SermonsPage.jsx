@@ -5,7 +5,7 @@ import './SermonsPage.css'
 
 const SermonsPage = (props) => {
 
-  var style = {
+  const style = {
     minHeight:"700px",
     minWidth:"100%",
     maxWidth:"100%",

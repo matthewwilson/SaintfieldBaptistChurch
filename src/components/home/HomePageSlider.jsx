@@ -1,111 +1,97 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Slider from "react-slick";
-import $ from "jquery";
 import HomePageSlide from "./HomePageSlide";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import "./HomePageSlider.css";
 
-class HomePageSlider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      padding: this.getPadding(),
-      slides: [
-        {
-          type: "BIBLE STUDY",
-          title: "ABRAHAM",
-          subtitle: "The friend of God",
-          imageUrl: "img/slides/abraham.png",
-          url: "/sermons/series/Abraham%20The%20Friend%20of%20God",
-          backgroundPosition: "center",
-          buttonText: "LISTEN AGAIN",
-          internalLink: true,
-        },
-        {
-          type: "SUNDAY MORNING SERIES",
-          title: "Building from Burdens",
-          subtitle: "Studies in the Book of Nehemiah",
-          url: "/sermons/series/Building%20from%20Burdens",
-          imageUrl: "img/slides/nehemiah.png",
-          internalLink: true,
-          buttonText: "LISTEN AGAIN",
-        },
-        {
-          type: "SUNDAY EVENING SERIES",
-          title: "The Seven Churches",
-          subtitle: "Letters in Revelation",
-          imageUrl: "img/slides/seven-churches.png",
-          url: "/sermons/series/Letters%20to%20the%20Seven%20Churches",
-          backgroundPosition: "center",
-          buttonText: "LISTEN AGAIN",
-          internalLink: true,
-        },
-        {
-          type: "SUNDAY EVENING SERIES",
-          title: "Seven Cries from the Cross",
-          imageUrl: "img/slides/seven-cries.png",
-          url: "/sermons/series/Seven%20Cries%20from%20the%20Cross",
-          backgroundPosition: "center",
-          buttonText: "LISTEN AGAIN",
-          internalLink: true,
-        },
-        {
-          type: "CHILDRENS & YOUTH WORK",
-          title: "What's On?",
-          subtitle: "Term-time activities for tots, tweens and teens",
-          url: "/about/whats-on",
-          imageUrl: "img/slides/events.png",
-          internalLink: true,
-          buttonText: "FIND OUT MORE",
-        },
-      ],
-    };
-  }
+const slides = [
+  {
+    type: "BIBLE STUDY",
+    title: "ABRAHAM",
+    subtitle: "The friend of God",
+    imageUrl: "img/slides/abraham.png",
+    url: "/sermons/series/Abraham%20The%20Friend%20of%20God",
+    backgroundPosition: "center",
+    buttonText: "LISTEN AGAIN",
+    internalLink: true,
+  },
+  {
+    type: "SUNDAY MORNING SERIES",
+    title: "Building from Burdens",
+    subtitle: "Studies in the Book of Nehemiah",
+    url: "/sermons/series/Building%20from%20Burdens",
+    imageUrl: "img/slides/nehemiah.png",
+    internalLink: true,
+    buttonText: "LISTEN AGAIN",
+  },
+  {
+    type: "SUNDAY EVENING SERIES",
+    title: "The Seven Churches",
+    subtitle: "Letters in Revelation",
+    imageUrl: "img/slides/seven-churches.png",
+    url: "/sermons/series/Letters%20to%20the%20Seven%20Churches",
+    backgroundPosition: "center",
+    buttonText: "LISTEN AGAIN",
+    internalLink: true,
+  },
+  {
+    type: "SUNDAY EVENING SERIES",
+    title: "Seven Cries from the Cross",
+    imageUrl: "img/slides/seven-cries.png",
+    url: "/sermons/series/Seven%20Cries%20from%20the%20Cross",
+    backgroundPosition: "center",
+    buttonText: "LISTEN AGAIN",
+    internalLink: true,
+  },
+  {
+    type: "CHILDRENS & YOUTH WORK",
+    title: "What's On?",
+    subtitle: "Term-time activities for tots, tweens and teens",
+    url: "/about/whats-on",
+    imageUrl: "img/slides/events.png",
+    internalLink: true,
+    buttonText: "FIND OUT MORE",
+  },
+];
 
-  getPadding = () => {
-    if ($(window).width() > 700) {
-      return ($(window).width() - 700) / 2;
-    } else {
-      return 0;
-    }
+const getPadding = () => {
+  if (window.innerWidth > 700) {
+    return (window.innerWidth - 700) / 2;
+  }
+  return 0;
+};
+
+const HomePageSlider = () => {
+  const [padding, setPadding] = useState(getPadding);
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      setPadding(getPadding());
+    };
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  const settings = {
+    centerMode: true,
+    centerPadding: padding + "px",
+    slidesToShow: 1,
+    autoplay: true,
+    arrows: false,
+    autoplaySpeed: 5000,
+    dots: true,
   };
 
-  updateDimensions = () => {
-    this.setState({
-      padding: this.getPadding(),
-    });
-  };
-
-  componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
-  }
-
-  render() {
-    var settings = {
-      centerMode: true,
-      centerPadding: this.state.padding + "px",
-      slidesToShow: 1,
-      autoplay: true,
-      arrows: false,
-      autoplaySpeed: 5000,
-      dots: true,
-    };
-
-    const slides = this.state.slides.map((slide, index) => {
-      return (
+  return (
+    <Slider {...settings}>
+      {slides.map((slide, index) => (
         <div key={index}>
           <HomePageSlide {...slide} />
         </div>
-      );
-    });
-
-    return <Slider {...settings}>{slides}</Slider>;
-  }
-}
+      ))}
+    </Slider>
+  );
+};
 
 export default HomePageSlider;

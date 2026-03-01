@@ -16,7 +16,7 @@ const PageBanner = (props) => {
     }
   }
 
-  var className = "page-banner-mobile-center";
+  let className = "page-banner-mobile-center";
 
   if(props.bannerMobilePosition === "right") {
     className = "page-banner-mobile-right"

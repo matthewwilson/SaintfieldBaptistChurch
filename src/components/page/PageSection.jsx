@@ -1,61 +1,40 @@
-import React from 'react';
-import $ from 'jquery';
+import React, { useState } from 'react';
 
-class PageSection extends React.Component {
+const PageSection = (props) => {
+  const hasMultipleChildren = React.Children.count(props.children) > 1;
+  const shouldCollapse = hasMultipleChildren && window.innerWidth < 992;
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      collapsed:this.getCollapsed(),
-      useShowMoreFunctionality:this.getCollapsed()
-    }
+  const [collapsed, setCollapsed] = useState(shouldCollapse);
+  const [useShowMoreFunctionality] = useState(shouldCollapse);
+
+  const toggleReadMore = () => {
+    setCollapsed(!collapsed);
   }
 
-  getCollapsed = () => {
-    if(React.Children.count(this.props.children) > 1) {
-      return ($(window).width() < 992)
-    } else {
-      return false;
-    }
-  }
+  const children = React.Children.toArray(props.children);
 
-  toggleReadMore = (event) => {
-    this.setState({
-      collapsed:this.state.collapsed ? false : true
-    })
-  }
-
-  render() {
-
-    const buttonContents = this.state.collapsed ? "Show More" : "Show Less";
-    let readButton;
-
-    if(this.state.useShowMoreFunctionality) {
-      readButton = (
-        <button className="btn btn-link history-section-button history-section-button-bold" onClick={this.toggleReadMore}>{buttonContents}</button>
-      )
-    }
-
-    const children = React.Children.toArray(this.props.children)
-
-    let extraContents;
-
-    if(!this.state.collapsed) {
-      extraContents = children[1];
-    }
-
-    return (
-      <div>
-        {children[0]}
-        {extraContents}
-        <div className="float-left">
-            {readButton}
-        </div>
-      </div>
+  let readButton;
+  if (useShowMoreFunctionality) {
+    const buttonContents = collapsed ? "Show More" : "Show Less";
+    readButton = (
+      <button className="btn btn-link history-section-button history-section-button-bold" onClick={toggleReadMore}>{buttonContents}</button>
     )
   }
 
+  let extraContents;
+  if (!collapsed) {
+    extraContents = children[1];
+  }
 
+  return (
+    <div>
+      {children[0]}
+      {extraContents}
+      <div className="float-left">
+          {readButton}
+      </div>
+    </div>
+  )
 }
 
-export default PageSection
+export default PageSection;
