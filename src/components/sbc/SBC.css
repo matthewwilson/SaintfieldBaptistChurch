@@ -1,9 +1,9 @@
 a {
-  color:#ff5a34
+  color: #ff5a34;
 }
 
 a:hover {
-  color:black
+  color: black;
 }
 
 .row {
@@ -12,10 +12,10 @@ a:hover {
 }
 
 body {
-  padding-top: 90px;;
+  padding-top: 90px;
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   body {
     padding-top: 110px;
   }

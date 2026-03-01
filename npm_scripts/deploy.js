@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('node:path');
 const Client = require('ssh2-sftp-client');
 
 const client = new Client();
@@ -7,7 +7,7 @@ const config = {
   host: process.env.FTP_HOST,
   username: process.env.FTP_USER,
   password: process.env.FTP_PASSWORD,
-  port: 1050
+  port: 1050,
 };
 
 const localBuildDir = path.join(__dirname, '..', 'build');

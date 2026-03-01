@@ -1,24 +1,21 @@
-import React from 'react';
-import {Helmet} from 'react-helmet';
-import './LivePage.css'
+import { Helmet } from 'react-helmet';
+import './LivePage.css';
 
-
-const LivePage = (props) => {
-
+const LivePage = (_props) => {
   const style = {
     position: 'relative',
     width: '100%',
     height: 0,
-    paddingBottom: '56.25%'
-  }
+    paddingBottom: '56.25%',
+  };
 
   const iFrameStyle = {
     position: 'absolute',
     left: 0,
-    top: 0
-  }
+    top: 0,
+  };
 
-   const contents = (
+  const contents = (
     <div style={style}>
       <iframe
         title="Live"
@@ -30,8 +27,8 @@ const LivePage = (props) => {
         allowFullScreen
         frameBorder="0"
         scrolling="no"
-        allow="autoplay">
-      </iframe>
+        allow="autoplay"
+      ></iframe>
     </div>
   );
 
@@ -50,10 +47,10 @@ const LivePage = (props) => {
         <link rel="canonical" href="https://www.saintfieldbaptist.org.uk/live" />
       </Helmet>
       <h1>Watch Live</h1>
-      <hr/>
+      <hr />
       {contents}
     </div>
-  )
-}
+  );
+};
 
 export default LivePage;

@@ -1,165 +1,136 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './PageSidebar.css';
 
-class PageSidebar extends React.Component {
+const PageSidebar = (props) => {
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentSection: this.getCurrentSection(props),
-      collapsed: true
-    };
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.location.pathname !== this.props.location.pathname || prevProps.children !== this.props.children) {
-      const currentSection = this.getCurrentSection(this.props);
-      if (currentSection !== this.state.currentSection) {
-        this.setState({ currentSection });
-      }
-    }
-  }
-
-  getCurrentSection = (props) => {
-    let currentSection = 0;
+  const getCurrentSection = () => {
     const sections = React.Children.toArray(props.children);
     for (let i = 0; i < sections.length; i++) {
-      if (props.location.pathname === sections[i].props.url) {
-        currentSection = i;
-        break;
+      if (location.pathname === sections[i].props.url) {
+        return i;
       }
     }
-    return currentSection;
-  }
+    return 0;
+  };
 
-  componentDidMount() {
-    const newSection = this.getNewSection(this.state.currentSection);
-    const title = this.getTitle(newSection);
-    const bannerImageUrl = newSection.props.bannerImageUrl;
-    const bannerMobilePosition = newSection.props.bannerMobilePosition;
-    const description = newSection.props.description;
-    this.props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition, description);
-  }
+  const [currentSection, setCurrentSection] = useState(getCurrentSection);
+  const [collapsed, setCollapsed] = useState(true);
 
-  sectionLinkClicked = (event) => {
-    const newSection = this.getNewSection(event.target.dataset.index);
-    this.changeSection(newSection);
-    this.setState({
-      currentSection: event.target.dataset.index,
-      collapsed: true
-    });
-  }
-
-  changeSection = (newSection) => {
-    const title = this.getTitle(newSection);
-    const bannerImageUrl = newSection.props.bannerImageUrl;
-    const bannerMobilePosition = newSection.props.bannerMobilePosition;
-    const description = newSection.props.description;
-
-    this.props.navigate(newSection.props.url);
-    this.props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition, description);
-  }
-
-  getNewSection = (index) => React.Children.toArray(this.props.children)[index]
-
-  getTitle = (section) => {
-    let title = section.props.linkTitle;
+  const getTitle = (section) => {
     if (section.props.bannerTitle) {
-      title = section.props.bannerTitle;
+      return section.props.bannerTitle;
     }
-    return title;
-  }
+    return section.props.linkTitle;
+  };
 
-  toggleMobileMenu = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  }
+  const notifySectionChange = (section) => {
+    const title = getTitle(section);
+    const { bannerImageUrl, bannerMobilePosition, description } = section.props;
+    props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition, description);
+  };
 
-  renderMobileMenu(links) {
+  // Notify parent of initial section on mount
+  useEffect(() => {
+    const sections = React.Children.toArray(props.children);
+    notifySectionChange(sections[getCurrentSection()]);
+  }, [getCurrentSection, notifySectionChange, props.children]);
 
-    const collapsed = this.state.collapsed;
+  // Update section when URL changes
+  useEffect(() => {
+    const newSection = getCurrentSection();
+    if (newSection !== currentSection) {
+      setCurrentSection(newSection);
+      const sections = React.Children.toArray(props.children);
+      notifySectionChange(sections[newSection]);
+    }
+  }, [currentSection, getCurrentSection, notifySectionChange, props.children]);
 
-    const buttonContents = collapsed ? '+' : '-';
+  const sectionLinkClicked = (event) => {
+    const index = Number(event.target.dataset.index);
+    const sections = React.Children.toArray(props.children);
+    const section = sections[index];
+    const title = getTitle(section);
+    const { bannerImageUrl, bannerMobilePosition, description } = section.props;
 
-    const toggleButton = (
-      <button className="btn btn-link btn-page-sidebar-link btn-page-sidebar-mobile-toggle" onClick={this.toggleMobileMenu} aria-label={collapsed ? 'Show menu' : 'Hide menu'}>{buttonContents}</button>
-    );
+    navigate(section.props.url);
+    props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition, description);
+    setCurrentSection(index);
+    setCollapsed(true);
+  };
 
-    if (collapsed) {
-      return (
-        <div className="col-md-3 d-lg-none d-xl-none page-sidebar-wrapper-mobile">
-          <div className="row">
-            <div className="offset-10 col-2">
-              {toggleButton}
-            </div>
-          </div>
-        </div>
-      );
+  const toggleMobileMenu = () => {
+    setCollapsed((c) => !c);
+  };
+
+  const sections = React.Children.toArray(props.children);
+  const links = sections.map((section, index) => {
+    let classes = '';
+    if (currentSection === index) {
+      classes = 'btn-page-sidebar-link-active';
     }
 
     return (
+      <li key={index}>
+        <button
+          type="button"
+          className={`btn btn-link btn-page-sidebar-link ${classes}`}
+          onClick={sectionLinkClicked}
+          data-index={index}
+        >
+          {section.props.linkTitle}
+        </button>
+      </li>
+    );
+  });
+
+  const buttonContents = collapsed ? '+' : '-';
+  const toggleButton = (
+    <button
+      type="button"
+      className="btn btn-link btn-page-sidebar-link btn-page-sidebar-mobile-toggle"
+      onClick={toggleMobileMenu}
+      aria-label={collapsed ? 'Show menu' : 'Hide menu'}
+    >
+      {buttonContents}
+    </button>
+  );
+
+  let mobileMenu;
+  if (collapsed) {
+    mobileMenu = (
+      <div className="col-md-3 d-lg-none d-xl-none page-sidebar-wrapper-mobile">
+        <div className="row">
+          <div className="offset-10 col-2">{toggleButton}</div>
+        </div>
+      </div>
+    );
+  } else {
+    mobileMenu = (
       <div className="col-md-3 d-lg-none d-xl-none page-sidebar-wrapper-mobile">
         <div className="row">
           <div className="col-10">
-            <ul className="page-sidebar-menu-list">
-              {links}
-            </ul>
+            <ul className="page-sidebar-menu-list">{links}</ul>
           </div>
-          <div className="col-2">
-            {toggleButton}
-          </div>
+          <div className="col-2">{toggleButton}</div>
         </div>
       </div>
     );
   }
 
-
-  render() {
-    const sections = React.Children.toArray(this.props.children);
-    const links = sections.map((section, index) => {
-
-      let classes = '';
-
-      if (this.state.currentSection && this.state.currentSection.toString() === index.toString()) {
-        classes = 'btn-page-sidebar-link-active';
-      }
-
-      return (
-        <li key={index}>
-          <button className={`btn btn-link btn-page-sidebar-link ${classes}`} onClick={this.sectionLinkClicked} data-index={index}>
-            {section.props.linkTitle}
-          </button>
-        </li>
-      );
-    });
-
-    const mobileMenu = this.renderMobileMenu(links);
-
-    return (
-      <div className="page-sidebar-wrapper">
-        <div className="row">
-          <div className="col-md-3 d-none d-sm-none d-md-none d-lg-block">
-            <ul className="page-sidebar-menu-list">
-              {links}
-            </ul>
-          </div>
-          {mobileMenu}
-          <div className="col-md-9 page-sidebar-section">
-            {sections[this.state.currentSection]}
-          </div>
+  return (
+    <div className="page-sidebar-wrapper">
+      <div className="row">
+        <div className="col-md-3 d-none d-sm-none d-md-none d-lg-block">
+          <ul className="page-sidebar-menu-list">{links}</ul>
         </div>
+        {mobileMenu}
+        <div className="col-md-9 page-sidebar-section">{sections[currentSection]}</div>
       </div>
-    );
-  }
-}
-
-const PageSidebarWithRouter = (props) => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  return <PageSidebar {...props} location={location} navigate={navigate} />;
+    </div>
+  );
 };
 
-export default PageSidebarWithRouter;
+export default PageSidebar;

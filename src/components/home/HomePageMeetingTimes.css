@@ -3,24 +3,24 @@
   padding: 50px 45px;
 }
 
-@media(min-width: 992px) {
-  .home-page-meeting-times{
+@media (min-width: 992px) {
+  .home-page-meeting-times {
     padding: 50px 100px;
   }
 }
 
 .home-page-meeting-times h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
-  color:#ff5a34;
+  color: #ff5a34;
 }
 
 .home-page-meeting-times h3 {
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
 }
 
 .what-to-expect-button {
-  color:#ff5a34;
+  color: #ff5a34;
   margin: 0 auto;
   border-color: #ff5a34;
   margin-bottom: 30px;
@@ -28,15 +28,15 @@
 }
 
 .what-to-expect-button:hover {
-  background-color: #ff5a34 !important;
-  border-color: #ff5a34 !important;
-  color:white;
+  background-color: #ff5a34;
+  border-color: #ff5a34;
+  color: white;
 }
 
 .what-to-expect-button:active {
-  background-color: ##ff5a34 !important;
-  border-color: #ff5a34 !important;
-  color:white;
+  background-color: #ff5a34;
+  border-color: #ff5a34;
+  color: white;
 }
 
 .what-to-expect-button:focus {

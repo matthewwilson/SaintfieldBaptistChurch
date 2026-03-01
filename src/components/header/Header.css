@@ -1,36 +1,36 @@
 .sbc-navbar {
-  background-color: white !important;
-  padding-left: 45px !important;
-  padding-right: 45px !important;
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
+  background-color: white;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-@media(min-width: 992px) {
-  .sbc-navbar{
-    padding-left: 100px !important;
-    padding-right: 100px !important;
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+@media (min-width: 992px) {
+  .sbc-navbar {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
 .sbc-navbar-logo {
-  width:auto;
-  height:40px;
+  width: auto;
+  height: 40px;
 }
 
-@media(min-width: 330px) {
+@media (min-width: 330px) {
   .sbc-navbar-logo {
-    width:auto;
-    height:45px;
+    width: auto;
+    height: 45px;
   }
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .sbc-navbar-logo {
-    width:auto;
-    height:60px;
+    width: auto;
+    height: 60px;
   }
 }
 
@@ -48,12 +48,12 @@
 }
 
 .nav-link {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 500;
 }
 
 .login-btn {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500 !important;
-  border-style: none !important;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  border-style: none;
 }

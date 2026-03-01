@@ -1,32 +1,29 @@
-import React from 'react';
-
 const SermonAudioSeries = ({
   title,
-  sort="newest",
-  pageSize=25,
-  showBackground=true,
-  showSermonBorders=true,
-  showExternalBorders=true,
-  showHeader=true
+  sort = 'newest',
+  pageSize = 25,
+  showBackground = true,
+  showSermonBorders = true,
+  showExternalBorders = true,
+  showHeader = true,
 }) => {
-
   const style = {
-    minHeight:"700px",
-    minWidth:"100%",
-    maxWidth:"100%",
-    border: "1px solid #ddd",
-    boxSizing: "border-box"
-  }
+    minHeight: '700px',
+    minWidth: '100%',
+    maxWidth: '100%',
+    border: '1px solid #ddd',
+    boxSizing: 'border-box',
+  };
 
-  let url = "https://embed.sermonaudio.com/browser/broadcaster/saintfieldbaptist/series/"
+  let url = 'https://embed.sermonaudio.com/browser/broadcaster/saintfieldbaptist/series/';
 
-  url += encodeURIComponent(title) + "/";
-  url += `?sort=${sort}&`
-  url += `page_size=${pageSize}&`
-  url += `background=${showBackground}&`
-  url += `sermon_borders=${showSermonBorders}&`
-  url += `external_borders=${showExternalBorders}&`
-  url += `header=${showHeader}`
+  url += `${encodeURIComponent(title)}/`;
+  url += `?sort=${sort}&`;
+  url += `page_size=${pageSize}&`;
+  url += `background=${showBackground}&`;
+  url += `sermon_borders=${showSermonBorders}&`;
+  url += `external_borders=${showExternalBorders}&`;
+  url += `header=${showHeader}`;
 
   return (
     <iframe
@@ -37,9 +34,9 @@ const SermonAudioSeries = ({
       src={url}
       style={style}
       frameBorder="0"
-      scrolling="no">
-    </iframe>
-  )
-}
+      scrolling="no"
+    ></iframe>
+  );
+};
 
 export default SermonAudioSeries;

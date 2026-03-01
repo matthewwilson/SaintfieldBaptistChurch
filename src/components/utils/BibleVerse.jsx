@@ -1,14 +1,13 @@
-import React from 'react'
-import './BibleVerse.css'
+import './BibleVerse.css';
 
-const BibleVerse = ({reference, text}) => {
-
-  const url = "https://www.bible.com/en-GB/bible/1/"+reference+".KJV"
+const BibleVerse = ({ reference, text }) => {
+  const url = `https://www.bible.com/en-GB/bible/1/${reference}.KJV`;
 
   return (
-    <a className="bible-verse" href={url} target="_blank" rel="noopener noreferrer">{text}</a>
-  )
+    <a className="bible-verse" href={url} target="_blank" rel="noopener noreferrer">
+      {text}
+    </a>
+  );
+};
 
-}
-
-export default BibleVerse
+export default BibleVerse;

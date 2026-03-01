@@ -1,10 +1,10 @@
 .sermons-page {
   padding: 50px 45px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
-@media(min-width: 992px) {
-  .sermons-page{
+@media (min-width: 992px) {
+  .sermons-page {
     padding: 50px 100px;
   }
 }

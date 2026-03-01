@@ -1,18 +1,12 @@
-import React from 'react';
-
-const SermonAudioSermon = ({
-  sermonId,
-  title
-}) => {
-
+const SermonAudioSermon = ({ sermonId, title }) => {
   const style = {
-    minWidth:"100%",
-    maxWidth:"100%",
-    border: "1px solid #ddd",
-    boxSizing: "border-box"
-  }
+    minWidth: '100%',
+    maxWidth: '100%',
+    border: '1px solid #ddd',
+    boxSizing: 'border-box',
+  };
 
-  let url = `https://embed.sermonaudio.com/player/a/${sermonId}/`
+  const url = `https://embed.sermonaudio.com/player/a/${sermonId}/`;
 
   return (
     <iframe
@@ -23,9 +17,9 @@ const SermonAudioSermon = ({
       src={url}
       style={style}
       frameBorder="0"
-      scrolling="no">
-    </iframe>
-  )
-}
+      scrolling="no"
+    ></iframe>
+  );
+};
 
 export default SermonAudioSermon;

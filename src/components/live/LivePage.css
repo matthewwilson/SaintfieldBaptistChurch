@@ -1,10 +1,10 @@
 .live-page {
   padding: 50px 45px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
-@media(min-width: 992px) {
-  .live-page{
+@media (min-width: 992px) {
+  .live-page {
     padding: 50px 100px;
   }
 }
