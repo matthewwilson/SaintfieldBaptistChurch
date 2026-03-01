@@ -86,9 +86,9 @@
 }
 
 .image-slide-button {
-  color: white;
+  color: white !important;
   margin: 0 auto;
-  border-color: white;
+  border-color: white !important;
   margin-bottom: 30px;
   box-shadow: none;
 }
