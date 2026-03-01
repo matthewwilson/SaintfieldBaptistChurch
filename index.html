@@ -21,6 +21,11 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
     <title>Saintfield Baptist Church</title>
+    <script>
+      if (location.hostname.indexOf('saintfieldbaptist.org.uk') !== -1 && location.protocol !== 'https:') {
+        location.href = location.href.replace('http://', 'https://');
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
