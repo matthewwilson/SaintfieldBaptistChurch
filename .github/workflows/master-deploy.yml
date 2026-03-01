@@ -30,5 +30,3 @@ jobs:
         server-dir: /
         protocol: ftp
         port: 21
-        exclude: |
-          static/**
