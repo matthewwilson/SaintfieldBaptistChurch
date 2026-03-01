@@ -25,7 +25,7 @@ const PageBanner = (props) => {
   return (
     <div className={"page-banner "+className} style={style}>
       <Helmet>
-        <title>{props.title} - Saintfield Baptist Church</title>
+        <title>{(props.title || '') + ' - Saintfield Baptist Church'}</title>
         {props.description && <meta name="description" content={props.description} />}
         {props.description && <meta property="og:description" content={props.description} />}
         <meta property="og:image" content={`https://www.saintfieldbaptist.org.uk${props.imageUrl}`}/>
