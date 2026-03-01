@@ -7,7 +7,7 @@ const Header = () => {
   const [numberOfClicks, setNumberOfClicks] = useState(0);
 
   const navBarToggleClick = () => {
-    setCollapsed(!collapsed);
+    setCollapsed((c) => !c);
   };
 
   const navLinkClick = () => {
@@ -15,14 +15,15 @@ const Header = () => {
   };
 
   const navLinkLogoClick = () => {
-    const newCount = numberOfClicks + 1;
-    setNumberOfClicks(newCount);
+    setNumberOfClicks((c) => {
+      const newCount = c + 1;
+      if (newCount >= 5) {
+        window.location.href = 'https://forms.gle/k7UjoYDYywCTLmSX6';
+        return 0;
+      }
+      return newCount;
+    });
     setCollapsed(true);
-
-    if (newCount >= 5) {
-      setNumberOfClicks(0);
-      window.location.href = 'https://forms.gle/k7UjoYDYywCTLmSX6';
-    }
   };
 
   const collapsedClass = collapsed ? 'collapse' : '';

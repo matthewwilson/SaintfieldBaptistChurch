@@ -5,10 +5,10 @@ const PageSection = (props) => {
   const shouldCollapse = hasMultipleChildren && window.innerWidth < 992;
 
   const [collapsed, setCollapsed] = useState(shouldCollapse);
-  const [useShowMoreFunctionality] = useState(shouldCollapse);
+  const useShowMoreFunctionality = shouldCollapse;
 
   const toggleReadMore = () => {
-    setCollapsed(!collapsed);
+    setCollapsed((c) => !c);
   };
 
   const children = React.Children.toArray(props.children);

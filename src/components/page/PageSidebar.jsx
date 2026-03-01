@@ -49,7 +49,7 @@ const PageSidebar = (props) => {
   }, [currentSection, getCurrentSection, notifySectionChange, props.children]);
 
   const sectionLinkClicked = (event) => {
-    const index = event.target.dataset.index;
+    const index = Number(event.target.dataset.index);
     const sections = React.Children.toArray(props.children);
     const section = sections[index];
     const title = getTitle(section);
@@ -62,13 +62,13 @@ const PageSidebar = (props) => {
   };
 
   const toggleMobileMenu = () => {
-    setCollapsed(!collapsed);
+    setCollapsed((c) => !c);
   };
 
   const sections = React.Children.toArray(props.children);
   const links = sections.map((section, index) => {
     let classes = '';
-    if (currentSection && currentSection.toString() === index.toString()) {
+    if (currentSection === index) {
       classes = 'btn-page-sidebar-link-active';
     }
 
