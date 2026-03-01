@@ -13,7 +13,7 @@
 
 .footer-logo {
   height:100px;
-  width:23px;
+  width:auto;
 }
 
 .footer-links {
@@ -54,4 +54,13 @@
 
 .footer-social-links a:hover {
   color: #ff5a34;
+}
+
+
+.footer-logo-col {
+  text-align: right;
+}
+
+.footer-social-links i {
+  font-size: 20px;
 }
