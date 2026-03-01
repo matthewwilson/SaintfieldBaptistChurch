@@ -1,8 +1,6 @@
-import React from 'react';
 import './HomePageMeetingTimes.css';
 
-const HomePageMeetingTimes = (props) => {
-
+const HomePageMeetingTimes = (_props) => {
   return (
     <div className="row">
       <div className="offset-md-2 col-md-8">
@@ -15,6 +13,6 @@ const HomePageMeetingTimes = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default HomePageMeetingTimes;

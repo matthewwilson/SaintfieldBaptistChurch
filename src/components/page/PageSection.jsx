@@ -9,16 +9,22 @@ const PageSection = (props) => {
 
   const toggleReadMore = () => {
     setCollapsed(!collapsed);
-  }
+  };
 
   const children = React.Children.toArray(props.children);
 
   let readButton;
   if (useShowMoreFunctionality) {
-    const buttonContents = collapsed ? "Show More" : "Show Less";
+    const buttonContents = collapsed ? 'Show More' : 'Show Less';
     readButton = (
-      <button className="btn btn-link history-section-button history-section-button-bold" onClick={toggleReadMore}>{buttonContents}</button>
-    )
+      <button
+        type="button"
+        className="btn btn-link history-section-button history-section-button-bold"
+        onClick={toggleReadMore}
+      >
+        {buttonContents}
+      </button>
+    );
   }
 
   let extraContents;
@@ -30,11 +36,9 @@ const PageSection = (props) => {
     <div>
       {children[0]}
       {extraContents}
-      <div className="float-left">
-          {readButton}
-      </div>
+      <div className="float-left">{readButton}</div>
     </div>
-  )
-}
+  );
+};
 
 export default PageSection;

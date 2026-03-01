@@ -2,8 +2,8 @@
   padding: 50px 45px;
 }
 
-@media(min-width: 992px) {
-  .homepage-text{
+@media (min-width: 992px) {
+  .homepage-text {
     padding: 50px 100px;
   }
 }
@@ -19,13 +19,13 @@
 }
 
 .homepage-text h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
 }
 
 .homepage-text p {
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
   font-size: 18px;
   text-align: center;
 }

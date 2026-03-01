@@ -1,27 +1,37 @@
-import React from 'react';
 import Page from '../page/Page';
 import PageBanner from '../page/PageBanner';
-import './ContactPage.css'
+import './ContactPage.css';
 
-
-const ContactPage = (props) => {
+const ContactPage = (_props) => {
   return (
     <Page>
       <div className="contact-page">
-        <PageBanner imageUrl="/img/contact.jpg" titleColour="white" title="CONTACT US" description="Get in touch with Saintfield Baptist Church – 51 Crossgar Road, Saintfield."/>
-        <br/>
+        <PageBanner
+          imageUrl="/img/contact.jpg"
+          titleColour="white"
+          title="CONTACT US"
+          description="Get in touch with Saintfield Baptist Church – 51 Crossgar Road, Saintfield."
+        />
+        <br />
         <p>
-          Saintfield Baptist Church<br/>
-          51 Crossgar Road<br/>
-          Saintfield<br/>
+          Saintfield Baptist Church
+          <br />
+          51 Crossgar Road
+          <br />
+          Saintfield
+          <br />
         </p>
-        <br/>
-        <a href="https://maps.app.goo.gl/cCK2hDGhzcyUX23M9" target="_blank" rel="noopener noreferrer">Google Maps</a>
-        <br/>
-        <a href="mailto:secretary@saintfieldbaptist.org.uk"><i className="far fa-envelope"></i> Email Us</a>
+        <br />
+        <a href="https://maps.app.goo.gl/cCK2hDGhzcyUX23M9" target="_blank" rel="noopener noreferrer">
+          Google Maps
+        </a>
+        <br />
+        <a href="mailto:secretary@saintfieldbaptist.org.uk">
+          <i className="far fa-envelope"></i> Email Us
+        </a>
       </div>
     </Page>
-  )
-}
+  );
+};
 
 export default ContactPage;

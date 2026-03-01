@@ -8,6 +8,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm start        # Vite dev server
 npm run build    # Production build to dist/
 npm test         # Run all tests (Vitest + jsdom)
+npm run lint     # Check lint, formatting, and import order (runs in CI)
+npm run lint:fix # Auto-fix all lint and formatting issues
+npm run format   # Format all files
 ```
 
 Node version: 22.12.0
@@ -55,6 +58,10 @@ Sermon pages embed iframes from `embed.sermonaudio.com`. Three components in `sr
 ### Homepage Slider
 
 `HomePageSlider.jsx` contains a hardcoded slides array with sermon series and events. Uses `react-slick` with auto-play. Slide URLs should match entries in `public/sitemap.xml`.
+
+### Linting & Formatting
+
+Uses [Biome](https://biomejs.dev/) for linting, formatting, and import sorting. Config in `biome.json`. CI runs `npm run lint` on every PR and push to master. Run `npm run lint:fix` to auto-fix issues locally. Style: single quotes, 2-space indent, 120 line width, semicolons always.
 
 ### Legacy Notes
 

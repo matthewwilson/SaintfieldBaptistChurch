@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './PageSidebar.css';
 
@@ -14,7 +14,7 @@ const PageSidebar = (props) => {
       }
     }
     return 0;
-  }
+  };
 
   const [currentSection, setCurrentSection] = useState(getCurrentSection);
   const [collapsed, setCollapsed] = useState(true);
@@ -24,19 +24,19 @@ const PageSidebar = (props) => {
       return section.props.bannerTitle;
     }
     return section.props.linkTitle;
-  }
+  };
 
   const notifySectionChange = (section) => {
     const title = getTitle(section);
     const { bannerImageUrl, bannerMobilePosition, description } = section.props;
     props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition, description);
-  }
+  };
 
   // Notify parent of initial section on mount
   useEffect(() => {
     const sections = React.Children.toArray(props.children);
     notifySectionChange(sections[getCurrentSection()]);
-  }, []);
+  }, [getCurrentSection, notifySectionChange, props.children]);
 
   // Update section when URL changes
   useEffect(() => {
@@ -46,7 +46,7 @@ const PageSidebar = (props) => {
       const sections = React.Children.toArray(props.children);
       notifySectionChange(sections[newSection]);
     }
-  }, [location.pathname]);
+  }, [currentSection, getCurrentSection, notifySectionChange, props.children]);
 
   const sectionLinkClicked = (event) => {
     const index = event.target.dataset.index;
@@ -59,11 +59,11 @@ const PageSidebar = (props) => {
     props.onSectionChange(bannerImageUrl, title.toUpperCase(), bannerMobilePosition, description);
     setCurrentSection(index);
     setCollapsed(true);
-  }
+  };
 
   const toggleMobileMenu = () => {
     setCollapsed(!collapsed);
-  }
+  };
 
   const sections = React.Children.toArray(props.children);
   const links = sections.map((section, index) => {
@@ -74,7 +74,12 @@ const PageSidebar = (props) => {
 
     return (
       <li key={index}>
-        <button className={`btn btn-link btn-page-sidebar-link ${classes}`} onClick={sectionLinkClicked} data-index={index}>
+        <button
+          type="button"
+          className={`btn btn-link btn-page-sidebar-link ${classes}`}
+          onClick={sectionLinkClicked}
+          data-index={index}
+        >
           {section.props.linkTitle}
         </button>
       </li>
@@ -83,7 +88,14 @@ const PageSidebar = (props) => {
 
   const buttonContents = collapsed ? '+' : '-';
   const toggleButton = (
-    <button className="btn btn-link btn-page-sidebar-link btn-page-sidebar-mobile-toggle" onClick={toggleMobileMenu} aria-label={collapsed ? 'Show menu' : 'Hide menu'}>{buttonContents}</button>
+    <button
+      type="button"
+      className="btn btn-link btn-page-sidebar-link btn-page-sidebar-mobile-toggle"
+      onClick={toggleMobileMenu}
+      aria-label={collapsed ? 'Show menu' : 'Hide menu'}
+    >
+      {buttonContents}
+    </button>
   );
 
   let mobileMenu;
@@ -91,9 +103,7 @@ const PageSidebar = (props) => {
     mobileMenu = (
       <div className="col-md-3 d-lg-none d-xl-none page-sidebar-wrapper-mobile">
         <div className="row">
-          <div className="offset-10 col-2">
-            {toggleButton}
-          </div>
+          <div className="offset-10 col-2">{toggleButton}</div>
         </div>
       </div>
     );
@@ -102,13 +112,9 @@ const PageSidebar = (props) => {
       <div className="col-md-3 d-lg-none d-xl-none page-sidebar-wrapper-mobile">
         <div className="row">
           <div className="col-10">
-            <ul className="page-sidebar-menu-list">
-              {links}
-            </ul>
+            <ul className="page-sidebar-menu-list">{links}</ul>
           </div>
-          <div className="col-2">
-            {toggleButton}
-          </div>
+          <div className="col-2">{toggleButton}</div>
         </div>
       </div>
     );
@@ -118,17 +124,13 @@ const PageSidebar = (props) => {
     <div className="page-sidebar-wrapper">
       <div className="row">
         <div className="col-md-3 d-none d-sm-none d-md-none d-lg-block">
-          <ul className="page-sidebar-menu-list">
-            {links}
-          </ul>
+          <ul className="page-sidebar-menu-list">{links}</ul>
         </div>
         {mobileMenu}
-        <div className="col-md-9 page-sidebar-section">
-          {sections[currentSection]}
-        </div>
+        <div className="col-md-9 page-sidebar-section">{sections[currentSection]}</div>
       </div>
     </div>
   );
-}
+};
 
 export default PageSidebar;

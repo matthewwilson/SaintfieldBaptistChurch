@@ -2,28 +2,28 @@
   padding: 50px 45px;
   background-color: #e6e6e6;
   color: black;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
-@media(min-width: 992px) {
-  .footer{
+@media (min-width: 992px) {
+  .footer {
     padding: 50px 100px;
   }
 }
 
 .footer-logo {
-  height:100px;
-  width:auto;
+  height: 100px;
+  width: auto;
 }
 
 .footer-links {
   display: none;
-  padding-bottom:30px;
+  padding-bottom: 30px;
 }
 
 .footer-links a {
-  color:black;
-  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-family: "Raleway", sans-serif;
 }
 
 .footer-links a:hover {
@@ -37,8 +37,8 @@
   padding-right: 10px;
 }
 
-@media(min-width: 576px) {
-  .footer-links{
+@media (min-width: 576px) {
+  .footer-links {
     display: block;
   }
 }
@@ -55,7 +55,6 @@
 .footer-social-links a:hover {
   color: #ff5a34;
 }
-
 
 .footer-logo-col {
   text-align: right;

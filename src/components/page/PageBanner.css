@@ -2,21 +2,21 @@
   margin-left: -10px;
   margin-right: -10px;
   min-height: 300px;
-  background-size: cover !important;
+  background-size: cover;
   margin-bottom: 20px;
 }
 
 .page-banner-mobile-center {
-  background-position: center !important;
+  background-position: center;
 }
 
 .page-banner-mobile-right {
-  background-position: right !important;
+  background-position: right;
 }
 
 .page-banner h1 {
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
 
@@ -24,12 +24,12 @@
   height: 300px;
 }
 
-@media(min-width: 992px) {
-  .page-banner{
+@media (min-width: 992px) {
+  .page-banner {
     margin-left: -100px;
     margin-right: -100px;
     min-height: 350px;
-    background-position: center !important;
+    background-position: center;
   }
   .page-banner .row {
     height: 350px;

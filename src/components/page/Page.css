@@ -1,11 +1,11 @@
 .page {
   margin: 0 10px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   min-height: 100vh;
 }
 
-@media(min-width: 992px) {
-  .page{
+@media (min-width: 992px) {
+  .page {
     margin: 0 100px;
   }
 }
@@ -17,5 +17,5 @@
 
 .page-bible-reference {
   font-weight: 700;
-  color:#ff5a34;
+  color: #ff5a34;
 }

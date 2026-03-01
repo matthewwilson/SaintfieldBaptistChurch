@@ -1,28 +1,27 @@
 .image-slide {
-  min-height: 500px !important;
-  background-size: cover !important;
+  min-height: 500px;
+  background-size: cover;
   text-decoration: none;
 }
 
 .image-slide-content {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .image-slide-content p {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .image-slide-link {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .image-slide {
-    min-height: 400px !important;
-    background-size: contain !important;
+    min-height: 400px;
+    background-size: contain;
   }
 }
-
 
 .image-slide hr {
   border: 1px solid white;
@@ -31,9 +30,9 @@
 }
 
 .image-slide-type {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 12pt !important;
+  font-size: 12pt;
   text-align: center;
   margin-top: 30px;
   color: white;
@@ -41,16 +40,16 @@
   text-transform: uppercase;
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .image-slide-type {
     font-weight: 200;
   }
 }
 
 .image-slide-title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 34pt !important;
+  font-size: 34pt;
   text-align: center;
   margin-top: 20px;
   color: white;
@@ -60,8 +59,8 @@
 }
 
 .image-slide-sub-title {
-  font-family: 'Crimson Text', serif;
-  font-size: 22pt !important;
+  font-family: "Crimson Text", serif;
+  font-size: 22pt;
   text-align: center;
   margin-top: 10px;
   color: white;
@@ -71,23 +70,23 @@
 }
 
 .image-slide-sub-subtitle {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 12pt !important;
+  font-size: 12pt;
   text-align: center;
   margin-top: 20px;
   color: white;
   word-wrap: break-word;
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .image-slide-sub-subtitle {
     font-weight: 200;
   }
 }
 
 .image-slide-button {
-  color:white;
+  color: white;
   margin: 0 auto;
   border-color: white;
   margin-bottom: 30px;
@@ -95,13 +94,13 @@
 }
 
 .image-slide-button:hover {
-  background-color: #ff5a34 !important;
-  border-color: #ff5a34 !important;
+  background-color: #ff5a34;
+  border-color: #ff5a34;
 }
 
 .image-slide-button:active {
-  background-color: #ff5a34 !important;
-  border-color: #ff5a34 !important;
+  background-color: #ff5a34;
+  border-color: #ff5a34;
 }
 
 .image-slide-button:focus {
@@ -109,18 +108,18 @@
 }
 
 .image-slide-fullheight-row {
-  height:100%;
+  height: 100%;
   overflow: hidden;
-  min-height: 500px !important;
+  min-height: 500px;
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .image-slide-fullheight-row {
-    min-height: 400px !important;
+    min-height: 400px;
   }
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .image-slide-content {
     padding: 30px;
   }
