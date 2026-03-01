@@ -1,25 +1,25 @@
 .image-slide {
-  min-height: 500px;
-  background-size: cover;
+  min-height: 500px !important;
+  background-size: cover !important;
   text-decoration: none;
 }
 
 .image-slide-content {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .image-slide-content p {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .image-slide-link {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 @media (min-width: 992px) {
   .image-slide {
-    min-height: 400px;
-    background-size: contain;
+    min-height: 400px !important;
+    background-size: contain !important;
   }
 }
 
@@ -32,7 +32,7 @@
 .image-slide-type {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 12pt;
+  font-size: 12pt !important;
   text-align: center;
   margin-top: 30px;
   color: white;
@@ -49,7 +49,7 @@
 .image-slide-title {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 34pt;
+  font-size: 34pt !important;
   text-align: center;
   margin-top: 20px;
   color: white;
@@ -60,7 +60,7 @@
 
 .image-slide-sub-title {
   font-family: "Crimson Text", serif;
-  font-size: 22pt;
+  font-size: 22pt !important;
   text-align: center;
   margin-top: 10px;
   color: white;
@@ -72,7 +72,7 @@
 .image-slide-sub-subtitle {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 12pt;
+  font-size: 12pt !important;
   text-align: center;
   margin-top: 20px;
   color: white;
@@ -94,13 +94,13 @@
 }
 
 .image-slide-button:hover {
-  background-color: #ff5a34;
-  border-color: #ff5a34;
+  background-color: #ff5a34 !important;
+  border-color: #ff5a34 !important;
 }
 
 .image-slide-button:active {
-  background-color: #ff5a34;
-  border-color: #ff5a34;
+  background-color: #ff5a34 !important;
+  border-color: #ff5a34 !important;
 }
 
 .image-slide-button:focus {
@@ -110,12 +110,12 @@
 .image-slide-fullheight-row {
   height: 100%;
   overflow: hidden;
-  min-height: 500px;
+  min-height: 500px !important;
 }
 
 @media (min-width: 992px) {
   .image-slide-fullheight-row {
-    min-height: 400px;
+    min-height: 400px !important;
   }
 }
 
