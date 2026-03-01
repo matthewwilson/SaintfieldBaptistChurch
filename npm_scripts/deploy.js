@@ -1,27 +1,29 @@
-const path = require('path')
-const SftpUpload = require('sftp-upload')
+const path = require('path');
+const Client = require('ssh2-sftp-client');
 
-var options = {
-    host: process.env.FTP_HOST,
-    username: process.env.FTP_USER,
-    password: process.env.FTP_PASSWORD,
-    port: 1050,
-    path: path.join(__dirname, '..', '/build'),
-    remoteDir: 'public_html'
+const client = new Client();
+
+const config = {
+  host: process.env.FTP_HOST,
+  username: process.env.FTP_USER,
+  password: process.env.FTP_PASSWORD,
+  port: 1050
+};
+
+const localBuildDir = path.join(__dirname, '..', 'build');
+const remoteDir = 'public_html';
+
+async function deploy() {
+  try {
+    await client.connect(config);
+    await client.uploadDir(localBuildDir, remoteDir);
+    console.log('Upload Completed');
+  } catch (err) {
+    console.error('Upload failed:', err);
+    process.exitCode = 1;
+  } finally {
+    await client.end();
+  }
 }
 
-sftp = new SftpUpload(options);
-
-sftp.on('error', function(err) {
-    throw err;
-})
-.on('uploading', function(progress) {
-    console.log('Uploading', progress.file);
-    console.log(progress.percent+'% completed');
-})
-.on('completed', function() {
-    console.log('Upload Completed');
-})
-.upload();
-
-
+deploy();

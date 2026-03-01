@@ -17,12 +17,12 @@ const SermonAudioSermon = ({
   return (
     <iframe
       title={title}
-      tabindex="-1"
+      tabIndex="-1"
       width="100%"
       height="150"
       src={url}
       style={style}
-      frameborder="0"
+      frameBorder="0"
       scrolling="no">
     </iframe>
   )

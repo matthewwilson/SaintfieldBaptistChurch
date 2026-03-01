@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 import './SermonsPage.css'
 
 
@@ -14,6 +15,11 @@ const SermonsPage = (props) => {
 
   return (
     <div className="sermons-page">
+      <Helmet>
+        <title>Sermons - Saintfield Baptist Church</title>
+        <meta name="description" content="Listen to sermons from Saintfield Baptist Church." />
+        <link rel="canonical" href="https://www.saintfieldbaptist.org.uk/sermons" />
+      </Helmet>
       <h1>Sermons</h1>
       <hr/>
       <div>

@@ -1,40 +1,22 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# This workflow runs CI for pull requests targeting master.
 
-name: Node.js CI
+name: Pull Request CI
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Build and deploy
-      uses: actions/setup-node@v2
+    - uses: actions/checkout@v4
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '22.12.0'
+        cache: npm
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - name: deploy
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
-      with:
-        server: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./build/
-        server-dir: /
-        protocol: ftp
-        port: 21

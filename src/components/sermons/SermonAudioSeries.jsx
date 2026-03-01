@@ -31,12 +31,12 @@ const SermonAudioSeries = ({
   return (
     <iframe
       title={title}
-      tabindex="-1"
+      tabIndex="-1"
       width="1"
       height="700"
       src={url}
       style={style}
-      frameborder="0"
+      frameBorder="0"
       scrolling="no">
     </iframe>
   )
