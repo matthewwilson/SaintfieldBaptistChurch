@@ -14,6 +14,7 @@ const slides = [
     url: '/hbc',
     buttonText: 'REGISTER NOW',
     internalLink: true,
+    darkOverlay: true,
   },
   {
     type: 'CHILDRENS & YOUTH WORK',

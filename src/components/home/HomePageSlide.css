@@ -2,6 +2,20 @@
   min-height: 500px !important;
   background-size: cover !important;
   text-decoration: none;
+  position: relative;
+}
+
+.image-slide-dark-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.image-slide-dark-overlay .image-slide-fullheight-row {
+  position: relative;
+  z-index: 1;
 }
 
 .image-slide-content {
