@@ -15,6 +15,7 @@ const HomePageSlide = ({
   fullHeightLink = false,
   backgroundPosition = 'left',
   backgroundColor,
+  darkOverlay = false,
 }) => {
   let slideStyle = {
     background: `url(${imageUrl})`,
@@ -83,7 +84,7 @@ const HomePageSlide = ({
   }
 
   const slideContents = (
-    <div className="image-slide" style={slideStyle}>
+    <div className={`image-slide${darkOverlay ? ' image-slide-dark-overlay' : ''}`} style={slideStyle}>
       <div className="row image-slide-fullheight-row">
         <div className="col align-self-center image-slide-content">
           <p className={`image-slide-type ${textColour}`}>{type}</p>

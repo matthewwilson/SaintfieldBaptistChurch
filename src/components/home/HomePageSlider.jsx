@@ -7,6 +7,25 @@ import './HomePageSlider.css';
 
 const slides = [
   {
+    type: 'CHILDRENS & YOUTH WORK',
+    title: 'Holiday Bible Club',
+    subtitle: '8-12 June 2026',
+    imageUrl: 'img/slides/hbc.png',
+    url: '/hbc',
+    buttonText: 'REGISTER NOW',
+    internalLink: true,
+    darkOverlay: true,
+  },
+  {
+    type: 'CHILDRENS & YOUTH WORK',
+    title: 'Sports for Christ',
+    subtitle: '17-20 Aug 2026',
+    imageUrl: 'img/slides/sports.jpg',
+    url: '/s4c',
+    buttonText: 'REGISTER NOW',
+    internalLink: true,
+  },
+  {
     type: 'BIBLE STUDY',
     title: 'ABRAHAM',
     subtitle: 'The friend of God',
@@ -42,24 +61,6 @@ const slides = [
     url: '/sermons/series/Cries%20from%20the%20Cross',
     backgroundPosition: 'center',
     buttonText: 'LISTEN AGAIN',
-    internalLink: true,
-  },
-  {
-    type: 'CHILDRENS & YOUTH WORK',
-    title: 'Holiday Bible Club',
-    subtitle: '8-12 June 2026',
-    imageUrl: 'img/slides/hbc.png',
-    url: '/hbc',
-    buttonText: 'REGISTER NOW',
-    internalLink: true,
-  },
-  {
-    type: 'CHILDRENS & YOUTH WORK',
-    title: 'Sports for Christ',
-    subtitle: '17-20 Aug 2026',
-    imageUrl: 'img/slides/sports.jpg',
-    url: '/s4c',
-    buttonText: 'REGISTER NOW',
     internalLink: true,
   },
   {
