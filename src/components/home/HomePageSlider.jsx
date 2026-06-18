@@ -8,16 +8,6 @@ import './HomePageSlider.css';
 const slides = [
   {
     type: 'CHILDRENS & YOUTH WORK',
-    title: 'Holiday Bible Club',
-    subtitle: '8-12 June 2026',
-    imageUrl: 'img/slides/hbc.png',
-    url: '/hbc',
-    buttonText: 'REGISTER NOW',
-    internalLink: true,
-    darkOverlay: true,
-  },
-  {
-    type: 'CHILDRENS & YOUTH WORK',
     title: 'Sports for Christ',
     subtitle: '17-20 Aug 2026',
     imageUrl: 'img/slides/sports.jpg',
