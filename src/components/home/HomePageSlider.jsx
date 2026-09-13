@@ -7,15 +7,6 @@ import './HomePageSlider.css';
 
 const slides = [
   {
-    type: 'CHILDRENS & YOUTH WORK',
-    title: 'Sports for Christ',
-    subtitle: '17-20 Aug 2026',
-    imageUrl: 'img/slides/sports.jpg',
-    url: '/s4c',
-    buttonText: 'REGISTER NOW',
-    internalLink: true,
-  },
-  {
     type: 'BIBLE STUDY',
     title: 'ABRAHAM',
     subtitle: 'The friend of God',
