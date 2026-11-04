@@ -33,7 +33,8 @@
 @media (min-width: 992px) {
   .image-slide {
     min-height: 400px !important;
-    background-size: contain !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
   }
 }
 
