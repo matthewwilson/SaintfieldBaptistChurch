@@ -20,12 +20,16 @@ const HomePageSlide = ({
   let slideStyle = {
     background: `url(${imageUrl})`,
     backgroundPosition: backgroundPosition,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
   };
 
   if (backgroundColor) {
     slideStyle = {
       background: backgroundColor,
       backgroundPosition: backgroundPosition,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
     };
   }
 
